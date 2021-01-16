@@ -1,0 +1,176 @@
+\section{Preliminaries}
+\label{sec:overview}
+
+\subsection{Problem Definition}
+\label{sec:definition}
+The generator of an unconditional GAN learns the mapping $G: \mathcal{Z} \to \mathcal{X}$. 
+When $\z_1, \z_2 \in \mathcal{Z}$ are close in the $\mathcal{Z}$ space, the corresponding images $x_1, x_2 \in \mathcal{X}$ are visually similar. 
+GAN inversion is to map data $x$ back to latent representation $\z^*$, or equivalently, to find an image ${x^*}$ that can be entirely synthesized by the well-trained generator $G$ and stay close to the real image $x$.
+Formally, denoting the signal to invert by $x \in \R^{n}$, the well-trained generative model as $G: \R^{n_{0}} \to \R^{n}$, and the latent vector as $\z \in \R^{n_{0}}$, we study the following inversion problem:
+\begin{equation}
+\z^*=\underset{\z}{\arg \min } \ \ell(G(\z), x),
+\label{eqn:def}
+\end{equation}
+where $\ell(\cdot)$ is a distance metric in the image or feature space, and $G$ is assumed to be a feed-forward neural network. 
+Typically, $\ell(\cdot)$ can be based on $\ell_1$, $\ell_2$, perceptual~\cite{johnson2016perceptual}, and LPIPS~\cite{zhang2018unreasonable} metrics.
+This is usually a non-convex problem due to the non-convexity of $G(\z)$, and GAN inversion methods focus on reconstructing the image content.
+
+\subsection{Trained GAN Models and Datasets}
+\label{sec:model_data}
+Deep generative models such as GANs~\cite{goodfellow2014generative} have been used to model natural image distributions and synthesize photo-realistic images. Recent advances in GANs such as DCGAN~\cite{radford2016dcgan}, WGAN~\cite{gulrajani2017improved}, PGGAN~\cite{karras2017progressive}, BigGAN~\cite{brock2018large}, StyleGAN~\cite{karras2019style} and StyleGAN2~\cite{karras2020analyzing} have developed better architectures, losses and training schemes. These models are trained on diverse datasets, including faces (CelebA-HQ~\cite{karras2017progressive}, FFHQ~\cite{karras2019style,karras2020analyzing}, AnimeFaces~\cite{jin2017towards} and AnimalFace~\cite{liu2019funit}), scenes (LSUN~\cite{yu2015lsun}), and objects (LSUN~\cite{yu2015lsun} and ImageNet~\cite{russakovsky2015imagenet}).
+
+\subsubsection{GAN Models} 
+\label{sec:gan models}
+
+\noindent\textbf{DCGAN}~\cite{radford2016dcgan} uses convolutions in the discriminator and fractional-strided convolutions in the generator. \par
+
+\vspace{1mm}
+\noindent\textbf{WGAN}~\cite{gulrajani2017improved} minimizes the Wasserstein distance between the generated and real data distributions, which offers more model stability and makes the training process easier.\par
+
+\vspace{1mm}
+\noindent\textbf{PGGAN}~\cite{karras2017progressive}, also denoted as ProGAN or Progressive GAN, uses a growing strategy for the training process. 
+The key idea is to start with a low resolution for both the generator and the discriminator, and then add new layers that model increasingly fine-grained details as the training progresses. 
+This improves both the training speed and the stabilization, thereby facilitating image synthesis at higher resolution, \eg, CelebA images at $1024 \times 1024$ pixels. \par
+
+\vspace{1mm}
+\noindent\textbf{BigGAN}~\cite{brock2018large} generates high-resolution and high-quality images, with modifications on scaling-up, architectural changes and orthogonal regularization to improve scalability, robustness and stability of large-scale GANs.\par
+
+\vspace{1mm}
+\noindent\textbf{StyleGAN}~\cite{karras2019style} implicitly learns hierarchical latent styles for image generation. 
+This model manipulates per-channel mean and variance to control the style of an image~\cite{huang2017adain} effectively.
+The StyleGAN generator takes per-block incorporation of style vectors (defined by a mapping network) and stochastic variation (provided by the noise layers) as inputs, instead of samples from the latent space, to generate a synthetic image. 
+This offers control over the style of generated images at different levels of detail.
+The StyleGAN2 model~\cite{karras2020analyzing} further improves the image quality by proposing weight demodulation, path length regularization, redesigning generator, and removing progressive growing. 
+The StyleGAN-based architectures have been applied to numerous applications~\cite{gabbay2019style,zhu2020sean,zhu2020semantically}.\par
+
+\subsubsection{Datasets}
+\label{sec:datasets}
+
+\vspace{1mm}
+\noindent\textbf{ImageNet}~\cite{russakovsky2015imagenet} is a large-scale hand-annotated dataset for visual object recognition research, containing more than 14 million images with more than 20,000 categories.\par
+
+\vspace{1mm}
+\noindent\textbf{CelebA}~\cite{liu2015faceattributes} is a large-scale face attributes dataset consisting of 200K celebrity images with 40 attribute annotations each. CelebA, together with its succeeding CelebA-HQ~\cite{karras2017progressive}, CelebAMask-HQ~\cite{CelebAMask-HQ}, and CelebA-Spoof~\cite{CelebA-Spoof}, are widely used in face image generation and manipulation.\par
+
+\vspace{1mm}
+\noindent\textbf{Flickr-Faces-HQ} (FFHQ)~\cite{karras2019style,karras2020analyzing} is a high-quality image dataset of human faces crawled from Flickr, which consists of 70,000 high-quality human face images of $1024 \times 1024$ pixels and contains considerable variation in terms of age, ethnicity, and image background.\par
+
+\vspace{1mm}
+\noindent\textbf{LSUN}~\cite{yu2015lsun} contains around one million labeled images for each of 10 scene categories (\eg, bedroom, church, or tower) and 20 object classes (\eg, bird, cat, or bus).
+The church and bedroom scene images, and car and bird object images are commonly used in the GAN inversion methods.\par
+
+Besides, some GAN inversion studies also use other datasets~\cite{lecun1998mnist,xiao2017fashion,krizhevsky2009learning,chen2014cross,yu2017jittor,xia2020tedigan} in their experiments, such as \textbf{DeepFashion}~\cite{liu2016fashion, liu2016deepfashion, Ge2019DeepFashion2}, \textbf{AnimeFaces}~\cite{jin2017towards}, and \textbf{StreetScapes}~\cite{naik2014streetscore}.
+
+\subsection{Evaluation Metrics}
+\label{sec:metrics}
+
+Image synthesis based on GANs is usually evaluated in terms of photorealism, diversity, interpretability, and disentanglability. 
+Photorealism is usually measured by structural similarity (PSNR and SSIM) and perceptual quality (IQA methods). 
+Diversity is especially crucial to GAN generation methods; the most widely used metrics are IS, FID and LPIPS; recent studies also use SWD.
+Interpretability and disentanglability are the most relative metrics in the GAN inversion task. 
+In the literature, some methods~\cite{nitzan2020harness} use Cosine or Euclidean distance to evaluate different attributes between input and output while others~\cite{voynov2020latent} use the classification accuracy for assessment.
+
+\subsubsection{Image Quality Assessment}
+\label{sec:iqa}
+
+\noindent\textbf{Mean Opinion Score} (MOS) and \textbf{Difference Mean Opinion Score} (DMOS) have been used for subjective image quality assessment, where human raters are asked to assign perceptual quality scores to images.
+Typically, the scores are from $1$ (bad) to $5$ (good), and the final MOS is calculated as the arithmetic mean over all ratings.
+However, there are drawbacks with this metric, \eg, non-linearly perceived scale, bias and variance of rating criteria.
+
+
+
+\vspace{1mm}
+\noindent\textbf{Peak Signal-to-Noise Ratio} (PSNR) is one of the most widely-used criteria to measure the quality of reconstruction.
+The PSNR between the ground truth image $I$ and the reconstruction $\hat{I}$ is defined by the maximum possible pixel value of the image (denoted as $L$) and the mean squared error (MSE) between image:
+\begin{align}
+{\rm PSNR} &= 10 \cdot \log_{10} (\frac {L^2} {\frac{1}{N} \sum_{i=1}^{N} (I(i) - \hat{I}(i))^2}),
+\label{eqn:mse}
+\end{align}
+where $L$ equals to $2^{n}-1$ if represented using linear pulse-code modulation with $n$ bits, \eg, $255$ in general cases using 8-bit representations.
+
+\vspace{1mm}
+\noindent\textbf{Structural Similarity} (SSIM)~\cite{TIP2004ImageWang} measures the structural similarity between images based on independent comparisons in terms of luminance, contrast, and structures.
+For two images $I$ and $\hat{I}$ with $N$ pixels, the SSIM is given by
+\begin{equation}
+\label{eqn:ssim}
+{\rm SSIM}(I, \hat{I}) = [\mathcal{C}_l(I, \hat{I})]^\alpha
+                         [\mathcal{C}_c(I, \hat{I})]^\beta
+                         [\mathcal{C}_s(I, \hat{I})]^\gamma,
+\end{equation}
+where $\alpha$, $\beta$, $\gamma$ are control parameters for adjusting the relative importance. 
+The details of these terms can be found in~\cite{TIP2004ImageWang}.
+
+
+
+
+
+
+\subsubsection{Learning-based Perceptual Quality}
+\noindent\textbf{Inception Score} (IS)~\cite{salimans2016improved} is a widely-used metric to measure the quality and diversity of images generated from GAN models. It calculates the statistics of the Inception-v3 Network~\cite{szegedy2016rethinking} pretrained on the ImageNet~\cite{deng2009imagenet} when applied to generated images:
+\begin{equation}
+\mathrm{IS} = \exp{\big (\E_{x \sim p_g} D_{KL} (p(y|x) \;\|\; p(y))\big)},
+\end{equation}
+where $x \sim p_g$ indicates that $x$ is an image sampled from $p_g$, $D_{KL}(p\|q)$ is the KL-divergence between the distributions $p$ and $q$, $p(y|x)$ is the conditional class distribution, and $p(y) = \int_x p(y|x)p_g(x)$ is the marginal class distribution.\par
+
+\vspace{1mm}
+\noindent\textbf{Fr$\acute{e}$chet Inception Distance}~\cite{heusel2017gans} (FID) is defined using the Fr$\acute{e}$chet distance between two multivariate Gaussians:
+\begin{equation}
+\mathrm{FID}=\|\mu_{r}-\mu_{g}\|^{2}+\operatorname{Tr}(\Sigma_{r}+\Sigma_{g}-2(\Sigma_{r} \Sigma_{g})^{\frac{1}{2}}),
+\end{equation}
+where $X_{r} \sim \mathcal{N}(\mu_{r}, \Sigma_{r})$ and $X_{g} \sim \mathcal{N}(\mu_{g}, \Sigma_{g})$ are the 2048-dimensional activations of the Inception-v3~\cite{szegedy2016rethinking} pool3 layer for real and generated samples, respectively.
+The lowest FID means the most perceptual results.\par
+
+\vspace{1mm}
+\noindent\textbf{Fr$\acute{e}$chet Segmentation Distance} (FSD)~\cite{bau2019seeing} is an interpretable counterpart to the FID metric:
+\begin{equation}
+\mathrm{FSD} = \|\mu_{g}-\mu_{t}\|^{2}+\operatorname{Tr}(\Sigma_{g}+\Sigma_{t}-2(\Sigma_{g} \Sigma_{t})^{\frac{1}{2}}),
+\end{equation}
+where $\mu_{t}$ is the mean pixel count for each object class over a sample of training images, and $\Sigma_{t}$ is the covariance.\par
+
+\vspace{1mm}
+\noindent\textbf{Sliced Wasserstein Discrepancy} (SWD)~\cite{rabin2011wasserstein} is designed to capture the dissimilarity between the outputs of task-specific classifiers and can be obtained by computing 1D Wasserstein distances of the projected point clouds:
+\begin{equation}
+\tilde{W}(X, Y)^{2}=\int_{\theta \in \Omega} W\left(X_{\theta}, Y_{\theta}\right)^{2} \mathrm{~d} \theta
+\end{equation}
+where $X_{\theta}=\left\{\left\langle X_{i}, \theta\right\rangle\right\}_{i \in I} \subset \R$ and $\Omega=\left\{\theta \in \R^{d} \backslash\|\theta\|=1\right\}$ is the unit sphere. 
+It provides a geometrically meaningful guidance to detect target samples that are far from the support of the source and enables efficient distribution alignment in an end-to-end trainable fashion.\par
+
+\vspace{1mm}
+\noindent\textbf{Learned Perceptual Image Patch Similarity} (LPIPS)~\cite{zhang2018unreasonable} can measure image perceptual quality while reducing manual intervention. 
+It is computed between two patches using the cosine distance in the channel dimension and average across spatial dimensions and given convolutional layers of different networks.
+To obtain the distance between reference and distorted patches ${x,x_0}$ with network $\mathcal{F}$, it first computes deep embeddings for layer $l$, denoted as $\hat{y}^l, \hat{y}_0^l \in \R^{H_l\times W_l\times C_l}$, normalizes the activations in the channel dimension, scales each channel by vector $w^l \in \R^{C_l}$ and measures the $\ell_2$ distance (using $w_l=1, \forall l$, which is equivalent to computing the cosine distance):
+\begin{equation}
+d(x,x_0) = \sum_l \dfrac{1}{H_l W_l} \sum_{h,w} || w_l \odot ( \hat{y}_{hw}^l - \hat{y}_{0hw}^l ) ||_2^2.
+\label{eqn:dist}
+\end{equation}\par
+
+\vspace{1mm}
+\noindent\textbf{Perceptual Path Length} (PPL)~\cite{karras2019style} measures the difference of interpolations between two inputs and is calculated by the pairwise image distance between the shifted image and the synthesized image by using the VGG16~\cite{simonyan2014very} embedding. 
+To be specific, if subdividing a latent space interpolation path into linear segments, the total perceptual length of this segmented path can be defined as the sum of perceptual differences over each segment.
+PPL in latent space $\mathcal{Z}$ is 
+\begin{equation}
+l_{\mathcal{Z}} = \E\Big[{\displaystyle\frac{1}{\epsilon^2}}d\big(G(\mathrm{slerp}({\z}_1,{\z}_2;\,t)), G(\mathrm{slerp}({\z}_1,{\z}_2;\,t+\epsilon))\big)\Big],
+\end{equation}
+where \mbox{${\z}_1,\z_2\sim P(\z),t\sim U(0,1)$}, $\epsilon$ is a small subdivision, $G$ is the generator (\ie, $g \circ f$ for style-based networks), and $d(\cdot,\cdot)$ evaluates the perceptual distance between the resulting images. 
+PPL in $\mathcal{W}$ is carried out in a similar way:
+\begin{equation}
+\begin{aligned}
+l_{\mathcal{Z}} = \E\Big[{\displaystyle\frac{1}{\epsilon^2}}d\big(&g(\mathrm{lerp}(f(\z_1),f(\z_2);\,t)), \\
+&g(\mathrm{lerp}(f(\z_1),f(\z_2);\,t+\epsilon))\big)\Big].
+\end{aligned}
+\end{equation}
+Typically, $\mathrm{slerp}(\cdot)$ in $\mathcal{Z}$ denotes spherical interpolation~\cite{shoemake1985animating}, which is the most appropriate way of interpolating in the normalized input latent space~\cite{white2016sampling}.
+The linear interpolation $\mathrm{lerp}(\cdot)$ is used in $\mathcal{W}$ since vectors in $\mathcal{W}$ are not normalized in any fashion.
+
+\subsubsection{Inversion Accuracy}
+\noindent\textbf{Classification Accuracy.}
+Voynov~\etal~\cite{voynov2020latent} propose the \textbf{Reconstructor Classification Accuracy} (RCA) to measure the model interpretability by predicting the direction in the latent space that a given image transformation is generated. 
+The reconstructor’s classification solves a multi-class classification problem and high RCA values imply that directions are easy to distinguish from each other, \ie, corresponding image transformations do not ``interfere'' or influence different factors of variations.
+Abdal~\etal~\cite{abdal2020styleflow} use the \textbf{Face Identity} to evaluate the quality of the edits and quantify the identity preserving property of the edits. 
+A face classifier model~\cite{Geitgey2020Fr} is used to obtain the embeddings of the images, which can be compared (before and after the edits), \ie, $i_1$ and $i_2$, and then calculate the Euclidean distance and the cosine similarity between the embeddings.\par
+
+\vspace{1mm}
+\noindent\textbf{Reconstruction Distance.}
+Nitzan~\etal~\cite{nitzan2020harness} utilize the cosine similarity metric to compare the accuracy of expression preservation, which is calculated as the Euclidean distance between 2D landmarks of $I_{attr}$ and $I_{out}$~\cite{dlib2009}. In contrast, the pose preservation is calculated as the Euclidean distance between Euler angles of $I_{attr}$ and $I_{out}$.
+Abdal~\etal~\cite{abdal2020styleflow} develop the \textbf{Edit Consistency Score} to measure the consistency across edited images based on the assumption that different permutations of edits should lead to the same attributes when classified with an attribute classifier.
+For instance, the pose attribute obtained after editing expression and pose and the pose attribute obtained after editing the same pose and lighting are expected to be the same, as constrained by the proposed score $|\mathcal{A}_p(E_p(E_e(I))-\mathcal{A}_p(E_l(E_p(I))|$, where $E_x$ denotes conditional edit along attribute specification $x$ and $\mathcal{A}_p$ denotes the pose attribute vector regressed by the attribute classifier.

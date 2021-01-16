@@ -1,0 +1,76 @@
+\section{Latent Space of GANs}
+\label{sec:feature}
+Before introducing GAN inversion methods, we first review interesting features of latent space, \eg, $\mathcal{W}$ and $\mathcal{Z}$ spaces for StyleGAN~\cite{karras2019style}.
+We discuss what GAN models can learn in terms of interpretability, disentanglability, and invertibility.
+
+
+\subsection{$\mathcal{Z}$ space and $\mathcal{W}$ space}
+\label{sec:space}
+
+The generative model in the GAN architecture learns to map values sampled from a simple distribution, \eg, normal or uniform distribution, to generated images. 
+These values, sampled \emph{directly} from the distribution, form a structure typically called latent $\mathcal{Z}$ space, and these values are latent codes or latent representations, denoted by $\z \in \mathcal{Z}$. 
+Most latent spaces of GANs can be described by the $\mathcal{Z}$ space, including DCGAN~\cite{radford2016dcgan}, PGGAN~\cite{karras2017progressive} and BigGAN~\cite{brock2018large}.
+As discussed in Section~\ref{sec:gan models}, recent work~\cite{karras2019style} further converts native $\z$ to the mapped style vectors $\w$ by a non-linear mapping network $f$ implemented with an $8$-layer multilayer perceptron (MLP), which forms another intermediate latent space referred as $\mathcal{W}$ space. 
+Examples include the $\mathcal{W}$ space for the StyleGAN~\cite{karras2019style}, and the $\mathcal{W}^{+}$ space for the StyleGAN2~\cite{karras2020analyzing}.
+
+
+Due to the mapping network and affine transformations, the $\mathcal{W}$ space of StyleGAN contains more untangled features than $\mathcal{Z}$ space. 
+The $\mathcal{W}$ space alleviates entanglement~\cite{karras2019style} such that images can be easily generated. 
+Other studies also analyze the separability and semantics of both $\mathcal{W}$ and $\mathcal{Z}$ spaces.
+For example, Shen~\etal~\cite{shen2020interpreting} illustrate that the models using the $\mathcal{W}$ space perform better in terms of separability and representation than those based on the $\mathcal{Z}$ space.
+The generator $G$ of the StyleGAN method tends to learn semantic information based on the $\mathcal{W}$ space, and performs better than the one using the $\mathcal{Z}$ space.
+For semantics, they evaluate classification accuracy on their latent separation boundaries with respect to different attributes.
+The StyleGAN with the $\mathcal{W}$ space achieves higher accuracy than the PGGAN with the $\mathcal{Z}$ space.  
+The constraints of the $\mathcal{Z}$ space subject to normal distribution limit its representative capacity for the semantic attributes since the assumption may not hold. 
+To tackle spatial entanglement caused by the intrinsic complexity of style-based generators~\cite{karras2019style} and the spatial invariance of AdaIN normalization~\cite{huang2017adain}, very recent methods~\cite{liu2020style,wu2020stylespace} further propose the $\mathcal{S}$ space to achieve spatial disentanglement in the spatial dimension instead of at the semantic level. 
+By directly intervening the style code $s \in \mathcal{S}$, both methods~\cite{liu2020style,wu2020stylespace} can achieve fine-grained controls on local translations.
+
+\subsection{Interpretability}
+Numerous methods have been developed to interpret hidden feature vectors or individual neurons of deep models based on three groups of approaches: network modification, feature visualization, and vector arithmetic.
+The first group of approaches focuses on modifying network architectures or losses for training to analyze how the models perform. 
+Tao~\etal~\cite{Tao18attngan} and Li~\etal~\cite{li2019control,li2020manigan} utilize attention mechanisms to learn image-text matching by correlating fine-grained word-level information with the intermediate feature maps, which enhances the detailed attribute modification guided by natural language descriptions.
+Xia~\etal~\cite{xia2020gaze} introduce a controller with several branches that separately edit head pose, gaze direction and other secondary facial attributes for gaze redirection and interpolation.
+
+Existing methods mainly focus on the second group of approaches that uses feature visualization to interpret model performance. 
+Nguyen~\etal~\cite{nguyen2016synthesizing} optimize over input codes of a generator network that was trained to reconstruct images from hidden layers. 
+Recently, Daras~\etal~\cite{daras2020your} introduce two-dimensional local attention mechanisms for generative models and show that the newly introduced attention heads indeed capture interesting aspects of the real image by visualizing the attention maps.
+The third group of approaches utilizes the vector arithmetic property. 
+Radford~\etal~\cite{radford2016dcgan} demonstrate a rich linear structure of trained GANs, indicating that algebraic operations in the latent space can lead to semantically meaningful manipulation in the image space. 
+Numerous approaches have been developed to synthesize different results by varying the latent codes. 
+Subsequent studies~\cite{bau2019inverting,shen2020interpreting,zhu2020indomain} further demonstrate that the latent space of GANs encodes rich hierarchical semantic information.
+Such vector arithmetic property is often realized by moving the latent code towards specific directions as $\z^{\prime}=\z+\alpha \n$, where $\n \in \R^{d}$ denotes the direction corresponding to a particular attribute and $\alpha$ is the step.
+
+\subsection{Disentanglability}
+\label{sec:disentanglability}
+
+As there is no precise definition, we define disentanglability as the property that latent vector $\z$ can be separated into diverse and independent parts of representation $\mathbf{z_k}$. 
+In addition, \textit{diversity} means that each factor $\mathbf{z_k}$ represents a specific interpretable concept, and \textit{independence} indicates that it would be possible to analyze and modify different factors $\mathbf{z_k}$ independently of each other.
+This implies a factorization of their joint density $p(\mathbf{\tilde{z}})=\prod_{k=0}^{K} p(\mathbf{{z}_{k}})$.
+The latent features of well-disentangled features of different classes can be visualized~\cite{xia2020domain,li2020latent} by using the t-SNE~\cite{maaten2008visualizing} method. 
+The disentangled representation learning gives an exploitable structure and makes us able to change only some properties of the underlying state,~\eg, hair color of a facial image, while leaving all other properties invariant. Many recent methods on disentanglement aim to learn an interpretable and transferable representation with explicit constraints in training. 
+For example, Liu~\etal~\cite{liu2018unified} propose a unified model that learns disentangled representation for describing and manipulating data across multiple domains, and 
+Lu~\etal~\cite{lu2019unsupervised} disentangle the content and blur features from blurred images for image restoration. 
+
+Some unconditional image generation models~\cite{karras2019style,karras2020analyzing} demonstrate well-disentanglement properties. 
+Rather than learning disentangled latent space with explicit constraints, these methods introduce a non-linear mapping network to the generator: $f:\mathcal{Z} \to \mathcal{W}$. 
+For example, the intermediate latent space $\mathcal{W}$ of StyleGAN~\cite{karras2019style} is induced from a learned piecewise continuous mapping. It yields less entangled representations in an unsupervised setting, \ie, when the factors of variation are not known in advance.
+In subsequent sections, we will show that this well-disentangled latent space offers feasible inversion and achieves better results.
+
+\subsection{Invertibility}
+\label{sec:invertibility}
+As discussed in Section~\ref{sec:space}, Radford~\etal~\cite{radford2016dcgan} present the vector arithmetic property of latent representation $\z$.
+Creswell~\etal~\cite{creswell2018inverting} propose the concept of inversion together with their inverting algorithm. 
+Esser~\etal~\cite{esser2020invertible} show that sampling from the simple distribution, \eg, a Gaussian distribution, benefits the generative models trained for image generation. 
+Due to the convexity of the Gaussian density, linear operations between representations are meaningful, and linear interpolations enable traversing along the latent space of GANs. 
+ 
+Although the above-mentioned methods perform well empirically, less success has been made in theoretical understanding of the model invertibility. 
+Recent methods aim to address this issue from different theoretical perspectives, such as compressed sensing~\cite{bora2017sensing, gilbert2017invert, ma2018invertibility} and sparse representation~\cite{aberdam2020invert}.
+For example, Hand~\etal~\cite{hand2020global} establish that a fully connected generative network with weights following Gaussian distribution can be inverted given only compressive linear observations of its last layer.
+Gilbert~\etal~\cite{gilbert2017invert} study a $1$-layer network with a special activation function (concatenated ReLU~\cite{shang2016understanding}, which is essentially linear) and a strong $k$-sparsity assumption on the latent code.
+Ma~\etal~\cite{ma2018invertibility} show that the expansive network consisting of two layers of transposed convolutions followed by ReLU~\cite{nair2010rectified} activation functions is invertible.
+Aberdam~\etal~\cite{aberdam2020invert} provide invertibility and uniqueness guarantees for general non-statistical weight matrices. 
+In~\cite{aberdam2020invert}, theoretical conditions are derived from the sparse representation theory. 
+It provides the invertibility of deep generative models by ensuring a unique solution for the inversion problem defined in~\eqref{eqn:def}. 
+One corollary is that the number of nonzero elements should expand by a factor of at least $2$ between layers to ensure a unique global minimum of the inverse problem, which effectively predicts whether the generative process is invertible or not.
+
+\tabfeature

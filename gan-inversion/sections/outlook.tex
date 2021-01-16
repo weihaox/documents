@@ -1,0 +1,55 @@
+\section{Challenges and Future Directions}
+\label{sec:outlook}
+
+\noindent\textbf{Theoretical Understanding.} 
+Despite its success in applications, there still lacks of theoretical understanding of GAN inversion.
+GAN inversion can be seen as a nonlinear equivalent to the dimensionality reduction commonly performed by PCA as proposed by~\cite{eric2020GANSpace}. 
+Nonlinear structure in data can be represented compactly, and the induced geometry necessitates the use of nonlinear statistical tools~\cite{kuhnel2018latent}, Riemanian manifold, and locally linear methods. 
+Well established theories in related areas can facilitate better theoretical understanding of GAN inversion in terms of the weights (parameters) or latent space of neural networks from different perspectives.
+For example, we can formulate GAN inversion as decomposing signals into components (matrix factorization problems) and use non-linear Factor Analysis (FA)~\cite{harman1976modern}, Independent Component Analysis (ICA)~\cite{davies2007source}, Latent Dirichlet Allocation (LDA)~\cite{hoffman2010online,blei2003latent} to decompose the network weight and to find interpretable directions of latent space. 
+
+\vspace{1mm}
+\noindent\textbf{Inversion Type.} 
+Besides GANs inversion, some methods have been developed to invert generative models based on the encoder-decoder architecture.
+The IIN method~\cite{esser2020invertible} learns invertible disentangled interpretations of variational auto-encoders (VAE)~\cite{kingma2013auto}. 
+Zhu~\etal~\cite{zhu2019lia} develop the latently invertible auto-encoder method to learn a disentangled representation of face images, from which contents can be edited based on attributes. 
+The LaDDer approach~\cite{Lin2020LaDDer} uses a meta-embedding based on generative prior (including an additive VAE and a mixture of hyper prior) to project the latent space of a well-trained VAE to a lower dimensional latent space, where multiple VAE models are used to form a hierarchical representation.
+It is beneficial to explore how to combine GAN inversion and encoder-decoder inversion, so that we can exploit the best of both worlds.
+
+\vspace{1mm}
+\noindent\textbf{Domain Generalization.}
+As discussed in Section~\ref{sec:applications}, GAN inversion has been proved to be effective in cross-domain applications such as style transfer and image restoration, which indicates that the pretrained models have learned domain-agnostic features. 
+The images from different domains can be inverted into the same latent space from which effective metrics can be derived. 
+Multi-task methods have been developed to collaboratively exploit visual cues, such as image restoration and image segmentation~\cite{xia2019adverse}, or semantic segmentation and depth estimation~\cite{Nekrasov2019joint,zhan2019joint}, within the GAN framework.
+It is challenging but worthwhile to develop effective and consistent methods to invert the intermediate shared representations, so that we can tackle different vision tasks under a unified framework. 
+
+\vspace{1mm}
+\noindent\textbf{Scene Representation.}
+GAN inversion methods~\cite{abdal2020styleflow,voynov2020latent} can manipulate geometry (\eg, zoom, shift, and rotate), texture (\eg, background blur and sharpness) and color (\eg, lighting and saturation).
+This ability indicates the GAN models pretrained on large-scale datasets have learned some physical information from real-world scenes.
+The implicit neural representation learning~\cite{chen2019learning,tucker2020single,rajeswar2020pix2shape}, a recent trend in 3D community, is to learn implicit functions for 3D shapes or scenes and enables control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
+It has been used for volumetric performance capture~\cite{chen2020free,liu2020neural,lombardi2019neural}, novel-view synthesis~\cite{martin2020nerf,martin2020nerf}, face shape generation~\cite{wu2020unsupervised}, object modeling~\cite{nguyen2020blockgan,kato2019self}, and human reconstruction~\cite{zheng2020pamir,bhatnagar2020combining,he2020geo,saito2020pifuhd}.
+The recent StyleRig method~\cite{tewari2020stylerig} is trained based on the semantic parameters of 3D Morphable Model (3DMM)~\cite{egger20203d} and the input of StyleGAN~\cite{karras2019style}.
+It opens an interesting research direction to invert such implicit representations of a pretrained GAN for 3D reconstruction, \eg, using StyleGAN~\cite{karras2019style} for human face modeling or time-lapse video generation.
+
+\vspace{1mm}
+\noindent\textbf{Precise Control.} 
+GAN inversion can be used to find directions for image manipulation, while preserving the identity and other attributes~\cite{abdal2020styleflow,shen2020interpreting}.
+However, there is also some tuning required to achieve the desired granularity of precise fine-grained control, \eg, gaze redirection~\cite{ganin2016deepwarp,wood2018gaze,he2019gaze,xia2020gaze}, relighting~\cite{zhou2019deep,sun2019single,zhang2020portrait} and continuous view control~\cite{chen2019monocular}.
+These tasks require fine-grained control, \ie, $1^{\circ}$ of camera view or gaze direction. 
+Current GAN inversion methods are incapable of tackling the situation, which indicates that more efforts need to be made to accomplish these tasks with ease, such as creating more disentangled latent spaces and discovering more interpretable directions.
+
+\vspace{1mm}
+\noindent\textbf{Multimodal Inversion.}
+The existing GAN inversion methods are primarily about images.
+However, recent advances in generative models are beyond the image domain, such as the GPT-3 language model~\cite{brown2020gpt3} and WaveNet for audio synthesis~\cite{oord2016wavenet}. 
+Trained on diverse large-scale datasets, these sophisticated deep neural networks have been proven to be capable of representing an extensive range of different contents, styles, sentiments, and topics.
+Applying GAN inversion techniques on these different modalities could provide a novel perspective for tasks like language style transfer. 
+Furthermore, there are also GAN models for multi-modality generation or translation~\cite{li2019control,jia2018speaker,prajwal2020speech}. 
+It can be substantially rewarding to invert such GAN models as multi-modal representations for creating novel kinds of content, behavior, and interaction.
+
+\vspace{1mm}
+\noindent\textbf{Evaluation Metrics.}
+The perceptual quality metrics, which can better evaluate photo-realistic and diversity images or consistent identity to the original image, remain to be explored.
+Furthermore, the evaluations mostly concentrate on photo-realism, or judge if the distribution of generated images is consistent with the real images with regard to classification~\cite{bau2019seeing} or segmentation~\cite{voynov2020latent} accuracy using models trained for real images. 
+However, there is still a lack of effective assessment tools to evaluate the difference between directions of the predicted results and the expected ones, or measuring the inverted latent codes more directly.

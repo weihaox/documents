@@ -1,0 +1,53 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+%compsoc, transmag, comsoc; conference,journal
+% *** CITATION PACKAGES ***
+%
+\ifCLASSOPTIONcompsoc
+  % The IEEE Computer Society needs nocompress option
+  % requires cite.sty v4.0 or later (November 2003)
+  \usepackage[nocompress]{cite}
+\else
+  % normal IEEE
+  \usepackage{cite}
+\fi
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx} 
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage[norelsize, linesnumbered, ruled, lined, boxed, commentsnumbered]{algorithm2e}
+
+\usepackage[pagebackref=true,breaklinks=true,bookmarks=false,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{pifont}
+\input{commands/figures}
+\input{commands/newcommand}
+
+\begin{document}
+\input{sections/authors}
+\input{sections/abstract}
+
+% \tableofcontents
+
+\maketitle
+\IEEEpeerreviewmaketitle
+
+\input{sections/introduction}
+\input{sections/preliminaries}
+\input{sections/space}
+\input{sections/methods}
+\input{sections/applications}
+\input{sections/relevant}
+\input{sections/outlook}
+\input{sections/conclusion}
+
+% Can use something like this to put references on a page by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+ \newpage
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEfull}
+
+\end{document}

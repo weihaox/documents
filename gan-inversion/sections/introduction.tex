@@ -1,0 +1,27 @@
+\section{Introduction}
+\label{sec:introduction}
+\IEEEPARstart{T}{he} generative adversarial network (GAN) framework is a deep learning architecture that estimates how data points are generated in a probabilistic framework~\cite{goodfellow2014generative,goodfellow2016deep}.
+It consists of two interacting neural networks: a generator $G$ and a discriminator $D$, which are trained jointly through an adversarial process.
+The objective of $G$ is to synthesize fake data that resemble real data, while the objective of $D$ is to distinguish between real and fake data. 
+Through an adversarial training process, the generator $G$ can generate fake data that match real data distribution. 
+In recent years, GANs have been applied to numerous tasks
+ranging from image translation~\cite{mao2019mode,lee2018drit,huang2018munit}, image manipulation~\cite{wang2018high,xia2020gaze,li2020manigan} to image restoration~\cite{zhang2017beyond,tsai2017deep,xu2017text,ma2017learning,li2018flow}.
+
+Numerous GAN models, \eg, PGGAN~\cite{karras2017progressive}, BigGAN~\cite{brock2018large} and StyleGAN~\cite{karras2019style,karras2020analyzing}, have been developed to synthesize images with high quality and diversity from random noise input. 
+Recent studies have shown that GANs effectively encode rich semantic information in the intermediate features~\cite{bau2019semantic} and latent space~\cite{goetschalckx2019ganalyze,jahanian2020steerability, shen2020interpreting}, as a result of image generation.
+These methods can synthesize images with various attributes, such as aging, expression, and light direction, by varying the latent code. 
+However, such manipulation in the latent space is only applicable to the images generated from GANs rather than any given real images, due to the lack of inference functionality or encoder in GANs. 
+
+\figoverview
+
+In contrast, GAN inversion aims to invert a given image back into the latent space of a pretrained GAN model. The image then can be faithfully reconstructed from the inverted code by the generator. 
+Since GAN inversion plays an essential role of bridging real and fake image domains, significant advances have been made~\cite{zhu2016generative,abdal2019image2stylegan,abdal2020image2stylegan2,bau2019seeing,karras2020analyzing,huh2020transforming,pan2020exploiting,jahanian2020steerability,shen2020interpreting}. 
+GAN inversion enables the controllable directions found in latent spaces of the existing trained GANs to be applicable to real image editing, without requiring ad-hoc supervision or expensive optimization. 
+As shown in Figure~\ref{fig:overview}, after the real image is inverted into the latent space, we can vary its code along one specific direction to edit the corresponding attribute of the image. 
+As a rapidly growing field that combines the generative adversarial network with interpretable machine learning techniques, GAN inversion not only provides an alternative flexible image editing framework but also helps reveal the inner mechanism of deep generative models. 
+
+In this paper, we present a comprehensive survey of GAN inversion methods with an emphasis on algorithms and applications. 
+To the best of our knowledge, this work is the first survey on the rapidly growing GAN inversion with the following contributions. 
+First, we provide a comprehensive and systematic review, as well as an insightful analysis, of all aspects of GAN inversion hierarchically and structurally.
+Second, we provide a comparative summary of the properties and performance for GAN inversion methods. 
+Third, we discuss the challenges and open issues and identify the trends for future research.

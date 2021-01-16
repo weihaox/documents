@@ -1,0 +1,65 @@
+\section{Relevant Problems}
+\label{sec:related}
+
+\subsection{Deep Generative Models}
+\label{sec:dgm}
+
+Aside from GANs, numerous generative models have been developed including Deep Boltzmann Machines (DBMs)~\cite{salakhutdinov2009deep,salakhutdinov2010efficient,montavon2012deep,srivastava2012multimodal}, Variational Autoencoders (VAEs)~\cite{kingma2013auto,higgins2017betavae}, Deep Autoregressive Models (DARs)~\cite{mathieu2015masked,vaswani2017attention,oord2016pixel,oord2016wavenet,salimans2017pixelcnn++}, and Normalizing Flow Models (NFMs)~\cite{dinh2016density,dinh2014nice,kingma2018glow,lugmayr2020srflow}.
+A DBM is a binary Markov Random Field~(MRF) with multiple layers of hidden random variables. 
+DBMs can learn complex and abstract representations by first training on limited, labeled data and then fine-tuning on a large-scale unlabeled dataset. 
+GANs, VAEs, DARs and NFMs are latent variable models which represent high-dimensional data $x$ using lower-dimensional latent variables $\mathbf{z}$. 
+Different from previous autoencoder models~\cite{rifai2011contractive,vincent2008extracting} mapping the input $x$ into a fixed vector, VAEs~\cite{kingma2013auto} map $x$ into a latent vector $\mathbf{z}$ with prior distribution $p_\theta(\mathbf{z})$, parameterized by $\theta$. 
+The optimal parameter $\theta^{*}$ would be $\theta^{*} = \arg\max_\theta \sum_{i=1}^n \log p_\theta(x^{(i)})$, which can be solved by optimizing the Kullback–Leible (KL)-divergence of the estimated posterior distribution $q_\phi (\mathbf{z}\vert x)$ (defining encoder) and the intractable real posterior $p_\theta(\mathbf{z}\vert x)$ (defining decoder $p_\theta(x\vert \mathbf{z})$), $D_\text{KL}( q_\phi(\mathbf{z}\vert x) \| p_\theta(\mathbf{z}\vert x) )$ with respect to $\phi$, by maximizing the evidence lower bound (ELBO).
+DARs~\cite{mathieu2015masked,vaswani2017attention} are feed-forward models which give predictive probability distribution $P(x_{t+1} | x_1, x_2, \cdots, x_t)$ for future values $x_{t+1}$ from past observations $x_1, x_2, \cdots, x_t$. DARs work flexibly on both continuous and discrete signals, including audio (WaveNet~\cite{oord2016wavenet}), images (PixelCNN++~\cite{salimans2017pixelcnn++}) and text (Transformer~\cite{vaswani2017attention}).
+Different from GANs and VAEs, flow-based deep generative models explicitly learn the probability density function of input $x$ by a sequence of invertible transformations: $x = \mathbf{z}_K = f_K \circ f_{K-1} \circ \dots \circ f_1 (\mathbf{z}_0)$.
+The path traversed by the random variables $\mathbf{z}_i = f_i(\mathbf{z}_{i-1})$ is the flow and the full chain formed by the successive distributions $\pi_i$ is called a normalizing flow. A transformation function $f_i$ should satisfy two requirements: efficient inversion and tractable Jacobian determinant calculation.
+Furthermore, if $f_i$ is framed as an autoregressive model, \ie, each dimension in a vector variable is conditioned on the previous dimensions like ARMA~\cite{box2011time} or ARCH~\cite{engle1982autoregressive}, this is an autoregressive flow. Classic autoregressive flow models include MAF~\cite{papamakarios2017masked} and IAF~\cite{kingma2016improved}.
+
+\subsection{Adversarial Feature Learning}
+\label{sec:afl}
+Similar to GAN inversion, Adversarial Feature Learning~(AFL, also known as BiGAN)~\cite{donahue2016adversarial,li2018domain,xie2017controllable}  or Adversarially Learned Inference~(ALI)~\cite{dumoulin2016adversarially, du2018multi, belghazi2018hierarchical} also aims to learn the inverse mapping of GAN models\footnote{ALI~\cite{dumoulin2016adversarially} and AFL~\cite{donahue2016adversarial} share the same idea but are developed by two teams independently.}. Different from GAN inversion, which interprets the latent space of a trained GAN model, AFL or ALI trains a generation network and an inference network \emph{jointly} in an adversarial manner. This kind of deep generative model also constitutes a novel approach to integrating efficient inference with the GANs framework. Unlike other deep generative models (like Variational Autoencoders (VAEs)~\cite{doersch2016vae} or Generative Latent Optimization (GLO)~\cite{bojanowski2017optimizing}), the objective function of AFL or ALI involves no explicit constraints during reconstruction. 
+Instead of a pixel-perfect reconstruction, they tend to produce believable reconstructions with flexible variations, albeit at the expense of making some mistakes in capturing exact object placement, color, style or even identity. 
+This novel unsupervised feature learning framework led to the emergence of many applications, especially cross-domain retrieval, detection and recognition since it learns invariant features.
+For example, Li~\etal~\cite{li2018domain} use adversarial autoencoder~\cite{makhzani2015aae} to learn invariant features for domain generalization. 
+Xie~\etal~\cite{xie2017controllable} propose a framework and provide theoretical analysis to learn invariant representations of data, which can be applied to multiple applications including text generation and image classification.
+Li~\etal~\cite{li2017alice} describe the non-identifiability issue of ALI and provide a unified framework for recently proposed GAN models, including CGAN~\cite{mirza2014conditional}, ALI~\cite{dumoulin2016adversarially}, AFL~\cite{donahue2016adversarial} and  CycleGAN~\cite{zhu2017toward}, from the perspective of joint distribution matching.
+Pang~\etal~\cite{pang2018reid} introduce a sketch Re-ID problem and address it by proposing a cross-domain adversarial feature learning method, which can jointly learn identity and domain invariant features.
+Kim~\etal~\cite{kim2019pedestrain} propose a novel unsupervised learning framework for cross-spectral pedestrian detection. They apply an adversarial learning scheme to intermediate features of the color and thermal images based on the assumption that images from both domains share their characteristics in a common feature space.
+Donahue~\etal~\cite{donahue2019large} propose BigBiGAN (BiGAN with BigGAN generator) for unconditional image generation by adopting the generator and discriminator architectures from the BigGAN model, which shows generative models and inference model benefit from each other.
+
+\subsection{Deep Feature Factorization}
+Similar to GAN inversion, deep feature factorization (DFF)~\cite{collins2018deep} is also able to locate semantic concepts in individual images and across image sets.  
+DFF is the application of non-negative matrix factorization (NMF)~\cite{lee2001algorithms,lin2007projected} to the ReLU feature activations of a pretrained neural network. 
+NMF has previously been shown to be a useful decomposition for multivariate data. It can be understood as factorizing a non-negative data matrix subject to different constraints like Principal Components Analysis (PCA) or Vector Quantization (VQ).
+PCA enforces a weak orthogonality constraint, resulting in a distributed representation that uses cancellations to capture global variability~\cite{wold1987principal,turk1991eigenfaces}, while VQ uses a strong winner-take-all constraint that leads to clustering the data into mutually exclusive prototypes~\cite{gersho2012vector}. 
+In contrast, NMF features are more interpretable.
+Taking face recognition for example, PCA learns eigenfaces that resemble distorted versions of the whole faces; VQ learns holistic prototypes, each being a whole face; NMF learns local feature representation corresponding to different face details.
+Many modern neural networks use the rectified linear activation function (ReLU)~\cite{nair2010rectified}, $\max (x, 0)$, due to its desirable properties for training. 
+NMF is naturally applicable for this case as ReLU results in non-negative activations.
+DFF is first proposed by Collins~\etal~\cite{collins2018deep} for concept discovery and produces state-of-the-art results on co-segmentation and co-localization tasks. The authors claim that the returned $k$ factors, where $k$ is the predefined rank of the approximation, correspond to coherent objects or object-parts.
+They further propose to use DFF to achieve content-based image retrieval and localization~\cite{collins2019dff}.
+Similar ideas are also proposed to conduct analysis of the activations of generative models. Collins~\etal~\cite{collins2020uncovering} apply spherical $k$-means clustering~\cite{buchta2012spherical} to the activation vectors that make up the activation tensor at a given layer of generative models.
+Though Ramesh~\etal~\cite{ramesh2018spectral} and Voynov~\etal~\cite{voynov2020latent} use Jacobian Decomposition to investigate the latent space of a pretrained GAN model while Härkönen~\etal~\cite{eric2020GANSpace} use PCA, both of which seem similar to the aforementioned methods~\cite{collins2018deep,collins2019dff,collins2020uncovering}, we still do not categorize the DDF family as GAN inversion methods since they have no iteration or optimization process.
+
+\subsection{Deep Image Prior}
+Image prior describes statistics of natural images. It has been widely adopted in computer vision tasks, including 
+MRF~\cite{roth2005fields,zhu1997prior,geman1984stochastic}, dark channel prior \cite{he2010single} and total variation regularizer \cite{rudin1992nonlinear}, which all model correlation among neighboring pixels via Gibbs distribution.
+There are also other deep priors developed for low-level restoration tasks like deep denoiser prior~\cite{zhang2017learning, bigdeli2017deep} and TNRD~\cite{chen2016trainable}.
+These image priors capture low-level statistics and are typically used in denoising, inpainting, and segmentation.
+Recently, deep image prior (DIP)~\cite{ulyanov2018deep} presents that image statistics implicitly captured by the structure of a randomly-initialized neural network could also be used as prior to restore or translate images.
+DIP is shown to capture a great deal of low-level image statistics prior and can perform excellent results in standard inverse problems such as denoising, super-resolution and inpainting.
+SinGAN~\cite{shaham2019singan} fine-tunes a randomly initialized GAN on patches of a single image in different scales, achieving various image manipulation or restoration effects.
+However, SinGAN requires the target image to have rich repeated patterns, for it is biased towards capturing low-level and mid-level textures.
+Despite of excellent performance in some cases, DIP and SinGAN have limited access to image statistics beyond the input image since they are trained from scratch, which restrains their applicability in tasks such as image colorization.
+Some other studies~\cite{ho2020neural,chen2020dip} propose to search for neural architectures that capture stronger image priors instead of using hand-designed architectures. Specifically,
+Ho~\etal~\cite{ho2020neural} automatically optimize the encoder-decoder structure using evolutionary search and meta-parameters of the DIP network, which serves as a content-specific prior to regularize image restoration.
+Chen~\etal~\cite{chen2020dip} search for an improved network architecture by leveraging reinforcement learning with a recurrent neural network controller.
+
+The aforementioned approaches of image prior train their networks from scratch.
+There are also some attempts that use a pretrained generative model as a source of image statistics~\cite{bau2019semantic,hussein2019image}.
+For example, 
+Lin~\etal~\cite{Lin2020LaDDer} propose LaDDer, a method for accurately modeling the prior distribution in a VAE framework.
+Bau~\etal~\cite{bau2019semantic} adopt a GAN to manipulate partial areas of an image, but the proposed method is not applicable to restoration tasks like colorization.
+Another work~\cite{hussein2019image} also use GAN prior for restoration, but is only applicable for compressed sensing and face hallucination.
+A concurrent work of multi-code GAN prior (mGANPrior)~\cite{gu2020image} also conducts image processing by solving the GAN inversion problem. They study and exploit how the priors captured in GAN contribute for versatile restoration and manipulation tasks. 
+The significant differences between GAN inversion and GAN Prior are determined by using a pretrained model or inverting images to latent space.
