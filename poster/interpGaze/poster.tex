@@ -1,0 +1,216 @@
+% This poster is based on http://www.brian-amberg.de/uni/poster/
+\documentclass[landscape,a0paper,fontscale=0.292]{baposter}
+
+\usepackage[vlined]{algorithm2e}
+\usepackage{times}
+\usepackage{calc}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{enumitem}
+\usepackage{pifont}
+\newcommand{\ncmark}{\ding{51}}
+\newcommand{\nxmark}{\ding{55}}
+
+\setlist[itemize]{leftmargin=*,nosep}
+    \setlength{\columnsep}{0.7em}
+    \setlength{\columnseprule}{0mm}
+
+\setlist[enumerate]{leftmargin=2.5em,nosep}
+    \setlength{\columnsep}{1.0em}
+    \setlength{\columnseprule}{0mm}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Save space in lists. Use this after the opening of the list
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newcommand{\compresslist}{%
+% \setlength{\itemsep}{0pt}%
+% \setlength{\itemsep}{0pt}%
+% \setlength{\parskip}{0pt}%
+% \setlength{\parsep}{0pt}%
+% }
+\renewcommand{\rmdefault}{ptm} % Arial
+\renewcommand{\sfdefault}{ptm} % Arial
+
+\newcommand{\vn}{\boldsymbol{n}}
+\newcommand{\vl}{\boldsymbol{l}}
+\newcommand{\vM}{\mathbf{M}}
+\newcommand{\vN}{\mathbf{N}}
+\newcommand{\vL}{\mathbf{L}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here starts the poster
+%%---------------------------------------------------------------------------
+%% Format it to your taste with the options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{poster}{
+    % Show grid to help with alignment
+    grid=false,
+    columns=5,
+    % Column spacing
+    colspacing=0.7em,
+    % Color style
+    headerColorOne=cyan!20!white!90!black,
+    borderColor=cyan!30!white!90!black,
+    % Format of textbox
+    textborder=faded,
+    % Format of text header
+    headerborder=open,
+    headershape=roundedright,
+    headershade=plain,
+    background=none,
+    bgColorOne=cyan!10!white,
+    headerheight=0.12\textheight
+}
+% Eye Catcher
+{
+    \includegraphics[width=0.045\linewidth]{logo/thu_logo}
+    \makebox[0.005\textwidth]{} 
+    \raisebox{0.07\height}{\includegraphics[width=0.045\linewidth]{logo/ucl_logo}}
+    \makebox[0.005\textwidth]{} 
+}
+% Title
+{
+    \sc\huge\bf Controllable Continuous Gaze Redirection
+}
+% Authors
+{
+    \vspace{0.3em} Weihao Xia$^1$ \enspace Yujiu Yang$^1$ \enspace Jing-Hao Xue$^{2}$ \enspace Wensen Feng$^3$\\[0.2em]
+    {$^1$Tsinghua Shenzhen International Graduate School, Tsinghua University \enspace $^2$Department of Statistical Science, University College London \enspace $^3$Beijing University of Chemical Technology}
+}
+% Conference logo
+{\begin{tabular}{c}
+\raisebox{-1.0\height}{\includegraphics[width=0.15\linewidth]{Poster/logo/logo.png}}
+\end{tabular}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Now define the boxes that make up the poster
+%%%---------------------------------------------------------------------------
+%%% Each box has a name and can be placed absolutely or relatively.
+%%% The only inconvenience is that you can only specify a relative position 
+%%% towards an already declared box. So if you have a box attached to the 
+%%% bottom, one to the top and a third one which should be inbetween, you 
+%%% have to specify the top and bottom boxes before you specify the middle 
+%%% box.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\bf\color{blue} Problem Definition and Contribution}{name=contribution,column=0,row=0,span=2}{
+    \textbf{\color{blue}Goal:} Given two gaze images with different attributes, our goal is to redirect the eye gaze of one person into any gaze direction depicted in the reference image or to generate con- tinuous intermediate results. 
+
+    \textbf{\color{blue}Motivations:}
+    \begin{itemize}
+        \item We present a novel framework achieving both precise gaze redirection and continuous gaze interpolation. The two different tasks can be readily controlled by altering a control vector.
+        \item We learn a well-disentangled and hierarchically-organized latent space by decoupling the related gaze attributes and equipping with the efficacy of one-shot and diversity. 
+        \item We contribute a high-quality gaze dataset, which contains a large range of gaze directions and diversity on eye shapes, glasses, ages and genders.
+    \end{itemize}  
+}
+
+\headerbox{\bf\color{blue} Problem Formulation}{name=formulation,column=0,below=contribution,span=2}{
+    \textbf{\color{blue}Image Formation Model:} Our goal is to learn a model which can achieve both {\bf precise redirection} and {\bf continuous interpolation}. 
+For an RGB image of an eye patch $x \in \mathbb{R}^{H \times W \times 3}$, we define three primary attributes, \textit{i.e.}, gaze direction $\boldsymbol{d}_g$ and head pose $\boldsymbol{d}_h$, where $\boldsymbol{d}_g = [\phi_g, \theta_g]$, $\phi_g \in \mathbb{R}$ and $\theta_g \in \mathbb{R}$ denote the target yaw and pitch angles, respectively. Given two gaze images $x_s$ and $x_t$ with different attributes, the task is to redirect the eye gaze of one person $x_s$ into any gaze direction $x_g$ depicted in the reference image of another person $x_t$, or to generate continuous intermediate results $x_g$ between $x_s$ and $x_t$ of the same person.  
+
+\textbf{\color{blue}Main Idea:}  we design a model including an encoder $\boldsymbol{E}$, a controller $\boldsymbol{\mathcal{C}}$ and a decoder $\boldsymbol{G}$. The encoder $\boldsymbol{E}$ maps images ${x}_s$ and ${x}_t$ into feature space $F_{s}=\boldsymbol{E}(x_{s})$ and  $F_{t}=\boldsymbol{E}(x_{t})$. The controller $\boldsymbol{\mathcal C}$ produces morphing results of two samples $\mathcal C(F_{s},F_{t})$. The decoder $\boldsymbol{G}$ maps the desired features back to the image space.
+}
+
+\headerbox{\bf\color{blue} Method}{name=abstract,column=0,below=formulation,span=2}{
+\textbf{\color{blue}Network Architecture:} 
+\vspace{-0.5em}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../images/overview}
+\end{center}
+\hfill
+
+\begin{minipage}[t]{0.5\linewidth}
+\textbf{\color{blue}Loss Function for Encoder and Decoder:}
+\vspace{-0.6em}
+\begin{equation*}
+\begin{aligned}
+\mathcal{L}_{\boldsymbol{G}}&=\lambda_{p}\mathcal{L}_{p}+\lambda_{\boldsymbol{G}} \mathcal{L}_{recon},\\
+\mathcal{L}_{\boldsymbol{\mathcal{D}}}&= \lambda_{GAN_{\boldsymbol{\mathcal{D}}}} \mathcal{L}_{GAN_{\boldsymbol{\mathcal{D}}}},\\
+\mathcal{L}_{\boldsymbol{E}}&= \lambda_{GAN_{\boldsymbol{E}}}\mathcal{L}_{GAN_{\boldsymbol{E}, \boldsymbol{\mathcal{C}}}} + \lambda_{{\boldsymbol{E}}} \mathcal{L}_{recon} + \lambda_{distill}\mathcal{L}_{distill},
+\end{aligned}
+\end{equation*}
+\end{minipage}
+\hfill  
+\vspace{0.5em} 
+\begin{minipage}[t]{0.48\linewidth}
+\textbf{\color{blue}Loss Function for Controller:}
+\vspace{-0.6em}
+\begin{equation*}            \mathcal{L}_{\boldsymbol{\mathcal{C}}}=\lambda_{GAN_{\boldsymbol{\mathcal{C}}}} \mathcal{L}_{GAN_{\boldsymbol{E}, \boldsymbol{\mathcal{C}}}}+\lambda_{{{\boldsymbol{\mathcal{C}}}_{isp}}} \mathcal{L}_{{\boldsymbol{\mathcal{C}}}_{isp}}+\lambda_{{\boldsymbol{\mathcal{C}}}_{t}} \mathcal{L}_{{\boldsymbol{\mathcal{C}}}_{t}}
+\end{equation*}
+\end{minipage}
+}
+
+\headerbox{\bf\color{blue}Control Mechanism }{name=controller,column=2,row=0,span=3}{
+\begin{minipage}[t]{0.5\linewidth}
+    \vspace{-0.2em}
+    \begin{center}
+       \includegraphics[width=\textwidth]{../images/control_mechanism_terse}
+    \end{center}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}
+\item For gaze redirection, the inputs are a gaze patch of a certain person as the source image and that of another person with the desired directions as the target. If we want to redirect the same source image to $(0\text{P}, 0\text{V}, -5\text{H})$ defined in the reference image, we can set $\boldsymbol{v}_2$ as $[1.0,1.0,0,0]$, which alters the target attribute while keeping others almost intact.
+\item For gaze interpolation, the inputs are two gaze patches of the same person. Given $(-15\text{P}, 0\text{V}, 15\text{H})$ as the source and $(15\text{P}, 0\text{V}, -15\text{H})$ as the target, we can set the control vector $\boldsymbol{v}_1$ as $[0.5,0.667,0,0]$ to generate a specific intermediate result $(0\text{P}, 0\text{V}, -5\text{H})$. Similarly, we can generate predictable interpolation sequences in different \textbf{orders} using different control vectors.  
+%\item We can set the strength and order of the control vector to select features of each attribute and generate the desired results.
+\item The appearance of the reference image is allowed to be dramatically different from the source.
+\end{itemize}
+\end{minipage}    
+}
+%
+\headerbox{\bf\color{blue} Experiments \& Results}{name=results,column=2,row=1,,below=controller,span=3}{
+\textbf{\color{blue}Data Collection and Comparison:} 
+\begin{itemize}
+    \item To facilitate covering the full space of gaze directions, we introduce a high-quality gaze image dataset with a large range of directions, which also benefits researchers in related areas. We collect images in the same way as Columbia Gaze dataset, which is a high-resolution, publicly available human gaze dataset collected from 56 subjects in a constrained environment.
+\end{itemize}  
+
+\begin{center}
+\begin{tabular}{cccccccc}
+\toprule
+Dataset & Real& High Res& Constrained & Annotation Type & Num. Image &Head Pose &Gaze Range\\
+\hline\hline
+CMU Multi-Pie &\ncmark&\nxmark&\ncmark &Facial landmarks&755,370 &\ncmark &Small\\
+Gaze Capture &\ncmark &\nxmark &\nxmark &2D position on screen &$\textgreater$2.5M &\nxmark &Small\\
+SynthesEyes &\nxmark &\ncmark &\nxmark &Gaze vector & 11,382 &\ncmark & Full\\
+UnityEyes &\nxmark &\ncmark &\nxmark &Gaze vector &1,000,000 &\ncmark&Full\\
+MPII Gaze &\ncmark &\nxmark &\nxmark &Gaze vector &213,659 &\ncmark &Small\\
+UT Multi-View &\ncmark &\nxmark &\ncmark &Gaze vector&1,152,000 &\ncmark &Large\\
+Columbia &\ncmark &\ncmark &\ncmark &Gaze vector& 5,880 &\ncmark &Medium\\
+\hline\hline
+Ours&\ncmark &\ncmark &\ncmark &Gaze vector & 29,250 &\ncmark &Large\\
+\bottomrule
+\end{tabular}
+\end{center}
+\hfill
+
+\begin{minipage}[t]{0.5\textwidth}
+    \textbf{\color{blue}Results of Gaze Interpolation and Extrapolation} 
+    \vspace{-0.2em}
+    \begin{center}
+        \includegraphics[width=0.975\textwidth]{../images/interpolation}
+    \end{center}
+\end{minipage}
+\hfill%\smallskip\nointerlinespacing
+\begin{minipage}[t]{0.5\textwidth}
+\textbf{\color{blue}Results of Gaze Redirection} 
+    \begin{flushleft}
+        \includegraphics[width=\textwidth]{../images/redirection}
+    \end{flushleft}
+\end{minipage}
+}
+\end{poster}
+\end{document}
