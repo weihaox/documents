@@ -1,0 +1,4810 @@
+% @STRING{CVPR = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}}
+% @STRING{ICCV = {IEEE International Conference on Computer Vision (ICCV)}}
+% @STRING{ECCV = {European Conference on Computer Vision (ECCV)}}
+% @STRING{ICCP = {IEEE International Conference on Computational Photography (ICCP)}}
+% @STRING{CVPRW = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshop}}
+% @STRING{ICCVW = {IEEE International Conference on Computer Vision (ICCV) Workshop}}
+% @STRING{ECCVW = {European Conference on Computer Vision (ECCV) Workshop}}
+% @STRING{ICLR = {International Conference on Learning Representations (ICLR)}}
+% @STRING{DV = {International Conference on 3D Vision (3DV)}}
+% @STRING{CORL = {Conference on Robot Learning (CoRL)}}
+% @STRING{MM = {ACM International Conference on Multimedia (MM)}}
+
+% @STRING{IJCV = {International Journal of Computer Vision (IJCV)}}
+% @STRING{TIP = {IEEE Transactions on Image Processing (TIP)}}
+% @STRING{TVCG = {IEEE Transactions on Visualization and Computer Graphics (TVCG)}}
+% @STRING{PAMI = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)}}
+% @STRING{NIPS = {Conference on Neural Information Processing Systems (NeurIPS)}}
+% @STRING{ICML = {International Conference on Machine Learning (ICML)}}
+% @STRING{SIG = {ACM SIGGRAPH}}
+% @STRING{SIGA = {ACM SIGGRAPH Asia}}
+% @STRING{TOG = {ACM Transactions on Graphics (TOG)}}
+% @STRING{EGSR = {Eurographics Symposium on Rendering (EGSR)}}
+% @STRING{ICM = {Proceedings of the International Congress of Mathematicians (ICM)}}
+% @STRING{AISTATS = {Artificial Intelligence and Statistics}}
+@STRING{CVPR = {CVPR}}
+@STRING{ICCV = {ICCV}}
+@STRING{ECCV = {ECCV}}
+@STRING{ICCP = {ICCP}}
+@STRING{CVPRW = {CVPR Workshop}}
+@STRING{ICCVW = {ICCV Workshop}}
+@STRING{ECCVW = {ECCV Workshop}}
+@STRING{ICLR = {ICLR}}
+@STRING{DV = {3DV}}
+@STRING{CORL = {CoRL}}
+@STRING{MM = {MM}}
+@STRING{NeurIPS = {NeurIPS}}
+@STRING{ICML = {ICML}}
+@STRING{BMVC = {BMVC}}
+@STRING{AAAI = {AAAI}}
+@STRING{IJCAI = {IJCAI}}
+
+@STRING{IJCV = {IJCV}}
+@STRING{TIP = {TIP}}
+@STRING{TVCG = {TVCG}}
+@STRING{PAMI = {TPAMI}}
+@STRING{SIG = {SIGGRAPH}}
+@STRING{SIGA = {SIGGRAPH Asia}}
+@STRING{TOG = {TOG}}
+@STRING{EGSR = {EGSR}}
+@STRING{CVIU = {CVIU}}
+
+@article{liu2020style,
+  title={Style Intervention: How to Achieve Spatial Disentanglement with Style-based Generators?},
+  author={Yunfan Liu and Qi Li and Zhenan Sun and Tieniu Tan},
+  journal={arXiv preprint arXiv:2011.09699},
+  year={2020}
+ }
+
+@article{lu2020discovery,
+  title={Unsupervised Discovery of Disentangled Manifolds in GANs},
+  author={Yu-Ding Lu and Hsin-Ying Lee and Hung-Yu Tseng and Ming-Hsuan Yang},
+  journal={arXiv preprint arXiv:2011.11842},
+  year={2020}
+ }
+
+@article{gabbay2019style,
+  title={Style generator inversion for image enhancement and animation},
+  author={Gabbay, Aviv and Hoshen, Yedid},
+  journal={arXiv preprint arXiv:1906.11880},
+  year={2019}
+}
+
+@article{king2009dlib,
+title={Dlib-ml: A machine learning toolkit},
+author={King, Davis E},
+journal={JMLR},
+volume={10},
+pages={1755--1758},
+year={2009},
+}
+
+@inproceedings{shoemake1985animating,
+title={Animating rotation with quaternion curves},
+author={Shoemake, Ken},
+booktitle={SIGGRAPH},
+pages={245--254},
+year={1985}
+}
+
+@inproceedings{yu2020deepi2i,
+  title={DeepI2I: Enabling Deep Hierarchical Image-to-Image Translation by Transferring from GANs},
+  author={Yaxing Wang, Lu Yu, Joost van de Weijer},
+  booktitle={NeurIPS},
+  year={2020}
+}
+@inproceedings{candes2006compressive,
+  title={Compressive Sampling},
+  author={Cand{\`e}s, Emmanuel J and others},
+  booktitle={ICM},
+  volume={3},
+  pages={1433--1452},
+  year={2006}
+}
+@article{bau2020role,
+  author = {Bau, David and Zhu, Jun-Yan and Strobelt, Hendrik and Lapedriza, Agata and Zhou, Bolei and Torralba, Antonio},
+  title = {Understanding the role of individual units in a deep neural network},
+  year = {2020},
+  journal = {National Academy of Sciences}
+}
+
+@inproceedings{lugmayr2020srflow,
+  title={SRFlow: Learning the Super-Resolution Space with Normalizing Flow},
+  author={Lugmayr, Andreas and Danelljan, Martin and Van Gool, Luc and Timofte, Radu},
+  booktitle={ECCV},
+  year={2020}
+}
+@inproceedings{Lin2020LaDDer,
+  title={LaDDer: Latent Data Distribution Modelling with a Generative Prior},
+  author={Shuyu, Lin and Ronald, Clark},
+  booktitle={BMVC},
+  year={2020}
+}
+@inproceedings{xu2020hierarchical,
+  title={Hierarchical Style-based Networks for Motion Synthesis},
+  author={Xu, Jingwei and Xu, Huazhe and Ni, Bingbing and Yang, Xiaokang and Wang, Xiaolong and Darrell, Trevor},
+  booktitle={ECCV},
+  year={2020}
+}
+@inproceedings{orel2020lifespan,
+  title={Lifespan Age Transformation Synthesis},
+  author={Or-El, Roy and Sengupta, Soumyadip and Fried, Ohad
+          and Shechtman, Eli and Kemelmacher-Shlizerman, Ira},
+  booktitle={ECCV},
+  year={2020}
+}
+@inproceedings{CelebAMask-HQ,
+  title={MaskGAN: Towards Diverse and Interactive Facial Image Manipulation},
+  author={Lee, Cheng-Han and Liu, Ziwei and Wu, Lingyun and Luo, Ping},
+  booktitle={CVPR},
+  year={2020}
+}
+
+@inproceedings{CelebA-Spoof,
+  title={CelebA-Spoof: Large-Scale Face Anti-Spoofing Dataset with Rich Annotations},
+  author={Zhang, Yuanhan and Yin, Zhenfei and Li, Yidong and Yin, Guojun and Yan, Junjie and Shao, Jing and Liu, Ziwei},
+  booktitle={ECCV},
+  year={2020}
+}
+
+@inproceedings{zhu2020sean,
+  title={SEAN: Image Synthesis with Semantic Region-Adaptive Normalization},
+  author={Zhu, Peihao and Abdal, Rameen and Qin, Yipeng and Wonka, Peter},
+  booktitle={CVPR},
+  pages={5104--5113},
+  year={2020}
+}
+
+@inproceedings{zhu2020semantically,
+  title={Semantically Multi-modal Image Synthesis},
+  author={Zhu, Zhen and Xu, Zhiliang and You, Ansheng and Bai, Xiang},
+  booktitle={CVPR},
+  pages={5467--5476},
+  year={2020}
+}
+@article{TIP2006StatisticalSheikh,
+    title={A statistical evaluation of recent full reference image quality assessment algorithms},
+    author={Sheikh, Hamid R and Sabir, Muhammad F and Bovik, Alan C},
+    journal={TIP},
+    volume={15},
+    year={2006}
+}
+@article{TIP2005InformationSheikh,
+    title={An information fidelity criterion for image quality assessment using natural scene statistics},
+    author={Sheikh, Hamid R and Bovik, Alan C and De Veciana, Gustavo},
+    journal={TIP},
+    volume={14},
+    year={2005}
+}
+@book{harman1976modern,
+  title={Modern factor analysis},
+  author={Harman, Harry H},
+  year={1976},
+  publisher={University of Chicago Press}
+}
+@article{TIP2004ImageWang,
+    title={Image quality assessment: From error visibility to structural similarity},
+    author={Wang, Zhou and Bovik, Alan C and Sheikh, Hamid R and Simoncelli, Eero P},
+    journal={TIP},
+    volume={13},
+    year={2004}
+}
+IQA, Metric, VIF
+@inproceedings{ICASSP2004ImageSheikh,
+    title={Image information and visual quality},
+    author={Sheikh, Hamid R and Bovik, Alan C},
+    booktitle={ICASSP},
+    year={2004},
+}
+@article{TIP2018NimaTalebi,
+    title={Nima: Neural image assessment},
+    author={Talebi, Hossein and Milanfar, Peyman},
+    journal={TIP},
+    volume={27},
+    year={2018},
+}
+
+
+
+%Metric, MS-SSIM
+@inproceedings{ACSSC2003MultiWang,
+    title={Multi-scale structural similarity for image quality assessment},
+    author={Wang, Zhou and Simoncelli, Eero and Bovik, Alan and others},
+    booktitle={Asilomar Conference on Signals, Systems, and Computers},
+    year={2003}
+}
+@article{ISPM2009MeanWang,
+    title={Mean squared error: Love it or leave it? A new look at signal fidelity measures},
+    author={Wang, Zhou and Bovik, Alan C},
+    journal={IEEE Signal Processing Magazine},
+    volume={26},
+    year={2009}
+}
+@article{zeiler2014vis,
+   title={Visualizing and Understanding Convolutional Networks},
+   journal={Lecture Notes in Computer Science},
+   publisher={Springer International Publishing},
+   author={Zeiler, Matthew D. and Fergus, Rob},
+   year={2014},
+   pages={818–833}
+}
+
+@article{simonyan2013deep,
+  title={Deep inside convolutional networks: Visualising image classification models and saliency maps},
+  author={Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},
+  journal={arXiv preprint arXiv:1312.6034},
+  year={2013}
+}
+
+@article{wu2020stylespace,
+  title={StyleSpace Analysis: Disentangled Controls for StyleGAN Image Generation},
+  author={Zongze Wu and Dani Lischinski and Eli Shechtman},
+  journal={arXiv preprint arXiv:2011.12799},
+  year={2020}
+}
+
+@article{white2016sampling,
+  title={Sampling generative networks: Notes on a few effective techniques},
+  author={White, Tom},
+  journal={arXiv preprint arXiv:1609.04468},
+  year={2016}
+}
+
+@article{yosinski2015understanding,
+    title={Understanding Neural Networks Through Deep Visualization},
+    author={Jason Yosinski and Jeff Clune and Anh Nguyen and Thomas Fuchs and Hod Lipson},
+    year={2015},
+    journal={arXiv preprint arXiv:1506.06579},
+}
+
+@inproceedings{nguyen2016synthesizing,
+  title={Synthesizing the preferred inputs for neurons in neural networks via deep generator networks},
+  author={Nguyen, Anh and Dosovitskiy, Alexey and Yosinski, Jason and Brox, Thomas and Clune, Jeff},
+  booktitle={NeurIPS},
+  pages={3387--3395},
+  year={2016}
+}
+
+@inproceedings{zhou2016feature,
+   title={Learning Deep Features for Discriminative Localization},
+   author={Zhou, Bolei and Khosla, Aditya and Lapedriza, Agata and Oliva, Aude and Torralba, Antonio},
+   booktitle={CVPR},
+   year={2016},
+}
+
+@inproceedings{li2019control,
+  title={Controllable text-to-image generation},
+  author={Li, Bowen and Qi, Xiaojuan and Lukasiewicz, Thomas and H.~S.~Torr, Philip},
+  booktitle={NeurIPS},
+  year={2019}
+}
+
+@inproceedings{Tao18attngan,
+  author    = {Tao, Xu and Pengchuan, Zhang and Qiuyuan, Huang and Han, Zhang and Zhe, Gan and Xiaolei Huang and Xiaodong, He},
+  title     = {AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks},
+  Year = {2018},
+  booktitle = {CVPR}
+}
+
+@inproceedings{li2020manigan,
+  title={ManiGAN: Text-Guided Image Manipulation},
+  author={Li, Bowen and Qi, Xiaojuan and Lukasiewicz, Thomas and Torr, Philip HS},
+  booktitle={CVPR},
+  year={2020}
+}
+
+@inproceedings{zhang2018nterpretable,
+  author    = {Quanshi Zhang and
+               Ying Nian Wu and
+               Song{-}Chun Zhu},
+  title     = {Interpretable Convolutional Neural Networks},
+  booktitle   = {CVPR},
+  year      = {2018}
+}
+
+@inproceedings{zhou2016learning,
+  author    = {Bolei Zhou and
+               Aditya Khosla and
+               {\`{A}}gata Lapedriza and
+               Aude Oliva and
+               Antonio Torralba},
+  title     = {Learning Deep Features for Discriminative Localization},
+  booktitle = {CVPR},
+  pages     = {2921--2929},
+  publisher = {{IEEE} Computer Society},
+  year      = {2016}
+}
+
+@InProceedings{Xiao2018elegant,
+    author = {Xiao, Taihong and Hong, Jiapeng and Ma, Jinwen},
+    title = {{ELEGANT}: Exchanging Latent Encodings with {GAN} for Transferring Multiple Face Attributes},
+    booktitle = {ECCV},
+    pages = {172--187},
+    year = {2018}
+}
+@inproceedings{huang2018munit,
+  author    = {Xun Huang and
+               Ming{-}Yu Liu and
+               Serge J. Belongie and
+               Jan Kautz},
+  title     = {Multimodal Unsupervised Image-to-Image Translation},
+  booktitle = {ECCV},
+  pages     = {179--196},
+  year      = {2018}
+}
+
+@inproceedings{liu2018unified,
+  author    = {Alexander H. Liu and
+               Yen{-}Cheng Liu and
+               Yu{-}Ying Yeh and
+               Yu{-}Chiang Frank Wang},
+  title     = {A Unified Feature Disentangler for Multi-Domain Image Translation and Manipulation},
+  booktitle = {NeurIPS},
+  pages     = {2595--2604},
+  year={2018}
+}
+@article{lu2019unsupervised,
+  title={Unsupervised Domain-Specific Deblurring via Disentangled Representations},
+  author={Lu, Boyu and Chen, Jun-Cheng and Chellappa, Rama},
+  journal   = {CVPR},
+  year={2019}
+}
+@inproceedings{goodfellow2014generative,
+	title={Generative adversarial networks},
+	author={Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua},
+	booktitle=NeurIPS,
+	year={2014}
+}
+
+@inproceedings{dalal2005histograms,
+	title={Histograms of oriented gradients for human detection},
+	author={Dalal, Navneet and Triggs, Bill},
+	booktitle=CVPR,
+	year={2005}
+}
+
+
+@inproceedings{larsen2016autoencoding,
+	title={Autoencoding beyond pixels using a learned similarity metric},
+	author={Larsen, Anders Boesen Lindbo and S{\o}nderby, S{\o}ren Kaae and Larochelle, Hugo and Winther, Ole},
+	booktitle=ICML,
+	year={2016}
+}
+
+
+@inproceedings{karras2020analyzing,
+	title={Analyzing and improving the image quality of {StyleGAN}},
+	author={Karras, Tero and Laine, Samuli and Aittala, Miika and Hellsten, Janne and Lehtinen, Jaakko and Aila, Timo},
+	booktitle=CVPR,
+	year={2020}
+}
+
+@article{chelnokova2014rewards,
+  title={Rewards of beauty: the opioid system mediates social motivation in humans},
+  author={Chelnokova, Olga and Laeng, Bruno and Eikemo, Marie and Riegels, Jeppe and L{\o}seth, Guro and Maurud, Hedda and Willoch, Frode and Leknes, Siri},
+  journal={Molecular psychiatry},
+  volume={19},
+  number={7},
+  pages={746--747},
+  year={2014},
+  publisher={Nature Publishing Group}
+}
+
+@article{courset2018caucasian,
+  title={{The Caucasian and North African French Faces (CaNAFF)}: A face database},
+  author={Courset, R{\'e}mi and Rougier, Marine and Palluel-Germain, Richard and Smeding, Annique and Jonte, Juliette Manto and Chauvin, Alan and Muller, Dominique},
+  journal={International Review of Social Psychology},
+  volume={31},
+  number={1},
+  year={2018},
+  publisher={Ubiquity Press}
+}
+
+@inproceedings{yi2019apdrawinggan,
+  title={{ApdrawingGAN}: Generating artistic portrait drawings from face photos with hierarchical GANs},
+  author={Yi, Ran and Liu, Yong-Jin and Lai, Yu-Kun and Rosin, Paul L},
+  booktitle={CVPR},
+  pages={10743--10752},
+  year={2019}
+}
+
+@inproceedings{saito2020coco,
+	title={{COCO-FUNIT}: Few-Shot Unsupervised Image Translation with a Content Conditioned Style Encoder},
+	author={Saito, Kuniaki and Saenko, Kate and Liu, Ming-Yu},
+	booktitle=ECCV,
+	year={2020}
+}
+@inproceedings{park2020contrastive,
+	title={Contrastive Learning for Unpaired Image-to-Image Translation},
+	author={Park, Taesung and Efros, Alexei A and Zhang, Richard and Zhu, Jun-Yan},
+	booktitle=ECCV,
+	year={2020}
+}
+
+@inproceedings{roth2017stabilizing,
+	title={Stabilizing training of generative adversarial networks through regularization},
+	author={Roth, Kevin and Lucchi, Aurelien and Nowozin, Sebastian and Hofmann, Thomas},
+	booktitle=NeurIPS,
+	year={2017}
+}
+
+@inproceedings{mescheder2018training,
+	title={Which training methods for {GANs} do actually converge?},
+	author={Mescheder, Lars and Geiger, Andreas and Nowozin, Sebastian},
+	booktitle=ICML,
+	year={2018}
+}
+
+@article{goodfellow2016nips,
+	title={{NIPS} 2016 tutorial: Generative adversarial networks},
+	author={Goodfellow, Ian},
+	journal={arXiv preprint arXiv:1701.00160},
+	year={2016}
+}
+@article{gui2020review,
+	title={A review on generative adversarial networks: Algorithms, theory, and applications},
+	author={Gui, Jie and Sun, Zhenan and Wen, Yonggang and Tao, Dacheng and Ye, Jieping},
+	journal={arXiv preprint arXiv:2001.06937},
+	year={2020}
+}
+@article{wang2019generative,
+	title={Generative adversarial networks in computer vision: A survey and taxonomy},
+	author={Wang, Zhengwei and She, Qi and Ward, Tomas E},
+	journal={arXiv preprint arXiv:1906.01529},
+	year={2019}
+}
+@article{creswell2018generative,
+	title={Generative adversarial networks: An overview},
+	author={Creswell, Antonia and White, Tom and Dumoulin, Vincent and Arulkumaran, Kai and Sengupta, Biswa and Bharath, Anil A},
+	journal={IEEE Signal Processing Magazine},
+	year={2018},
+}
+@article{pan2019recent,
+	title={Recent progress on generative adversarial networks ({GANs}): A survey},
+	author={Pan, Zhaoqing and Yu, Weijie and Yi, Xiaokai and Khan, Asifullah and Yuan, Feng and Zheng, Yuhui},
+	journal={IEEE Access},
+	publisher={IEEE},
+	year={2019},
+}
+
+@inproceedings{chen2020generative,
+	title={Generative Pretraining from Pixels},
+	author={Chen, Mark and Radford, Alec and Child, Rewon and Wu, Jeff and Jun, Heewoo and Dhariwal, Prafulla and Luan, David and Sutskever, Ilya},
+	booktitle=ICML,	
+	year={2020}	
+}
+
+@article{oord2016wavenet,
+	title={{WaveNet}: A generative model for raw audio},
+	author={Oord, Aaron van den and Dieleman, Sander and Zen, Heiga and Simonyan, Karen and Vinyals, Oriol and Graves, Alex and Kalchbrenner, Nal and Senior, Andrew and Kavukcuoglu, Koray},
+	journal={arXiv preprint arXiv:1609.03499},
+	year={2016}
+}
+
+
+@inproceedings{van2016conditional,
+	title={Conditional image generation with {PixelCNN} decoders},
+	author={Van den Oord, Aaron and Kalchbrenner, Nal and Espeholt, Lasse and Vinyals, Oriol and Graves, Alex and others},
+	booktitle=NeurIPS,
+	year={2016}
+}
+
+@inproceedings{salimans2017pixelcnn++,
+	title={{PixelCNN++}: Improving the {PixelCNN} with discretized logistic mixture likelihood and other modifications},
+	author={Salimans, Tim and Karpathy, Andrej and Chen, Xi and Kingma, Diederik P},
+	booktitle=ICLR,
+	year={2017}
+}
+
+@inproceedings{chen2018pixelsnail,
+	title={{PixelSNAIL}: An improved autoregressive generative model},
+	author={Chen, Xi and Mishra, Nikhil and Rohaninejad, Mostafa and Abbeel, Pieter},
+	booktitle=ICML,
+	year={2018}
+}
+
+
+@inproceedings{rezende2014stochastic,
+	title={Stochastic backpropagation and approximate inference in deep generative models},
+	author={Rezende, Danilo Jimenez and Mohamed, Shakir and Wierstra, Daan},
+	booktitle=ICML,
+	year={2014}
+}
+
+@inproceedings{sonderby2016ladder,
+	title={Ladder variational autoencoders},
+	author={S{\o}nderby, Casper Kaae and Raiko, Tapani and Maal{\o}e, Lars and S{\o}nderby, S{\o}ren Kaae and Winther, Ole},
+	booktitle=NeurIPS,
+	year={2016}
+}
+
+@article{bengio2013representation,
+	title={Representation learning: A review and new perspectives},
+	author={Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
+	journal=PAMI,
+	year={2013}
+}
+
+@article{dayan1995helmholtz,
+	title={The helmholtz machine},
+	author={Dayan, Peter and Hinton, Geoffrey E and Neal, Radford M and Zemel, Richard S},
+	journal={Neural Computation},
+	year={1995}
+}
+
+
+
+@article{kingma2019introduction,
+	title={An introduction to variational autoencoders},
+	author={Kingma, Diederik P and Welling, Max},
+	journal={arXiv preprint arXiv:1906.02691},
+	year={2019}
+}
+
+
+@article{lecun2006tutorial,
+	title={A tutorial on energy-based learning},
+	author={LeCun, Yann and Chopra, Sumit and Hadsell, Raia and Ranzato, M and Huang, F},
+	journal={Predicting structured data},
+	year={2006}
+}
+
+@inproceedings{fischer2012introduction,
+	title={An introduction to restricted Boltzmann machines},
+	author={Fischer, Asja and Igel, Christian},
+	booktitle={Iberoamerican congress on pattern recognition},
+	year={2012}
+}
+
+@article{hinton2006reducing,
+	title={Reducing the dimensionality of data with neural networks},
+	author={Hinton, Geoffrey E and Salakhutdinov, Ruslan R},
+	journal={Science},
+	year={2006},
+	publisher={American Association for the Advancement of Science}
+}
+
+@article{hinton2006fast,
+	title={A fast learning algorithm for deep belief nets},
+	author={Hinton, Geoffrey E and Osindero, Simon and Teh, Yee-Whye},
+	journal={Neural Computation},
+	year={2006}
+}
+
+@inproceedings{du2019implicit,
+	title={Implicit generation and generalization in energy-based models},
+	author={Du, Yilun and Mordatch, Igor},
+	booktitle=NeurIPS,
+	year = {2019},
+}
+
+@book{box2011time,
+  title={Time series analysis: forecasting and control},
+  author={Box, George EP and Jenkins, Gwilym M and Reinsel, Gregory C},
+  volume={734},
+  year={2011},
+  publisher={John Wiley \& Sons}
+}
+@article{engle1982autoregressive,
+  title={Autoregressive conditional heteroscedasticity with estimates of the variance of United Kingdom inflation},
+  author={Engle, Robert F},
+  journal={Econometrica: Journal of the Econometric Society},
+  pages={987--1007},
+  year={1982}
+}
+
+@inproceedings{rezende2015variational,
+	title={Variational inference with normalizing flows},
+	author={Rezende, Danilo Jimenez and Mohamed, Shakir},
+	booktitle=ICML,
+	year={2015}
+}
+
+@inproceedings{dinh2016density,
+	title={Density estimation using real {NVP}},
+	author={Dinh, Laurent and Sohl-Dickstein, Jascha and Bengio, Samy},
+	booktitle=ICLR,
+	year={2017}
+}
+
+@inproceedings{dinh2014nice,
+	title={{NICE}: Non-linear independent components estimation},
+	author={Dinh, Laurent and Krueger, David and Bengio, Yoshua},
+	booktitle=ICLR,
+	year={2015}
+}
+
+@inproceedings{kingma2018glow,
+  title={Glow: Generative flow with invertible 1x1 convolutions},
+  author={Kingma, Durk P and Dhariwal, Prafulla},
+  booktitle={NeurIPS},
+  pages={10215--10224},
+  year={2018}
+}
+@inproceedings{vincent2008extracting,
+  title={Extracting and composing robust features with denoising autoencoders},
+  author={Vincent, Pascal and Larochelle, Hugo and Bengio, Yoshua and Manzagol, Pierre-Antoine},
+  booktitle={ICML},
+  pages={1096--1103},
+  year={2008}
+}
+@inproceedings{salakhutdinov2009deep,
+  title={Deep boltzmann machines},
+  author={Salakhutdinov, Ruslan and Hinton, Geoffrey},
+  booktitle={AISTATS},
+  pages={448--455},
+  year={2009}
+}
+
+@inproceedings{salakhutdinov2010efficient,
+  title={Efficient learning of deep Boltzmann machines},
+  author={Salakhutdinov, Ruslan and Larochelle, Hugo},
+  booktitle={AISTATS},
+  pages={693--700},
+  year={2010}
+}
+
+@inproceedings{srivastava2012multimodal,
+  title={Multimodal learning with deep boltzmann machines},
+  author={Srivastava, Nitish and Salakhutdinov, Russ R},
+  booktitle={NeurIPS},
+  pages={2222--2230},
+  year={2012}
+}
+@inproceedings{rifai2011contractive,
+  title={Contractive auto-encoders: Explicit invariance during feature extraction},
+  author={Rifai, Salah and Vincent, Pascal and Muller, Xavier and Glorot, Xavier and Bengio, Yoshua},
+  booktitle={ICML},
+  year={2011}
+}
+@inproceedings{mathieu2015masked,
+  title={MADE: Masked Autoencoder for Distribution Estimation},
+  author={Germain, Mathieu and Karol, Gregor and Iain, Murray and Hugo, Larochelle},
+  booktitle={ICML},
+  year={2015}
+}
+@inproceedings{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  booktitle={NeurIPS},
+  pages={5998--6008},
+  year={2017}
+}
+@article{oord2016pixel,
+  title={Pixel recurrent neural networks},
+  author={Oord, Aaron van den and Kalchbrenner, Nal and Kavukcuoglu, Koray},
+  journal={arXiv preprint arXiv:1601.06759},
+  year={2016}
+}
+@inproceedings{kingma2016improved,
+  title={IAF: Improved variational inference with inverse autoregressive flow},
+  author={Kingma, Durk P and Salimans, Tim and Jozefowicz, Rafal and Chen, Xi and Sutskever, Ilya and Welling, Max},
+  booktitle={NeurIPS},
+  pages={4743--4751},
+  year={2016}
+}
+@inproceedings{papamakarios2017masked,
+  title={MAF: Masked Autoregressive Flow for Density Estimation},
+  author={Papamakarios, George and Pavlakou, Theo and Murray, Iain},
+  booktitle={NeurIPS},
+  pages={2338--2347},
+  year={2017}
+}
+
+@book{goodfellow2016deep,
+	title={Deep learning},
+	author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+	year={2016},
+	publisher={MIT Press}
+}
+
+@article{lecun2015deep,
+	title={Deep learning},
+	author={LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
+	journal={Nature},
+	year={2015}
+}
+
+
+@article{tewari2020neuralSTAR,
+	author = {Tewari, A. and Fried, O. and Thies, J. and Sitzmann, V. and Lombardi, S. and Sunkavalli, K. and Martin-Brualla, R. and Simon, T. and Saragih, J. and Nie{\ss}ner, M. and Pandey, R. and Fanello, S. and Wetzstein, G. and Zhu, J.-Y. and Theobalt, C. and Agrawala, M. and Shechtman, E. and Goldman, D. B and Zollh{\"o}fer, M.},
+	title = {{State of the Art on Neural Rendering}},
+	journal = {Computer Graphics Forum (EG STAR)},
+	year = {2020}
+}
+
+@article{brualla2018lookinggood,
+    author = {Martin-Brualla, Ricardo and Pandey, Rohit and Yang, Shuoran and Pidlypenskyi, Pavel and Taylor, Jonathan and Valentin, Julien and Khamis, Sameh and Davidson, Philip and Tkach, Anastasia and Lincoln, Peter and Kowdle, Adarsh and Rhemann, Christoph and Goldman, Dan B and Keskin, Cem and Seitz, Steve and Izadi, Shahram and Fanello, Sean},
+    title = {{LookinGood}: Enhancing Performance Capture with Real-Time Neural Re-Rendering},
+    year = {2018},
+    journal={TOG},
+}
+
+@article{tewari2020pie,
+	title = {PIE: Portrait Image Embedding for Semantic Control},
+	author={Tewari, Ayush and Elgharib, Mohamed and BR, Mallikarjun and Bernard, Florian  and Seidel, Hans-Peter and P{\'e}rez, Patrick and Z{\"o}llhofer, Michael and Theobalt, Christian},    
+	journal = {TOG},
+	volume = {39},
+	number = {6},
+	month = {December},
+	year = {2020}
+}
+
+
+
+@inproceedings{thies2019image,
+    title={Image-guided neural object rendering},
+    author={Thies, Justus and Zollh{\"o}fer, Michael and Theobalt, Christian and Stamminger, Marc and Nie{\ss}ner, Matthias},
+    booktitle=ICLR,
+    year={2019}
+}
+
+@inproceedings{pittaluga2019revealing,
+    title={Revealing scenes by inverting structure from motion reconstructions},
+    author={Pittaluga, Francesco and Koppal, Sanjeev J and Kang, Sing Bing and Sinha, Sudipta N},
+    booktitle=CVPR,
+    year={2019}
+}
+
+@inproceedings{mallya2020world,
+    title={World-Consistent Video-to-Video Synthesis},
+    author={Arun Mallya and Ting-Chun Wang and Karan Sapra and Ming-Yu Liu},
+    booktitle=ECCV,
+    year={2020}
+}
+
+@inproceedings{zhu2018visual,
+    title={{Visual Object Networks}: Image generation with disentangled 3D representations},
+    author={Zhu, Jun-Yan and Zhang, Zhoutong and Zhang, Chengkai and Wu, Jiajun and Torralba, Antonio and Tenenbaum, Josh and Freeman, Bill},
+    booktitle=NeurIPS,
+    year={2018}
+}
+
+@inproceedings{nguyen2019hologan,
+    title={{HoloGAN}: Unsupervised learning of 3d representations from natural images},
+    author={Nguyen-Phuoc, Thu and Li, Chuan and Theis, Lucas and Richardt, Christian and Yang, Yong-Liang},
+    booktitle=CVPR,
+    year={2019}
+}
+
+@article{schwarz2020graf,
+    title={{GRAF}: Generative Radiance Fields for 3D-Aware Image Synthesis},
+    author={Schwarz, Katja and Liao, Yiyi and Niemeyer, Michael and Geiger, Andreas},
+    journal={arXiv preprint arXiv:2007.02442},
+    year={2020}
+}
+
+@inproceedings{henzler2019escaping,
+    title={Escaping Plato's Cave: 3D Shape From Adversarial Rendering},
+    author={Henzler, Philipp and Mitra, Niloy J and Ritschel, Tobias},
+    booktitle=CVPR,
+    year={2019}
+}
+
+@inproceedings{li2020crowdsampling,
+    title = {Crowdsampling the Plenoptic Function},
+    author = {Zhengqi Li and Wenqi Xian and Abe Davis and Noah Snavely},
+    booktitle=ECCV,
+    year = {2020}
+}
+
+
+@inproceedings{krizhevsky2012imagenet,
+	title={Imagenet classification with deep convolutional neural networks},
+	author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	booktitle=NeurIPS,
+	year={2012}
+}
+
+@article{kaplanyan2019deepfovea,
+	title={{DeepFovea}: neural reconstruction for foveated rendering and video compression using learned statistics of natural videos},
+	author={Kaplanyan, Anton S and Sochenov, Anton and Leimk{\"u}hler, Thomas and Okunev, Mikhail and Goodall, Todd and Rufo, Gizem},
+	journal=TOG,
+	year={2019}
+}
+
+@inproceedings{zhao2017pyramid,
+	title={Pyramid scene parsing network},
+	author={Zhao, Hengshuang and Shi, Jianping and Qi, Xiaojuan and Wang, Xiaogang and Jia, Jiaya},
+	booktitle=CVPR,
+	year={2017}
+}
+
+
+@inproceedings{yao2017occlusion,
+	title={Occlusion-aware video temporal consistency},
+	author={Yao, Chun-Han and Chang, Chia-Yang and Chien, Shao-Yi},
+	booktitle=MM,
+	year={2017}
+}
+
+@article{bonneel2015blind,
+	title={Blind video temporal consistency},
+	author={Bonneel, Nicolas and Tompkin, James and Sunkavalli, Kalyan and Sun, Deqing and Paris, Sylvain and Pfister, Hanspeter},
+	journal=TOG,
+	year={2015},
+}
+
+@inproceedings{wiles2019synsin,
+	author={Olivia Wiles and Georgia Gkioxari and Richard Szeliski and Justin Johnson},
+	title={{SynSin}: End-to-end View Synthesis from a Single Image},
+	booktitle=CVPR,
+	year={2020}
+}
+
+@misc{wu2019detectron2,
+	author =       {Yuxin Wu and Alexander Kirillov and Francisco Massa and
+	Wan-Yen Lo and Ross Girshick},
+	title =        {Detectron2},
+	howpublished = {\url{https://github.com/facebookresearch/detectron2}},
+	year =         {2019}
+}
+
+@misc{opensfm,
+	title = {{OpenSfM}},
+	howpublished = {\url{https://github.com/mapillary/OpenSfM}}
+}
+
+@inproceedings{xie2015holistically,
+	title={Holistically-nested edge detection},
+	author={Xie, Saining and Tu, Zhuowen},
+	booktitle=ICCV,
+	year={2015}
+}
+
+@article{cao2018openpose,
+	author = {Zhe Cao and Gines Hidalgo and Tomas Simon and Shih-En Wei and Yaser Sheikh},
+	journal = {arXiv preprint arXiv:1812.08008},
+	title = {Open{P}ose: realtime multi-person 2{D} pose estimation using {P}art {A}ffinity {F}ields},
+	year = {2018}
+}
+
+@inproceedings{li2018megadepth,
+	title={{MegaDepth}: Learning single-view depth prediction from internet photos},
+	author={Li, Zhengqi and Snavely, Noah},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@article{wu2019wider,
+	title={Wider or deeper: Revisiting the resnet model for visual recognition},
+	author={Wu, Zifeng and Shen, Chunhua and Van Den Hengel, Anton},
+	journal={Pattern Recognition},
+	year={2019}
+}
+
+@inproceedings{tolstikhin2018wasserstein,
+    title={Wasserstein Auto-Encoders},
+    author={Ilya Tolstikhin and Olivier Bousquet and Sylvain Gelly and Bernhard Schoelkopf},
+    booktitle=ICLR,
+    year={2018},
+    url={https://openreview.net/forum?id=HkL7n1-0b},
+}
+
+@inproceedings{chen2018encoder,
+	title={Encoder-decoder with atrous separable convolution for semantic image segmentation},
+	author={Chen, Liang-Chieh and Zhu, Yukun and Papandreou, George and Schroff, Florian and Adam, Hartwig},
+	booktitle=ECCV,
+	year={2018}
+}
+
+@inproceedings{zhu2019improving,
+	title={Improving semantic segmentation via video propagation and label relaxation},
+	author={Zhu, Yi and Sapra, Karan and Reda, Fitsum A and Shih, Kevin J and Newsam, Shawn and Tao, Andrew and Catanzaro, Bryan},
+	booktitle=CVPR,
+	year={2019}
+}
+
+@inproceedings{liu2018image,
+	title={Image inpainting for irregular holes using partial convolutions},
+	author={Liu, Guilin and Reda, Fitsum A and Shih, Kevin J and Wang, Ting-Chun and Tao, Andrew and Catanzaro, Bryan},
+	booktitle=ECCV,
+	year={2018}
+}
+
+@inproceedings{dosovitskiy2017carla,
+	title = { {CARLA}: {An} Open Urban Driving Simulator},
+	author = {Alexey Dosovitskiy and German Ros and Felipe Codevilla and Antonio Lopez and Vladlen Koltun},
+	booktitle = CORL,
+	year = {2017}
+}
+
+@article{tomasi1992shape,
+	title={Shape and motion from image streams under orthography: a factorization method},
+	author={Tomasi, Carlo and Kanade, Takeo},
+	journal=IJCV,
+	year={1992}
+}
+
+@article{longuet1981computer,
+	title={A computer algorithm for reconstructing a scene from two projections},
+	author={Longuet-Higgins, H Christopher},
+	journal={Nature},
+	year={1981}
+}
+
+@inproceedings{golyanik2017multiframe,
+	title={Multiframe scene flow with piecewise rigid motion},
+	author={Golyanik, Vladislav and Kim, Kihwan and Maier, Robert and Nie{\ss}ner, Matthias and Stricker, Didier and Kautz, Jan},
+	booktitle=DV,
+	year={2017},
+}
+
+@inproceedings{dai2017scannet,
+	title={{ScanNet}: Richly-annotated 3d reconstructions of indoor scenes},
+	author={Dai, Angela and Chang, Angel X and Savva, Manolis and Halber, Maciej and Funkhouser, Thomas and Nie{\ss}ner, Matthias},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{li2019learning,
+	title={Learning the depths of moving people by watching frozen people},
+	author={Li, Zhengqi and Dekel, Tali and Cole, Forrester and Tucker, Richard and Snavely, Noah and Liu, Ce and Freeman, William T},
+	booktitle=CVPR,
+	year={2019}
+}
+
+@inproceedings{vedula1999three,
+	title={Three-dimensional scene flow},
+	author={Vedula, Sundar and Baker, Simon and Rander, Peter and Collins, Robert and Kanade, Takeo},
+	booktitle=CVPR,
+	year={1999}
+}
+
+@inproceedings{wang2019few,
+	title={Few-shot video-to-video synthesis},
+	author={Wang, Ting-Chun and Liu, Ming-Yu and Tao, Andrew and Liu, Guilin and Kautz, Jan and Catanzaro, Bryan},
+	booktitle=NeurIPS,
+	year={2019}
+}
+
+@inproceedings{qi2018semi,
+	title={Semi-parametric image synthesis},
+	author={Qi, Xiaojuan and Chen, Qifeng and Jia, Jiaya and Koltun, Vladlen},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@inproceedings{neverova2018dense,
+	title={Dense pose transfer},
+	author={Neverova, Natalia and Alp Guler, Riza and Kokkinos, Iasonas},
+	booktitle=ECCV,
+	year={2018}
+}
+
+@inproceedings{collins2018deep,
+title={Deep Feature Factorization for Concept Discovery},
+author={Collins, Edo and Achanta, Radhakrishna and Susstrunk, Sabine},
+booktitle=ECCV,
+volume={14},
+pages={352--368},
+year={2018}
+}
+    
+    
+@inproceedings{zhang2019graph,
+	title={Graph hypernetworks for neural architecture search},
+	author={Zhang, Chris and Ren, Mengye and Urtasun, Raquel},
+	booktitle=ICLR,
+	year={2019}
+}
+@inproceedings{su2019pixel,
+	title={Pixel-Adaptive Convolutional Neural Networks},
+	author={Su, Hang and Jampani, Varun and Sun, Deqing and Gallo, Orazio and Learned-Miller, Erik and Kautz, Jan},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{niklaus2017video,
+	title={Video frame interpolation via adaptive separable convolution},
+	author={Niklaus, Simon and Mai, Long and Liu, Feng},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{niklaus2017video2,
+	title={Video frame interpolation via adaptive convolution},
+	author={Niklaus, Simon and Mai, Long and Liu, Feng},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{ha2016hypernetworks,
+	title={Hypernetworks},
+	author={Ha, David and Dai, Andrew and Le, Quoc V},
+	booktitle=ICLR,
+	year={2016}
+}
+
+@inproceedings{kajiya1986rendering,
+	title={The rendering equation},
+	author={Kajiya, James T},
+	booktitle=SIG,
+	year={1986},
+}
+
+@article{zhou2019dance,
+	title={Dance Dance Generation: Motion Transfer for Internet Videos},
+	author={Zhou, Yipin and Wang, Zhaowen and Fang, Chen and Bui, Trung and Berg, Tamara L},
+	journal={arXiv preprint arXiv:1904.00129},
+	year={2019}
+}
+
+@inproceedings{gafni2019vid2game,
+	title={{Vid2Game}: Controllable Characters Extracted from Real-World Videos},
+	author={Gafni, Oran and Wolf, Lior and Taigman, Yaniv},
+	booktitle=ICLR,
+	year={2020}
+}
+
+@inproceedings{wang2018video,
+	title={Video-to-video Synthesis},
+	author={Wang, Ting-Chun and Liu, Ming-Yu and Zhu, Jun-Yan and Liu, Guilin and Tao, Andrew and Kautz, Jan and Catanzaro, Bryan},
+	booktitle=NeurIPS,
+	year={2018}
+}
+
+@inproceedings{bitouk2008face,
+	title={Face swapping: automatically replacing faces in photographs},
+	author={Bitouk, Dmitri and Kumar, Neeraj and Dhillon, Samreen and Belhumeur, Peter and Nayar, Shree K},
+	booktitle=SIG,
+	year={2008},
+}
+
+
+@article{lucas1981iterative,
+	title={An iterative image registration technique with an application to stereo vision},
+	author={Lucas, Bruce D and Kanade, Takeo and others},
+	journal={International Joint Conference on Artificial Intelligence (IJCAI) },
+	year={1981},
+	publisher={Vancouver, British Columbia}
+}
+
+@inproceedings{lai2018learning,
+	author = {Lai, Wei-Sheng and Huang, Jia-Bin and Wang, Oliver and Shechtman, Eli and Yumer, Ersin and Yang, Ming-Hsuan}, 
+	title = {Learning Blind Video Temporal Consistency}, 
+	booktitle = ECCV,
+	year = {2018}
+}
+
+@inproceedings{ma2017pose,
+	title={Pose guided person image generation},
+	author={Ma, Liqian and Jia, Xu and Sun, Qianru and Schiele, Bernt and Tuytelaars, Tinne and Van Gool, Luc},
+	booktitle=NeurIPS,
+	year={2017}
+}
+
+@inproceedings{yang2018pose,
+	title={Pose Guided Human Video Generation},
+	author={Yang, Ceyuan and Wang, Zhe and Zhu, Xinge and Huang, Chen and Shi, Jianping and Lin, Dahua},
+	booktitle=ECCV,
+	year={2018}
+}
+
+@article{yang2016detailed,
+	title={Detailed garment recovery from a single-view image},
+	author={Yang, Shan and Ambert, Tanya and Pan, Zherong and Wang, Ke and Yu, Licheng and Berg, Tamara and Lin, Ming C},
+	journal={arXiv preprint arXiv:1608.01250},
+	year={2016}
+}
+
+
+@article{zheng2017image,
+	title={Image-based clothes changing system},
+	author={Zheng, Zhao-Heng and Zhang, Hao-Tian and Zhang, Fang-Lue and Mu, Tai-Jiang},
+	journal={Computational Visual Media},
+	year={2017},
+}
+
+
+@inproceedings{ma2018disentangled,
+	title={Disentangled person image generation},
+	author={Ma, Liqian and Sun, Qianru and Georgoulis, Stamatios and Van Gool, Luc and Schiele, Bernt and Fritz, Mario},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@inproceedings{balakrishnan2018synthesizing,
+	title={Synthesizing Images of Humans in Unseen Poses},
+	author={Balakrishnan, Guha and Zhao, Amy and Dalca, Adrian V and Durand, Fredo and Guttag, John},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@inproceedings{Siarohin2019monkeynet,
+	author={Siarohin, Aliaksandr and Lathuilière, Stéphane and Tulyakov, Sergey and Ricci, Elisa and Sebe, Nicu},
+	title={Animating Arbitrary Objects via Deep Motion Transfer},
+	booktitle = CVPR,
+	year = {2019}
+}
+
+@inproceedings{esser2018variational,
+	title={A Variational U-Net for Conditional Appearance and Shape Generation},
+	author={Esser, Patrick and Sutter, Ekaterina and Ommer, Bj{\"o}rn},
+	booktitle=CVPR,
+	year={2018}
+}
+@incollection{montavon2012deep,
+  title={Deep Boltzmann machines and the centering trick},
+  author={Montavon, Gr{\'e}goire and M{\"u}ller, Klaus-Robert},
+  booktitle={Neural Networks: Tricks of the Trade},
+  pages={621--637},
+  year={2012},
+  publisher={Springer}
+}
+@inproceedings{chan2019everybody,
+	title={Everybody dance now},
+	author={Chan, Caroline and Ginosar, Shiry and Zhou, Tinghui and Efros, Alexei A},
+	booktitle=ICCV,
+	year={2019}
+}
+
+@inproceedings{srivastava2015unsupervised,
+	title={Unsupervised learning of video representations using {LSTMs}},
+	author={Srivastava, Nitish and Mansimov, Elman and Salakhudinov, Ruslan},
+	booktitle=ICML,
+	year={2015}
+}
+
+@article{rossler2018faceforensics,
+	title={FaceForensics: A Large-scale Video Dataset for Forgery Detection in Human Faces},
+	author={R{\"o}ssler, Andreas and Cozzolino, Davide and Verdoliva, Luisa and Riess, Christian and Thies, Justus and Nie{\ss}ner, Matthias},
+	journal={arXiv preprint arXiv:1803.09179},
+	year={2018}
+}
+
+@article{dlib2009,
+	author = {Davis E. King},
+	title = {Dlib-ml: A Machine Learning Toolkit},
+	journal = {JMLR},
+	year = {2009},
+}
+
+@inproceedings{walker2017pose,
+	title={The pose knows: Video forecasting by generating pose futures},
+	author={Walker, Jacob and Marino, Kenneth and Gupta, Abhinav and Hebert, Martial},
+	booktitle=ICCV,
+	year={2017},
+}
+@article{xu2015show,
+	title={Show, attend and tell: Neural image caption generation with visual attention},
+	author={Xu, Kelvin and Ba, Jimmy and Kiros, Ryan and Cho, Kyunghyun and Courville, Aaron and Salakhutdinov, Ruslan and Zemel, Richard and Bengio, Yoshua},
+	journal={arXiv preprint arXiv:1502.03044},
+	year={2015}
+}
+
+@inproceedings{lee2018drit,
+	title={Diverse image-to-image translation via disentangled representations},
+	author={Lee, Hsin-Ying and Tseng, Hung-Yu and Huang, Jia-Bin and Singh, Maneesh and Yang, Ming-Hsuan},
+	booktitle=ECCV,
+	year={2018}
+}
+
+@inproceedings{zhang2020cross,
+	title={Cross-domain Correspondence Learning for Exemplar-based Image Translation},
+	author={Zhang, Pan and Zhang, Bo and Chen, Dong and Yuan, Lu and Wen, Fang},
+	booktitle=CVPR,
+	year={2020},
+}
+
+@inproceedings{pix2pixSC2019,
+	title={Example-Guided Style-Consistent Image Synthesis from Semantic Labeling},
+	author={Wang, Miao and Yang, Guo-Ye and Li, Ruilong and Liang, Run-Ze and Zhang, Song-Hai and Hall, Peter. M and Hu, Shi-Min},
+	booktitle=CVPR,
+	year={2019},
+}
+
+@inproceedings{johnson2018image,
+	title={Image generation from scene graphs},
+	author={Johnson, Justin and Gupta, Agrim and Fei-Fei, Li},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@article{lee2018stochastic,
+	title={Stochastic Adversarial Video Prediction},
+	author={Lee, Alex X and Zhang, Richard and Ebert, Frederik and Abbeel, Pieter and Finn, Chelsea and Levine, Sergey},
+	journal={arXiv preprint arXiv:1804.01523},
+	year={2018}
+}
+
+@inproceedings{ilg2017flownet,
+	title={Flownet 2.0: Evolution of optical flow estimation with deep networks},
+	author={Ilg, Eddy and Mayer, Nikolaus and Saikia, Tonmoy and Keuper, Margret and Dosovitskiy, Alexey and Brox, Thomas},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{wang2018high,
+	title={High-Resolution Image Synthesis and Semantic Manipulation with Conditional {GANs}},
+	author={Wang, Ting-Chun and Liu, Ming-Yu and Zhu, Jun-Yan and Tao, Andrew and Kautz, Jan and Catanzaro, Bryan},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@inproceedings{park2019semantic,
+	title={Semantic Image Synthesis with Spatially-Adaptive Normalization},
+	author={Park, Taesung and Liu, Ming-Yu and Wang, Ting-Chun and Zhu, Jun-Yan},
+	booktitle=CVPR,
+	year={2019}
+}
+
+@article{chen2017rethinking,
+	title={Rethinking atrous convolution for semantic image segmentation},
+	author={Chen, Liang-Chieh and Papandreou, George and Schroff, Florian and Adam, Hartwig},
+	journal={arXiv preprint arXiv:1706.05587},
+	year={2017}
+}
+
+@inproceedings{higgins2017betavae,
+  author    = {Irina Higgins and
+               Lo{\"{\i}}c Matthey and
+               Arka Pal and
+               Christopher Burgess and
+               Xavier Glorot and
+               Matthew Botvinick and
+               Shakir Mohamed and
+               Alexander Lerchner},
+  title     = {beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework},
+  booktitle = {ICLR},
+  year      = {2017}
+}
+@inproceedings{chen2016infogan,
+  author    = {Xi Chen and
+               Yan Duan and
+               Rein Houthooft and
+               John Schulman and
+               Ilya Sutskever and
+               Pieter Abbeel},
+  title     = {InfoGAN: Interpretable Representation Learning by Information Maximizing
+               Generative Adversarial Nets},
+  booktitle = {NeurIPS},
+  pages     = {2172--2180},
+  year      = {2016}
+}
+
+% invertion
+@inproceedings{arvanitidis2018oddity,
+  author    = {Georgios Arvanitidis and
+               Lars Kai Hansen and
+               S{\o}ren Hauberg},
+  title     = {Latent Space Oddity: on the Curvature of Deep Generative Models},
+  booktitle = {ICLR},
+  year      = {2018}
+}
+
+@inproceedings{chen2018metric,
+  author    = {Nutan Chen and
+               Alexej Klushyn and
+               Richard Kurle and
+               Xueyan Jiang and
+               Justin Bayer and
+               Patrick van der Smagt},
+  title     = {Metrics for Deep Generative Models},
+  booktitle = {AISTATS},
+  volume    = {84},
+  pages     = {1540--1550},
+  year      = {2018}
+}
+
+@article{kuhnel2017latent,
+  author    = {Line K{\"{u}}hnel and
+               Tom Fletcher and
+               Sarang C. Joshi and
+               Stefan Sommer},
+  title     = {Latent Space Non-Linear Statistics},
+  journal={arXiv preprint arXiv:1706.05587},
+  year      = {2017}
+}
+
+@inproceedings{bora2017sensing,
+  author    = {Ashish Bora and
+               Ajil Jalal and
+               Eric Price and
+               Alexandros G. Dimakis},
+  title     = {Compressed Sensing using Generative Models},
+  booktitle = {ICML},
+  volume    = {70},
+  pages     = {537--546},
+  year      = {2017},
+}
+
+@article{hand2020global,
+  author    = {Paul Hand and Vladislav Voroninski},
+  title     = {Global Guarantees for Enforcing Deep Generative Priors by Empirical Risk},
+  journal   = {IEEE Transactions on Information Theory},
+  volume    = {66},
+  number    = {1},
+  pages     = {401--418},
+  year      = {2020}
+}
+
+@inproceedings{gilbert2017invert,
+  author    = {Anna C. Gilbert and
+               Yi Zhang and
+               Kibok Lee and
+               Yuting Zhang and
+               Honglak Lee},
+  title     = {Towards Understanding the Invertibility of Convolutional Neural Networks},
+  booktitle = {IJCAI},
+  pages     = {1703--1710},
+  year      = {2017}
+}
+
+@inproceedings{ma2018invertibility,
+	title={Invertibility of convolutional generative networks from partial measurements},
+	author={Ma, Fangchang and Ayaz, Ulas and Karaman, Sertac},
+	booktitle={NeurIPS},
+	pages={9651--9660},
+	year={2018}
+}
+
+@article{arulkumaran2017deep,
+	title={Deep Reinforcement Learning: A Brief Survey},
+	author={Arulkumaran, Kai and Deisenroth, Marc Peter and Brundage, Miles and Bharath, Anil Anthony},
+	journal={IEEE Signal Processing Magazine},
+	year={2017},
+}
+
+@inproceedings{ha2018world,
+	title={World Models},
+	author={Ha, David and Schmidhuber, Jürgen },
+	booktitle=NeurIPS,
+	year={2018}
+}
+
+@inproceedings{he2017mask,
+	title={Mask {R-CNN}},
+	author={He, Kaiming and Gkioxari, Georgia and Doll{\'a}r, Piotr and Girshick, Ross},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{zhu2017toward,
+	title={Toward multimodal image-to-image translation},
+	author={Zhu, Jun-Yan and Zhang, Richard and Pathak, Deepak and Darrell, Trevor and Efros, Alexei A and Wang, Oliver and Shechtman, Eli},
+	booktitle=NeurIPS,
+	year={2017}
+}
+
+%Video superresolution
+
+@inproceedings{wexler2004space,
+	title={Space-time video completion},
+	author={Wexler, Yonatan and Shechtman, Eli and Irani, Michal},
+	booktitle=CVPR,
+	year={2004}
+}
+
+@article{shechtman2005space,
+	title={Space-time super-resolution},
+	author={Shechtman, Eli and Caspi, Yaron and Irani, Michal},
+	journal=PAMI,
+	year={2005}
+}
+@article{bau2019ganpaint,
+author = {David Bau and Hendrik Strobelt and William Peebles and
+          Jonas Wulff and Bolei Zhou and Jun{-}Yan Zhu
+          and Antonio Torralba},
+title = {Semantic Photo Manipulation with a Generative Image Prior},
+journal = {TOG},
+volume = {38},
+number = {4},
+year = {2019},
+}
+@inproceedings{donahue2019large,
+  title={Large scale adversarial representation learning},
+  author={Donahue, Jeff and Simonyan, Karen},
+  booktitle={NIPS},
+  pages={10542--10552},
+  year={2019}
+}
+@inproceedings{shi2016real,
+	title={Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network},
+	author={Shi, Wenzhe and Caballero, Jose and Husz{\'a}r, Ferenc and Totz, Johannes and Aitken, Andrew P and Bishop, Rob and Rueckert, Daniel and Wang, Zehan},
+	booktitle=CVPR,
+	year={2016}
+}
+
+@inproceedings{heusel2017gans,
+	title={{GANs} trained by a two time-scale update rule converge to a local {Nash} equilibrium},
+	author={Heusel, Martin and Ramsauer, Hubert and Unterthiner, Thomas and Nessler, Bernhard and Hochreiter, Sepp},
+	booktitle=NeurIPS,
+	year={2017}
+}
+
+@article{aberdam2020invert,
+  title     = {When and How Can Deep Generative Models be Inverted?},
+  author    = {Aviad Aberdam and Dror Simon and Michael Elad},
+  journal    = {arXiv preprint arXiv:2006.15555},
+  year      = {2020}
+}
+
+@article{guan2020faster,
+  title     = {Collaborative Learning for Faster StyleGAN Embedding},
+  author    = {Shanyan Guan and Ying Tai and Bingbing Ni and Feida  Zhu and Feiyue Huang and Xiaokang Yang},
+  journal    = {arXiv preprint arXiv:2007.01758},
+  year      = {2020}
+}
+
+@article{cherepkov2020navigating,
+  title     = {Navigating the GAN Parameter Space for Semantic Image Editing},
+  author    = {Anton Cherepkov and Andrey Voynov and Artem Babenko},
+  journal    = {arXiv preprint arXiv:2011.13786},
+  year      = {2020}
+}
+
+@article{maaten2008visualizing,
+	title="Visualizing Data using t-SNE",
+	author="Laurens van der {Maaten} and Geoffrey {Hinton}",
+	journal={JMLR},
+	volume="9",
+	pages="2579--2605",
+	year="2008"
+}
+@article{li2020latent,
+  title     = {Interpreting the Latent Space of GANs via Correlation Analysis for Controllable Concept Manipulation},
+  author    = {Ziqiang Li and Rentuo Tao and Hongjing Niu and Bin  Li},
+  journal    = {arXiv preprint arXiv:2006.10132},
+  year      = {2020}
+}
+
+@article{doersch2016vae,
+  author    = {Carl Doersch},
+  title     = {Tutorial on Variational Autoencoders},
+  journal    = {arXiv preprint arXiv:1606.05908},
+  year      = {2016}
+}
+
+@article{voynov2020latent,
+  title     = {Unsupervised Discovery of Interpretable Directions in the GAN Latent Space},
+  author    = {Andrey, Voynov and Artem, Babenko},
+  journal    = {ICML},
+  year      = {2020},
+}
+
+@article{makhzani2015aae,
+  author    = {Alireza Makhzani and
+               Jonathon Shlens and
+               Navdeep Jaitly and
+               Ian J. Goodfellow},
+  title     = {Adversarial Autoencoders},
+  journal    = {arXiv preprint arXiv:1511.05644},
+  year      = {2015},
+}
+
+@article{shen2020closedform,
+  title   = {Closed-Form Factorization of Latent Semantics in GANs},
+  author  = {Shen, Yujun and Zhou, Bolei},
+  journal = {arXiv preprint arXiv:2007.06600},
+  year    = {2020}
+}
+
+@inproceedings{esser2020invertible,
+  title={A Disentangling Invertible Interpretation Network for Explaining Latent Representations},
+  author={Esser, Patrick and Rombach, Robin and Ommer, Bj{\"o}rn},
+  booktitle={CVPR},
+  year={2020}
+}
+
+@inproceedings{wang2016generative,
+	title={Generative image modeling using style and structure adversarial networks},
+	author={Wang, Xiaolong and Gupta, Abhinav},
+	booktitle=ECCV,
+	year={2016},
+}
+
+@article{plumerault2020control,
+  title={Controlling generative models with continuous factors of variations},
+  author={Plumerault, Antoine and Borgne, Herv{\'e} Le and Hudelot, C{\'e}line},
+  journal={ICLR},
+  year={2020}
+}
+
+@inproceedings{hong2018inferring,
+	title={Inferring Semantic Layout for Hierarchical Text-to-Image Synthesis},
+	author={Hong, Seunghoon and Yang, Dingdong and Choi, Jongwook and Lee, Honglak},
+	booktitle=CVPR,
+	year={2018}
+}
+
+% Video
+
+@inproceedings{walker2016uncertain,
+	title={An uncertain future: Forecasting from static images using variational autoencoders},
+	author={Walker, Jacob and Doersch, Carl and Gupta, Abhinav and Hebert, Martial},
+	booktitle=ECCV,
+	year={2016}
+}
+
+@inproceedings{xue2016visual,
+	title={Visual dynamics: Probabilistic future frame synthesis via cross convolutional networks},
+	author={Xue, Tianfan and Wu, Jiajun and Bouman, Katherine and Freeman, Bill},
+	booktitle=NeurIPS,
+	year={2016}
+}
+
+@inproceedings{ruder2016artistic,
+	title={Artistic style transfer for videos},
+	author={Ruder, Manuel and Dosovitskiy, Alexey and Brox, Thomas},
+	booktitle={German Conference on Pattern Recognition},
+	year={2016},
+}
+
+@inproceedings{gupta2017characterizing,
+	title={Characterizing and improving stability in neural style transfer},
+	author={Gupta, Agrim and Johnson, Justin and Alahi, Alexandre and Fei-Fei, Li},
+	booktitle=ICCV,
+	year={2017},
+}
+
+@inproceedings{huang2017real,
+	title={Real-time neural style transfer for videos},
+	author={Huang, Haozhi and Wang, Hao and Luo, Wenhan and Ma, Lin and Jiang, Wenhao and Zhu, Xiaolong and Li, Zhifeng and Liu, Wei},
+	booktitle=CVPR,
+	year={2017},
+}
+
+@inproceedings{villegas2017decomposing,
+	title={Decomposing motion and content for natural video sequence prediction},
+	author={Villegas, Ruben and Yang, Jimei and Hong, Seunghoon and Lin, Xunyu and Lee, Honglak},
+	booktitle=ICLR,
+	year={2017}
+}
+
+@article{ranzato2014video,
+	title={Video (language) modeling: a baseline for generative models of natural videos},
+	author={Ranzato, MarcAurelio and Szlam, Arthur and Bruna, Joan and Mathieu, Michael and Collobert, Ronan and Chopra, Sumit},
+	journal={arXiv preprint arXiv:1412.6604},
+	year={2014}
+}
+
+
+@inproceedings{sutskever2009recurrent,
+	title={The recurrent temporal restricted boltzmann machine},
+	author={Sutskever, Ilya and Hinton, Geoffrey E and Taylor, Graham W},
+	booktitle=NeurIPS,
+	year={2009}
+}
+
+@inproceedings{villegas2017learning,
+	title={Learning to generate long-term future via hierarchical prediction},
+	author={Villegas, Ruben and Yang, Jimei and Zou, Yuliang and Sohn, Sungryull and Lin, Xunyu and Lee, Honglak},
+	booktitle=ICML,
+	year={2017}
+}
+
+@inproceedings{liang2017dual,
+	title={Dual motion {GAN} for future-flow embedded video prediction},
+	author={Liang, Xiaodan and Lee, Lisa and Dai, Wei and Xing, Eric P},
+	booktitle=NeurIPS,
+	year={2017}
+}
+
+@inproceedings{finn2016unsupervised,
+	title={Unsupervised learning for physical interaction through video prediction},
+	author={Finn, Chelsea and Goodfellow, Ian and Levine, Sergey},
+	booktitle=NeurIPS,
+	year={2016}
+}
+
+
+@inproceedings{denton2017unsupervised,
+	title={Unsupervised learning of disentangled representations from video},
+	author={Denton, Emily L and Birodkar, Vighnesh},
+	booktitle=NeurIPS,
+	year={2017}
+}
+
+@inproceedings{saito2017temporal,
+	title={Temporal generative adversarial nets with singular value clipping},
+	author={Saito, Masaki and Matsumoto, Eiichi and Saito, Shunta},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{tulyakov2018mocogan,
+	title={{MoCoGAN}: Decomposing motion and content for video generation},
+	author={Tulyakov, Sergey and Liu, Ming-Yu and Yang, Xiaodong and Kautz, Jan},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@inproceedings{reddi2018convergence,
+	title={On the convergence of adam and beyond},
+	author={Reddi, Sashank J and Kale, Satyen and Kumar, Sanjiv},
+	booktitle=ICLR,
+	year={2018}
+}
+
+@inproceedings{mathieu2015deep,
+	title={Deep multi-scale video prediction beyond mean square error},
+	author={Mathieu, Michael and Couprie, Camille and LeCun, Yann},
+	booktitle=ICLR,
+	year={2016}
+}
+
+@inproceedings{lotter2016deep,
+	title={Deep predictive coding networks for video prediction and unsupervised learning},
+	author={Lotter, William and Kreiman, Gabriel and Cox, David},
+	booktitle=ICLR,
+	year={2017}
+}
+
+@inproceedings{huang2017stacked,
+	title={Stacked Generative Adversarial Networks.},
+	author={Huang, Xun and Li, Yixuan and Poursaeed, Omid and Hopcroft, John E and Belongie, Serge J},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{hao2018controllable,
+	title={Controllable Video Generation with Sparse Trajectories},
+	author={Hao, Zekun and Huang, Xun and Belongie, Serge},
+	booktitle=CVPR,
+	year={2018}	
+}
+
+
+@inproceedings{chen2017coherent,
+	title={Coherent online video style transfer},
+	author={Chen, Dongdong and Liao, Jing and Yuan, Lu and Yu, Nenghai and Hua, Gang},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@article{richardson2020encoding,
+  title={Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation},
+  author={Richardson, Elad and Alaluf, Yuval and Patashnik, Or and Nitzan, Yotam and Azar, Yaniv and Shapiro, Stav and Cohen-Or, Daniel},
+  journal={arXiv preprint arXiv:2008.00951},
+  year={2020}
+}
+
+@inproceedings{huang2017adain,
+	title={Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization},
+	author={Huang, Xun and Belongie, Serge},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{wu2018group,
+	title={Group normalization},
+	author={Wu, Yuxin and He, Kaiming},
+	booktitle=ECCV,
+	year={2018}
+}
+
+
+@article{ulyanov2016instance,
+	title={Instance normalization: The missing ingredient for fast stylization},
+	author={Ulyanov, Dmitry and Vedaldi, Andrea and Lempitsky, Victor},
+	journal={arXiv preprint arXiv:1607.08022},
+	year={2016}
+}
+
+@inproceedings{ioffe2015batch,
+	title={Batch normalization: Accelerating deep network training by reducing internal covariate shift},
+	author={Ioffe, Sergey and Szegedy, Christian},
+	booktitle=ICML,
+	year={2015}
+}
+
+@article{ba2016layer,
+	title={Layer normalization},
+	author={Ba, Jimmy Lei and Kiros, Jamie Ryan and Hinton, Geoffrey E},
+	journal={arXiv preprint arXiv:1607.06450},
+	year={2016}
+}
+
+
+@inproceedings{johnson2006semantic,
+	title={Semantic photo synthesis},
+	author={Johnson, Matthew and Brostow, Gabriel J and Shotton, Jamie and Arandjelovic, Ognjen and Kwatra, Vivek and Cipolla, Roberto},
+	booktitle={Computer Graphics Forum},
+	year={2006},
+}
+
+@article{chen2009sketch2photo,
+	title={Sketch2photo: Internet image montage},
+	author={Chen, Tao and Cheng, Ming-Ming and Tan, Ping and Shamir, Ariel and Hu, Shi-Min},
+	journal=TOG,
+	year={2009},
+}
+
+
+@inproceedings{li2017perceptual,
+	title={Perceptual generative adversarial networks for small object detection},
+	author={Li, Jianan and Liang, Xiaodan and Wei, Yunchao and Xu, Tingfa and Feng, Jiashi and Yan, Shuicheng},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{tungadversarial,
+	title={Adversarial Inverse Graphics Networks: Learning {2D}-to-{3D} Lifting and Image-to-Image Translation from Unpaired Supervision},
+	author={Tung, Hsiao-Yu Fish and Harley, Adam W and Seto, William and Fragkiadaki, Katerina},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{dong2017semantic,
+	title={Semantic Image Synthesis via Adversarial Learning},
+	author={Dong, Hao and Yu, Simiao and Wu, Chao and Guo, Yike},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{yi2017dualgan,
+	title={{DualGAN}: Unsupervised Dual Learning for Image-to-Image Translation},
+	author={Yi, Zili and Zhang, Hao and Gong, Ping Tan and others},
+	booktitle=ICCV,
+	year={2017}
+}
+
+
+@inproceedings{kaneko2017generative,
+	title={Generative Attribute Controller with Conditional Filtered Generative Adversarial Networks},
+	author={Kaneko, Takuhiro and Hiramatsu, Kaoru and Kashino, Kunio},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{zhang2017age,
+	title={Age Progression/Regression by Conditional Adversarial Autoencoder},
+	author={Zhang, Zhifei and Song, Yang and Qi, Hairong},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{wang2017fast,
+	title={{A-Fast-RCNN}: Hard positive generation via adversary for object detection},
+	author={Wang, Xiaolong and Shrivastava, Abhinav and Gupta, Abhinav},
+	booktitle=CVPR,
+	year={2017}
+}
+@misc{Geitgey2020Fr,
+    author       = {Geitgey, Adam },
+    title        = {GitHub - Face Recognition},
+    year={2020},
+    url          = {https://github.com/ageitgey/face_recognition}
+    }
+@article{kalchbrenner2016video,
+	title={Video pixel networks},
+	author={Kalchbrenner, Nal and Oord, Aaron van den and Simonyan, Karen and Danihelka, Ivo and Vinyals, Oriol and Graves, Alex and Kavukcuoglu, Koray},
+	journal=ICML,
+	year={2017}
+}
+@article{lecun1998mnist,
+  title={The MNIST database of handwritten digits},
+  author={LeCun, Yann},
+  journal={http://yann. lecun. com/exdb/mnist/},
+  year={1998}
+}
+@article{xiao2017fashion,
+  title={Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms},
+  author={Xiao, Han and Rasul, Kashif and Vollgraf, Roland},
+  journal={arXiv preprint arXiv:1708.07747},
+  year={2017}
+}
+@article{krizhevsky2009learning,
+  title={Learning multiple layers of features from tiny images},
+  author={Krizhevsky, Alex and Hinton, Geoffrey and others},
+  year={2009},
+  journal={Technical Report}
+}
+@inproceedings{liu2016deepfashion,
+  title={Deepfashion: Powering robust clothes recognition and retrieval with rich annotations},
+  author={Liu, Ziwei and Luo, Ping and Qiu, Shi and Wang, Xiaogang and Tang, Xiaoou},
+  booktitle={CVPR},
+  pages={1096--1104},
+  year={2016}
+}
+@inproceedings{Ge2019DeepFashion2,
+  author = {Yuying Ge and Ruimao Zhang and Lingyun Wu and Xiaogang Wang and Xiaoou Tang and Ping Luo},
+  title={A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images},
+  booktitle={CVPR},
+  year={2019}
+}
+@inproceedings{zhang2018unreasonable,
+  title={The unreasonable effectiveness of deep features as a perceptual metric},
+  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A and Shechtman, Eli and Wang, Oliver},
+  booktitle={CVPR},
+  pages={586--595},
+  year={2018}
+}
+@inproceedings{rabin2011wasserstein,
+  title={Wasserstein barycenter and its application to texture mixing},
+  author={Rabin, Julien and Peyr{\'e}, Gabriel and Delon, Julie and Bernot, Marc},
+  booktitle={International Conference on Scale Space and Variational Methods in Computer Vision},
+  pages={435--446},
+  year={2011},
+}
+
+@inproceedings{liu2016fashion,
+  title={Fashion landmark detection in the wild},
+  author={Liu, Ziwei and Yan, Sijie and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},
+  booktitle={ECCV},
+  pages={229--245},
+  year={2016},
+}
+@inproceedings{ohnishi2018ftgan,
+	title={Hierarchical Video Generation from Orthogonal Information: Optical Flow and Texture},
+	author={Ohnishi, Katsunori and Yamamoto, Shohei and Ushiku, Yoshitaka and Harada, Tatsuya},
+	booktitle={AAAI},
+	year={2018}
+}
+
+@inproceedings{vondrick2017generating,
+	title={Generating the future with adversarial transformers},
+	author={Vondrick, Carl and Torralba, Antonio},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{vondrick2016generating,
+	title={Generating videos with scene dynamics},
+	author={Vondrick, Carl and Pirsiavash, Hamed and Torralba, Antonio},
+	booktitle=NeurIPS,
+	year={2016}
+}
+
+
+@inproceedings{larsen2015autoencoding,
+	title={Autoencoding beyond pixels using a learned similarity metric},
+	author={Larsen, Anders Boesen Lindbo and S{\o}nderby, S{\o}ren Kaae and Larochelle, Hugo and Winther, Ole},
+	booktitle=ICML,
+	year={2016}
+}
+@inproceedings{he2016deep,
+	title={Deep residual learning for image recognition},
+	author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	booktitle=CVPR,
+	year={2016}
+}
+@article{simonyan2014very,
+	title={Very deep convolutional networks for large-scale image recognition},
+	author={Simonyan, Karen and Zisserman, Andrew},
+	journal={arXiv preprint arXiv:1409.1556},
+	year={2014}
+}
+@article{rudin1992nonlinear,
+	title={Nonlinear total variation based noise removal algorithms},
+	author={Rudin, Leonid I and Osher, Stanley and Fatemi, Emad},
+	journal={Physica D: Nonlinear Phenomena},
+	year={1992},
+}
+
+
+@article{lalonde2007photo,
+	title={Photo clip art},
+	author={Lalonde, Jean-Fran{\c{c}}ois and Hoiem, Derek and Efros, Alexei A and Rother, Carsten and Winn, John and Criminisi, Antonio},
+	journal=TOG,
+	year={2007},
+}
+
+@article{karacan2016learning,
+	title={Learning to generate images of outdoor scenes from attributes and semantic layouts},
+	author={Karacan, Levent and Akata, Zeynep and Erdem, Aykut and Erdem, Erkut},
+	journal={arXiv preprint arXiv:1612.00215},
+	year={2016}
+}
+@article{sangkloy2016scribbler,
+	title={Scribbler: Controlling deep image synthesis with sketch and color},
+	author={Sangkloy, Patsorn and Lu, Jingwan and Fang, Chen and Yu, Fisher and Hays, James},
+	journal={arXiv preprint arXiv:1612.00835},
+	year={2016}
+}
+@article{brown2020gpt3,
+    title={Language Models are Few-Shot Learners},
+    author={Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
+    journal={arXiv preprint arXiv:2005.14165},
+    year={2020},
+}
+@article{gharbi2016deep,
+	title={Deep joint demosaicking and denoising},
+	author={Gharbi, Micha{\"e}l and Chaurasia, Gaurav and Paris, Sylvain and Durand, Fr{\'e}do},
+	journal=TOG,
+	year={2016},
+}
+@inproceedings{gatys2016image,
+	title={Image style transfer using convolutional neural networks},
+	author={Gatys, Leon A and Ecker, Alexander S and Bethge, Matthias},
+	booktitle=CVPR,
+	year={2016}
+}
+@inproceedings{pathak2016context,
+	title={Context encoders: Feature learning by inpainting},
+	author={Pathak, Deepak and Krahenbuhl, Philipp and Donahue, Jeff and Darrell, Trevor and Efros, Alexei A},
+	booktitle=CVPR,
+	year={2016}
+}
+
+@inproceedings{zhang2017real,
+	title={Real-time user-guided image colorization with learned deep priors},
+	author={Zhang, Richard and Zhu, Jun-Yan and Isola, Phillip and Geng, Xinyang and Lin, Angela S and Yu, Tianhe and Efros, Alexei A},
+	booktitle=SIG,
+	year={2017}
+}
+
+@inproceedings{taigman2016unsupervised,
+	title={Unsupervised cross-domain image generation},
+	author={Taigman, Yaniv and Polyak, Adam and Wolf, Lior},
+	booktitle=ICLR,
+	year={2017}
+}
+@inproceedings{bousmalis2016unsupervised,
+	title={Unsupervised pixel-level domain adaptation with generative adversarial networks},
+	author={Bousmalis, Konstantinos and Silberman, Nathan and Dohan, David and Erhan, Dumitru and Krishnan, Dilip},
+	booktitle=CVPR,
+	year={2017}
+}
+@inproceedings{shrivastava2016learning,
+	title={Learning from simulated and unsupervised images through adversarial training},
+	author={Shrivastava, Ashish and Pfister, Tomas and Tuzel, Oncel and Susskind, Josh and Wang, Wenda and Webb, Russ},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{zhao2019image,
+	title={Image generation from layout},
+	author={Zhao, Bo and Meng, Lili and Yin, Weidong and Sigal, Leonid},
+	booktitle=CVPR,
+	year={2019}
+}
+
+@inproceedings{karras2017progressive,
+	title={Progressive growing of {GANs} for improved quality, stability, and variation},
+	author={Karras, Tero and Aila, Timo and Laine, Samuli and Lehtinen, Jaakko},
+	booktitle=ICLR,
+	year={2018}
+}
+
+@inproceedings{mao2017least,
+	title={Least squares generative adversarial networks},
+	author={Mao, Xudong and Li, Qing and Xie, Haoran and Lau, Raymond YK and Wang, Zhen and Smolley, Stephen Paul},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{zhang2017stackgan,
+	title={{StackGAN}: Text to photo-realistic image synthesis with stacked generative adversarial networks},
+	author={Zhang, Han and Xu, Tao and Li, Hongsheng and Zhang, Shaoting and Huang, Xiaolei and Wang, Xiaogang and Metaxas, Dimitris},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@inproceedings{reed2016generative,
+	title={Generative adversarial text to image synthesis},
+	author={Reed, Scott and Akata, Zeynep and Yan, Xinchen and Logeswaran, Lajanugen and Schiele, Bernt and Lee, Honglak},
+	booktitle=ICML,
+	year={2016}
+}
+
+@inproceedings{miyato2018cgans,
+	title={{cGANs} with projection discriminator},
+	author={Miyato, Takeru and Koyama, Masanori},
+	booktitle=ICLR,
+	year={2018}
+}
+
+@inproceedings{odena2016conditional,
+	title={Conditional image synthesis with auxiliary classifier {GANs}},
+	author={Odena, Augustus and Olah, Christopher and Shlens, Jonathon},
+	booktitle=ICML,
+	year={2017}
+}
+
+@inproceedings{ghosh2017multi,
+	title={Multi-Agent Diverse Generative Adversarial Networks},
+	author={Ghosh, Arnab and Kulharia, Viveka and Namboodiri, Vinay and Torr, Philip HS and Dokania, Puneet K},
+	booktitle=CVPR,
+	year={2018}
+}
+@article{iizuka2017globally,
+	title={Globally and locally consistent image completion},
+	author={Iizuka, Satoshi and Simo-Serra, Edgar and Ishikawa, Hiroshi},
+	journal=TOG,
+	year={2017},
+}
+
+@inproceedings{reed2017parallel,
+	title={Parallel multiscale autoregressive density estimation},
+	author={Reed, Scott and Oord, A{\"a}ron van den and Kalchbrenner, Nal and Colmenarejo, Sergio G{\'o}mez and Wang, Ziyu and Belov, Dan and de Freitas, Nando},
+	booktitle=ICML,
+	year={2017}
+}
+
+@inproceedings{kingma2013auto,
+	title={Auto-encoding variational {Bayes}},
+	author={Kingma, Diederik P and Welling, Max},
+	booktitle=ICLR,
+	year={2013}
+}
+
+
+
+@inproceedings{zhang2016stackgan,
+	title={{StackGAN}: Text to photo-realistic image synthesis with stacked generative adversarial networks},
+	author={Zhang, Han and Xu, Tao and Li, Hongsheng and Zhang, Shaoting and Huang, Xiaolei and Wang, Xiaogang and Metaxas, Dimitris},
+	booktitle=CVPR,
+	year={2017}
+}
+@inproceedings{huang2017sgan,
+	title={Stacked Generative Adversarial Networks},
+	author={Huang, Xun and Li, Yixuan and Poursaeed, Omid and Hopcroft, John and Belongie, Serge},
+	booktitle=CVPR,
+	year={2017}
+}
+@article{burt1983laplacian,
+	title={The {Laplacian} pyramid as a compact image code},
+	author={Burt, Peter and Adelson, Edward},
+	journal={IEEE Transactions on Communications},
+	year={1983},
+}
+@inproceedings{denton2015deep,
+	title={Deep Generative Image Models using a {Laplacian} Pyramid of Adversarial Networks},
+	author={Denton, Emily and Chintala, Soumith and Szlam, Arthur and Fergus, Rob},
+	booktitle=NeurIPS,
+	year={2015}
+}
+
+@inproceedings{taigman2017unsupervised,
+	title={Unsupervised Cross-Domain Image Generation},
+	author={Taigman, Yaniv and Polyak, Adam and Wolf, Lior},
+	booktitle=ICLR,
+	year={2017}
+}
+@inproceedings{benaim2018one,
+	title={One-Shot Unsupervised Cross Domain Translation},
+	author={Benaim, Sagie and Wolf, Lior},
+	booktitle=NeurIPS,
+	year={2018}
+}
+
+@inproceedings{liu2019few,
+	title={Few-shot unsupervised image-to-image translation},
+	author={Liu, Ming-Yu and Huang, Xun and Mallya, Arun and Karras, Tero and Aila, Timo and Lehtinen, Jaakko and Kautz, Jan},
+	booktitle=ICCV,
+	year={2019}
+}
+
+@inproceedings{xu2018attngan,
+	title={{AttnGAN}: Fine-grained text to image generation with attentional generative adversarial networks},
+	author={Xu, Tao and Zhang, Pengchuan and Huang, Qiuyuan and Zhang, Han and Gan, Zhe and Huang, Xiaolei and He, Xiaodong},
+	booktitle=CVPR,
+	year={2018}
+}
+@inproceedings{yu2017jittor,
+  author    = {Aron Yu and
+               Kristen Grauman},
+  title     = {Semantic Jitter: Dense Supervision for Visual Comparisons via Synthetic Images},
+  booktitle = {ICCV},
+  pages     = {5571--5580},
+  year      = {2017}
+}
+@inproceedings{wu2018dynamic,
+	title={Dynamic sampling convolutional neural networks},
+	author={Wu, Jialin and Li, Dai and Yang, Yu and Bajaj, Chandrajit and Ji, Xiangyang},
+	booktitle=ECCV,
+	year={2018}
+}
+@inproceedings{jia2016dynamic,
+	title={Dynamic filter networks},
+	author={Jia, Xu and De Brabandere, Bert and Tuytelaars, Tinne and Gool, Luc V},
+	booktitle=NeurIPS,
+	year={2016}
+}
+@inproceedings{brock2018large,
+	title={Large scale {GAN} training for high fidelity natural image synthesis},
+	author={Brock, Andrew and Donahue, Jeff and Simonyan, Karen},
+	booktitle=ICLR,
+	year={2019}
+}
+@inproceedings{nowozin2016f,
+	title={{f-GAN}: Training generative neural samplers using variational divergence minimization},
+	author={Nowozin, Sebastian and Cseke, Botond and Tomioka, Ryota},
+	booktitle=NeurIPS,
+	year={2016}
+}
+@inproceedings{jolicoeur2020relativistic,	
+	author = {Jolicoeur-Martineau, Alexia},
+	booktitle = ICML,
+	title = {On Relativistic f-Divergences},
+	year = {2020}
+}
+@inproceedings{jolicoeur2019relativistic,
+	title={The relativistic discriminator: a key element missing from standard {GAN}},
+	author={Jolicoeur-Martineau, Alexia},
+	booktitle=ICLR,
+	year={2019}
+}
+@inproceedings{radford2016dcgan,
+	title={Unsupervised representation learning with deep convolutional generative adversarial networks},
+	author={Radford, Alec and Metz, Luke and Chintala, Soumith},
+	booktitle=ICLR,
+	year={2016}
+}
+@inproceedings{salimans2016improved,
+	title={Improved techniques for training {GANs}},
+	author={Salimans, Tim and Goodfellow, Ian and Zaremba, Wojciech and Cheung, Vicki and Radford, Alec and Chen, Xi},
+	booktitle=NeurIPS,
+	year={2016}
+}
+@inproceedings{arjovsky2017wasserstein,
+	title={Wasserstein {GAN}},
+	author={Arjovsky, Martin and Chintala, Soumith and Bottou, L{\'e}on},
+	booktitle=ICML,
+	year={2017}
+}
+@article{huang2018multimodal,
+	title={Multimodal Unsupervised Image-to-Image Translation},
+	author={Huang, Xun and Liu, Ming-Yu and Belongie, Serge and Kautz, Jan},
+	journal=ECCV,
+	year={2018}
+}
+
+@article{kato2019self,
+  title={Self-supervised Learning of 3D Objects from Natural Images},
+  author={Kato, Hiroharu and Harada, Tatsuya},
+  journal={arXiv preprint arXiv:1911.08850},
+  year={2019}
+}
+@inproceedings{mildenhall2020nerf,
+  title={Nerf: Representing scenes as neural radiance fields for view synthesis},
+  author={Mildenhall, Ben and Srinivasan, Pratul P and Tancik, Matthew and Barron, Jonathan T and Ramamoorthi, Ravi and Ng, Ren},
+  booktitle={ECCV},
+  year={2020}
+}
+@article{lombardi2019neural,
+  title={Neural volumes: Learning dynamic renderable volumes from images},
+  author={Lombardi, Stephen and Simon, Tomas and Saragih, Jason and Schwartz, Gabriel and Lehrmann, Andreas and Sheikh, Yaser},
+  journal={arXiv preprint arXiv:1906.07751},
+  year={2019}
+}
+@article{martin2020nerf,
+  title={NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections},
+  author={Martin-Brualla, Ricardo and Radwan, Noha and Sajjadi, Mehdi SM and Barron, Jonathan T and Dosovitskiy, Alexey and Duckworth, Daniel},
+  journal={arXiv preprint arXiv:2008.02268},
+  year={2020}
+}
+
+@article{nguyen2020blockgan,
+  title={BlockGAN: Learning 3D Object-aware Scene Representations from Unlabelled Images},
+  author={Nguyen-Phuoc, Thu and Richardt, Christian and Mai, Long and Yang, Yong-Liang and Mitra, Niloy},
+  journal={arXiv preprint arXiv:2002.08988},
+  year={2020}
+}
+
+@inproceedings{saito2020pifuhd,
+  title={PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization},
+  author={Saito, Shunsuke and Simon, Tomas and Saragih, Jason and Joo, Hanbyul},
+  booktitle={CVPR},
+  pages={84--93},
+  year={2020}
+}
+@inproceedings{wu2020unsupervised,
+  title={Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild},
+  author={Wu, Shangzhe and Rupprecht, Christian and Vedaldi, Andrea},
+  booktitle={CVPR},
+  pages={1--10},
+  year={2020}
+}
+@article{he2020geo,
+  title={Geo-PIFu: Geometry and Pixel Aligned Implicit Functions for Single-view Human Reconstruction},
+  author={He, Tong and Collomosse, John and Jin, Hailin and Soatto, Stefano},
+  journal={arXiv preprint arXiv:2006.08072},
+  year={2020}
+}
+
+@article{bhatnagar2020combining,
+  title={Combining implicit function learning and parametric models for 3d human reconstruction},
+  author={Bhatnagar, Bharat Lal and Sminchisescu, Cristian and Theobalt, Christian and Pons-Moll, Gerard},
+  journal={arXiv preprint arXiv:2007.11432},
+  year={2020}
+}
+@article{zheng2020pamir,
+  title={PaMIR: Parametric Model-Conditioned Implicit Representation for Image-based Human Reconstruction},
+  author={Zheng, Zerong and Yu, Tao and Liu, Yebin and Dai, Qionghai},
+  journal={arXiv preprint arXiv:2007.03858},
+  year={2020}
+}
+@inproceedings{shaham2019singan,
+  title={Singan: Learning a generative model from a single natural image},
+  author={Shaham, Tamar Rott and Dekel, Tali and Michaeli, Tomer},
+  booktitle={ICCV},
+  pages={4570--4580},
+  year={2019}
+}
+
+@inproceedings{liu2017rankiqa,
+  author    = {Xialei Liu and
+               Joost van de Weijer and
+               Andrew D. Bagdanov},
+  title     = {{RankIQA}: Learning from Rankings for No-Reference Image Quality Assessment},
+  booktitle = {Proc. IEEE Int. Conf. Comput. Vis.},
+  pages     = {1040--1049},
+  year      = {2017}
+}
+@article{mittal2013niqe,
+  author={A. {Mittal} and R. {Soundararajan} and A. C. {Bovik}},
+  journal={IEEE Signal Processing Letters}, 
+  title={Making a “Completely Blind” Image Quality Analyzer}, 
+  year={2013},
+  volume={20},
+  number={3},
+  pages={209-212},
+ }
+ 
+@inproceedings{Ren2018RAN4IQA,
+  author    = {Hongyu Ren and
+               Diqi Chen and
+               Yizhou Wang},
+  title     = {{RAN4IQA}: Restorative Adversarial Nets for No-Reference Image Quality Assessment},
+  booktitle = {AAAI},
+  pages     = {7308--7314},
+  year      = {2018}
+}
+@inproceedings{szegedy2016rethinking,
+  title={Rethinking the inception architecture for computer vision},
+  author={Szegedy, Christian and Vanhoucke, Vincent and Ioffe, Sergey and Shlens, Jon and Wojna, Zbigniew},
+  booktitle={CVPR},
+  pages={2818--2826},
+  year={2016}
+}
+@article{ho2020neural,
+  title={Neural Architecture Search for Deep Image Prior},
+  author={Ho, Kary and Gilbert, Andrew and Jin, Hailin and Collomosse, John},
+  journal={arXiv preprint arXiv:2001.04776},
+  year={2020}
+}
+@inproceedings{chen2020dip,
+  title={NAS-DIP: Learning Deep Image Prior with Neural Architecture Search},
+  author={Chen, Yun-Chun and Gao, Chen and Robb, Esther and Huang, Jia-Bin},
+  booktitle={ECCV},
+  year={2020}
+}
+@article{egger20203d,
+  title={3D Morphable Face Models—Past, Present, and Future},
+  author={Egger, Bernhard and Smith, William AP and Tewari, Ayush and Wuhrer, Stefanie and Zollhoefer, Michael and Beeler, Thabo and Bernard, Florian and Bolkart, Timo and Kortylewski, Adam and Romdhani, Sami and others},
+  journal={TOG},
+  volume={39},
+  number={5},
+  pages={1--38},
+  year={2020},
+}
+@inproceedings{dey2019doodle,
+  title={Doodle to search: Practical zero-shot sketch-based image retrieval},
+  author={Dey, Sounak and Riba, Pau and Dutta, Anjan and Llados, Josep and Song, Yi-Zhe},
+  booktitle={CVPR},
+  pages={2179--2188},
+  year={2019}
+}
+@article{eitz2010sketch,
+  title={Sketch-based image retrieval: Benchmark and bag-of-features descriptors},
+  author={Eitz, Mathias and Hildebrand, Kristian and Boubekeur, Tamy and Alexa, Marc},
+  journal={TVCG},
+  volume={17},
+  number={11},
+  pages={1624--1636},
+  year={2010},
+  publisher={IEEE}
+}
+
+
+@article{cortes1995support,
+  title={Support-vector networks},
+  author={Cortes, Corinna and Vapnik, Vladimir},
+  journal={Machine learning},
+  volume={20},
+  number={3},
+  pages={273--297},
+  year={1995},
+  publisher={Springer}
+}
+@article{chen2020free,
+  title={A Free Viewpoint Portrait Generator with Dynamic Styling},
+  author={Chen, Anpei and Liu, Ruiyang and Xie, Ling and Yu, Jingyi},
+  journal={arXiv preprint arXiv:2007.03780},
+  year={2020}
+}
+
+@inproceedings{chen2019learning,
+  title={Learning implicit fields for generative shape modeling},
+  author={Chen, Zhiqin and Zhang, Hao},
+  booktitle={CVPR},
+  pages={5939--5948},
+  year={2019}
+}
+
+@inproceedings{tucker2020single,
+  title={Single-View View Synthesis with Multiplane Images},
+  author={Tucker, Richard and Snavely, Noah},
+  booktitle={CVPR},
+  pages={551--560},
+  year={2020}
+}
+
+@article{rajeswar2020pix2shape,
+  title={Pix2Shape: Towards Unsupervised Learning of 3D Scenes from Images Using a View-Based Representation},
+  author={Rajeswar, Sai and Mannan, Fahim and Golemo, Florian and Parent-L{\'e}vesque, J{\'e}r{\^o}me and Vazquez, David and Nowrouzezahrai, Derek and Courville, Aaron},
+  journal={IJCV},
+  pages={1--16},
+  year={2020},
+  publisher={Springer}
+}
+@incollection{cohen2006color,
+  title={Color harmonization},
+  author={Cohen-Or, Daniel and Sorkine, Olga and Gal, Ran and Leyvand, Tommer and Xu, Ying-Qing},
+  booktitle={ACM SIGGRAPH},
+  pages={624--630},
+  year={2006}
+}
+@inproceedings{tsai2017deep,
+  title={Deep image harmonization},
+  author={Tsai, Yi-Hsuan and Shen, Xiaohui and Lin, Zhe and Sunkavalli, Kalyan and Lu, Xin and Yang, Ming-Hsuan},
+  booktitle={CVPR},
+  pages={3789--3797},
+  year={2017}
+}
+@article{sunkavalli2010multi,
+  title={Multi-scale image harmonization},
+  author={Sunkavalli, Kalyan and Johnson, Micah K and Matusik, Wojciech and Pfister, Hanspeter},
+  journal={TOG},
+  volume={29},
+  number={4},
+  pages={1--10},
+  year={2010},
+}
+@inproceedings{bau2019gandissect,
+ title={GAN Dissection: Visualizing and Understanding Generative Adversarial Networks},
+ author={Bau, David and Zhu, Jun-Yan and Strobelt, Hendrik and Zhou, Bolei and Tenenbaum, Joshua B. and Freeman, William T. and Torralba, Antonio},
+ booktitle={ICLR},
+ year={2019}
+}
+@inproceedings{maas2013rectifier,
+  title={Rectifier nonlinearities improve neural network acoustic models},
+  author={Maas, Andrew L and Hannun, Awni Y and Ng, Andrew Y},
+  booktitle={ICML},
+  year={2013}
+}
+@article{xu2020ghfeat,
+  title   = {Generative Hierarchical Features from Synthesizing Images},
+  author  = {Xu, Yinghao and Shen, Yujun and Zhu, Jiapeng and Yang, Ceyuan and Zhou, Bolei},
+  journal = {arXiv preprint arXiv:2007.10379},
+  year    = {2020}
+}
+@inproceedings{liu2019funit,
+  title={Few-shot Unsueprvised Image-to-Image Translation},
+  author={Ming-Yu Liu and Xun Huang and Arun Mallya and Tero Karras and Timo Aila and Jaakko Lehtinen and Jan Kautz.},
+  booktitle={ICCV},
+  year={2019}
+}
+@inproceedings{shang2016understanding,
+  title={Understanding and improving convolutional neural networks via concatenated rectified linear units},
+  author={Shang, Wenling and Sohn, Kihyuk and Almeida, Diogo and Lee, Honglak},
+  booktitle={ICML},
+  pages={2217--2225},
+  year={2016}
+}
+
+@inproceedings{nair2010rectified,
+  title={Rectified linear units improve restricted boltzmann machines},
+  author={Nair, Vinod and Hinton, Geoffrey E},
+  booktitle={ICML},
+  year={2010}
+}
+@inproceedings{dosovitskiy2016generating,
+	title={Generating images with perceptual similarity metrics based on deep networks},
+	author={Dosovitskiy, Alexey and Brox, Thomas},
+	booktitle=NeurIPS,
+	year={2016}
+}
+@inproceedings{ledig2016photo,
+	title={Photo-realistic single image super-resolution using a generative adversarial network},
+	author={Ledig, Christian and Theis, Lucas and Husz{\'a}r, Ferenc and Caballero, Jose and Cunningham, Andrew and Acosta, Alejandro and Aitken, Andrew and Tejani, Alykhan and Totz, Johannes and Wang, Zehan and Shi, Wenzhe},
+	booktitle=CVPR,
+	year={2017},
+}
+@inproceedings{wang2015sparse,
+    title={Deep networks for image super-resolution with sparse prior},
+    author={Wang, Zhaowen and Liu, Ding and Yang, Jianchao and Han, Wei and Huang, Thomas},
+    booktitle={ICCV},
+    year={2015}
+}
+@inproceedings{sajjadi2017enhancenet,
+    title={Enhancenet: Single image super-resolution through automated texture synthesis},
+    author={Sajjadi, Mehdi SM and Sch{\"o}lkopf, Bernhard and Hirsch, Michael},
+    booktitle={ICCV},
+    year={2017}
+}
+@inproceedings{xu2017text,
+    title={Learning to super-resolve blurry face and text images},
+    author={Xu, Xiangyu and Sun, Deqing and Pan, Jinshan and Zhang, Yujin and Pfister, Hanspeter and Yang, Ming-Hsuan},
+    booktitle={ICCV},
+    year={2017}
+}
+@inproceedings{Dahl2019dual,
+    title={Pixel recursive super resolution},
+    author={Dahl, Ryan and Norouzi, Mohammad and Shlens, Jonathon},
+    booktitle={ICCV},
+    year={2017}
+}
+
+@inproceedings{wang2018spatial,
+    title={Recovering realistic texture in image super-resolution by deep spatial feature transform},
+    author={Wang, Xintao and Yu, Ke and Dong, Chao and Loy, Chen Change},
+    booktitle={CVPR},
+    year={2018}
+}
+
+@article{lai2018paramid,
+    title={Fast and accurate image super-resolution with deep laplacian pyramid networks},
+    author={Lai, Wei-Sheng and Huang, Jia-Bin and Ahuja, Narendra and Yang, Ming-Hsuan},
+    journal={TPAMI},
+    year={2018}
+}
+
+@inproceedings{liu2019learning,
+	title={Learning to predict layout-to-image conditional convolutions for semantic image synthesis},
+	author={Liu, Xihui and Yin, Guojun and Shao, Jing and Wang, Xiaogang and others},
+	booktitle=NeurIPS,
+	year={2019}
+}
+
+@article{mirza2014conditional,
+	title={Conditional generative adversarial nets},
+	author={Mirza, Mehdi and Osindero, Simon},
+	journal={arXiv preprint arXiv:1411.1784},
+	year={2014}
+}
+
+@inproceedings{wang2016generative,
+	title={Generative image modeling using style and structure adversarial networks},
+	author={Wang, Xiaolong and Gupta, Abhinav},
+	booktitle=ECCV,
+	year={2016},  
+}
+
+@inproceedings{isola2017image,
+	title={Image-to-image translation with conditional adversarial networks},
+	author={Isola, Phillip and Zhu, Jun-Yan and Zhou, Tinghui and Efros, Alexei A},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{chen2017photographic,
+	title={Photographic image synthesis with cascaded refinement networks},
+	author={Chen, Qifeng and Koltun, Vladlen},
+	booktitle=ICCV,
+	year={2017}
+}
+
+
+@inproceedings{liu2016unsupervised,
+	title={Unsupervised Image-to-Image Translation Networks},
+	author={Ming-Yu Liu and Thomas Breuel and Jan Kautz},
+	booktitle=NeurIPS,
+	year={2017}
+}
+@inproceedings{prajwal2020speech,
+author = {Prajwal, K R and Mukhopadhyay, Rudrabha and Namboodiri, Vinay P. and Jawahar, C.V.},
+title = {Learning Individual Speaking Styles for Accurate Lip to Speech Synthesis},
+booktitle = {CVPR},
+year = {2020}
+}
+@inproceedings{jia2018speaker,
+  author    = {Ye Jia and
+               Yu Zhang and
+               Ron J. Weiss and
+               Quan Wang and
+               Jonathan Shen and
+               Fei Ren and
+               Zhifeng Chen and
+               Patrick Nguyen and
+               Ruoming Pang and
+               Ignacio Lopez{-}Moreno and
+               Yonghui Wu},
+  title     = {Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis},
+  booktitle = {NeurIPS},
+  pages     = {4485--4495},
+  year      = {2018}
+}
+@article{kohonen1973matrix,
+  author    = {Teuvo Kohonen and
+               Matti Ruohonen},
+  title     = {Representation of Associated Data by Matrix Operators},
+  journal   = {IEEE Transactions on Computers},
+  volume    = {22},
+  number    = {7},
+  pages     = {701--702},
+  year      = {1973},
+}
+@inproceedings{liu2016coupled,
+	title={Coupled Generative Adversarial Networks},
+	author={Liu, Ming-Yu and Tuzel, Oncel},
+	booktitle=NeurIPS,
+	year={2016}
+}
+@inproceedings{zhu2017unpaired,
+	title={Unpaired image-to-image translation using cycle-consistent adversarial networks},
+	author={Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A},
+	booktitle=ICCV,
+	year={2017}
+}
+
+@article{reinhard2001color,
+	title={Color transfer between images},
+	author={Reinhard, Erik and Adhikhmin, Michael and Gooch, Bruce and Shirley, Peter},
+	journal={IEEE Computer Graphics and Applications},
+	year={2001},
+}
+@article{levin2004colorization,
+	title={Colorization using optimization},
+	author={Levin, Anat and Lischinski, Dani and Weiss, Yair},
+	journal=TOG,
+	year={2004},
+}
+@article{avidan2007seam,
+	title={Seam carving for content-aware image resizing},
+	author={Avidan, Shai and Shamir, Ariel},
+	journal=TOG,
+	year={2007},
+}
+@article{barnes2009patchmatch,
+	title={{PatchMatch}: A randomized correspondence algorithm for structural image editing},
+	author={Barnes, Connelly and Shechtman, Eli and Finkelstein, Adam and Goldman, Dan B},
+	journal=TOG,
+	year={2009}
+}
+@inproceedings{bau2019seeing,
+  title={Seeing what a gan cannot generate},
+  author={Bau, David and Zhu, Jun-Yan and Wulff, Jonas and Peebles, William and Strobelt, Hendrik and Zhou, Bolei and Torralba, Antonio},
+  booktitle={ICCV},
+  pages={4502--4511},
+  year={2019}
+}
+@inproceedings{zhu2016generative,
+	title={Generative visual manipulation on the natural image manifold},
+	author={Zhu, Jun-Yan and Kr{\"a}henb{\"u}hl, Philipp and Shechtman, Eli and Efros, Alexei A},
+	booktitle=ECCV,
+	year={2016}
+}
+@inproceedings{bau2020rewriting,
+	title={Rewriting a Deep Generative Model},
+	author={David, Bau and Steven, Liu and Tongzhou, Wang and Jun-Yan, Zhu and Antonio, Torralba},
+	booktitle=ECCV,
+	year={2020}
+}
+
+@inproceedings{zhu2020indomain,
+  title={In-domain gan inversion for real image editing},
+  author={Zhu, Jiapeng and Shen, Yujun and Zhao, Deli and Zhou, Bolei},
+  booktitle={ECCV},
+  year={2020}
+}
+
+@inproceedings{yu2014local,
+  author    = {Aron Yu and
+               Kristen Grauman},
+  title     = {Fine-Grained Visual Comparisons with Local Learning},
+  booktitle = {CVPR},
+  pages     = {192--199},
+  year      = {2014},
+}
+
+@inproceedings{zhou2014places,
+  author    = {Bolei Zhou and
+               {\`{A}}gata Lapedriza and
+               Jianxiong Xiao and
+               Antonio Torralba and
+               Aude Oliva},
+  title     = {Learning Deep Features for Scene Recognition using Places Database},
+  booktitle = {NeurIPS},
+  pages     = {487--495},
+  year      = {2014},
+}
+
+@inproceedings{Nekrasov2019joint,
+  author    = {Vladimir Nekrasov and
+               Thanuja Dharmasiri and
+               Andrew Spek and
+               Tom Drummond and
+               Chunhua Shen and
+               Ian D. Reid},
+  title     = {Real-Time Joint Semantic Segmentation and Depth Estimation Using Asymmetric Annotations},
+  booktitle = {ICRA},
+  pages     = {7101--7107},
+  publisher = {{IEEE}},
+  year      = {2019}
+}
+@inproceedings{zhan2019joint,
+  author    = {Wujing Zhan and
+               Xinqi Ou and
+               Yunyi Yang and
+               Long Chen},
+  title     = {DSNet: Joint Learning for Scene Segmentation and Disparity Estimation},
+  booktitle = {ICRA},
+  pages     = {2946--2952},
+  year      = {2019}
+}
+
+
+@article{touvron2020powers,
+  author    = {Hugo Touvron and
+               Matthijs Douze and
+               Matthieu Cord and
+               Herv{\'{e}} J{\'{e}}gou},
+  title     = {Powers of layers for image-to-image translation},
+  journal={arXiv preprint arXiv:2008.05763},
+  year      = {2020},
+}
+
+@inproceedings{huang2018apolloscape,
+	title={The {ApolloScape} Dataset for Autonomous Driving},
+	author={Huang, Xinyu and Cheng, Xinjing and Geng, Qichuan and Cao, Binbin and Zhou, Dingfu and Wang, Peng and Lin, Yuanqing and Yang, Ruigang},
+	booktitle=CVPR,
+	year={2018}
+}
+@inproceedings{brostow2008camvid,
+	author    = {Gabriel J. Brostow and Jamie Shotton and Julien Fauqueur and Roberto Cipolla},
+	title     = {Segmentation and Recognition Using Structure from Motion Point Clouds},
+	booktitle = ECCV,
+	year      = {2008},
+}
+@inproceedings{Guler2018DensePose,
+	title={{DensePose}: Dense Human Pose Estimation In The Wild},
+	author={G{\"u}ler, R{\i}za Alp and Neverova, Natalia and Kokkinos, Iasonas},
+	booktitle=CVPR,
+	year={2018}
+}
+
+@inproceedings{cao2017realtime,
+	author = {Zhe Cao and Tomas Simon and Shih-En Wei and Yaser Sheikh},
+	booktitle = CVPR,
+	title = {Realtime Multi-Person {2D} Pose Estimation using Part Affinity Fields},
+	year = {2017}
+}
+
+@inproceedings{le2012interactive,
+	title={Interactive facial feature localization},
+	author={Le, Vuong and Brandt, Jonathan and Lin, Zhe and Bourdev, Lubomir and Huang, Thomas S},
+	booktitle=ECCV,
+	year={2012},
+}
+
+@inproceedings{Cordts2016cityscapes,
+	title={The {Cityscapes} Dataset for Semantic Urban Scene Understanding},
+	author={Cordts, Marius and Omran, Mohamed and Ramos, Sebastian and Rehfeld, Timo and Enzweiler, Markus and Benenson, Rodrigo and Franke, Uwe and Roth, Stefan and Schiele, Bernt},
+	booktitle=CVPR,
+	year={2016}
+}
+@inproceedings{Silberman2012indoor,
+	author={Nathan Silberman, Derek Hoiem, Pushmeet Kohli and Rob Fergus},
+	title={Indoor Segmentation and Support Inference from {RGBD} Images},
+	booktitle=ECCV,
+	year={2012}
+}
+@inproceedings{zhou2017scene,
+	title={Scene Parsing through {ADE20K} Dataset},
+	author={Zhou, Bolei and Zhao, Hang and Puig, Xavier and Fidler, Sanja and Barriuso, Adela and Torralba, Antonio},
+	booktitle=CVPR,
+	year={2017}
+}
+@inproceedings{smith2013exemplar,
+	title={Exemplar-based face parsing},
+	author={Smith, Brandon M and Zhang, Li and Brandt, Jonathan and Lin, Zhe and Yang, Jianchao},
+	booktitle=CVPR,  
+	year={2013}
+}
+
+@article{wu2018cgnet,
+	title={CGNet: A Light-weight Context Guided Network for Semantic Segmentation},
+	author={Wu, Tianyi and Tang, Sheng and Zhang, Rui and Zhang, Yongdong},
+	journal={arXiv preprint arXiv:1811.08201},
+	year={2018}
+}
+
+@inproceedings{brown2003recognising,
+	title={Recognising panoramas.},
+	author={Brown, Matthew and Lowe, David G and others},
+	booktitle=ICCV,
+	year={2003}
+}
+
+@inproceedings{long2015fully,
+	title={Fully convolutional networks for semantic segmentation},
+	author={Long, Jonathan and Shelhamer, Evan and Darrell, Trevor},
+	booktitle=CVPR,
+	year={2015}
+}
+
+@inproceedings{ronneberger2015u,
+	title={{U}-net: Convolutional networks for biomedical image segmentation},
+	author={Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+	booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+	year={2015},
+}
+@inproceedings{zhao2017pspnet,
+	author = {Hengshuang Zhao and Jianping Shi and Xiaojuan Qi and Xiaogang Wang and Jiaya Jia},
+	title = {Pyramid Scene Parsing Network},
+	booktitle = CVPR,
+	year = {2017}
+}
+
+@inproceedings{zhao2016energy,
+	title={Energy-based generative adversarial network},
+	author={Zhao, Junbo and Mathieu, Michael and LeCun, Yann},
+	booktitle=ICLR,
+	year={2017}
+}
+
+@inproceedings{zhang2016colorful,
+	title={Colorful image colorization},
+	author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
+	booktitle=ECCV,
+	year={2016},
+}
+
+@article{guibas2017synthetic,
+	title={Synthetic Medical Images from Dual Generative Adversarial Networks},
+	author={Guibas, John T and Virdi, Tejpal S and Li, Peter S},
+	journal={arXiv preprint arXiv:1709.01872},
+	year={2017}
+}
+
+@article{costa2017end,
+	title={End-to-end Adversarial Retinal Image Synthesis},
+	author={Costa, Pedro and Galdran, Adrian and Meyer, Maria Ines and Niemeijer, Meindert and Abr{\`a}moff, Michael and Mendon{\c{c}}a, Ana Maria and Campilho, Aur{\'e}lio},
+	journal={IEEE Transactions on Medical Imaging},
+	year={2017},
+}
+
+@inproceedings{kingma2014adam,
+	title={Adam: A method for stochastic optimization},
+	author={Kingma, Diederik and Ba, Jimmy},
+	booktitle=ICLR,
+	year={2015}
+}
+
+@article{wexler2007space,
+	title={Space-time completion of video},
+	author={Wexler, Yonatan and Shechtman, Eli and Irani, Michal},
+	journal=PAMI,
+	volume={29},
+	number={3},
+	year={2007}
+}
+
+@inproceedings{carreira2017quo,
+	title={Quo vadis, action recognition? a new model and the kinetics dataset},
+	author={Carreira, Joao and Zisserman, Andrew},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{xie2017aggregated,
+	title={Aggregated residual transformations for deep neural networks},
+	author={Xie, Saining and Girshick, Ross and Doll{\'a}r, Piotr and Tu, Zhuowen and He, Kaiming},
+	booktitle=CVPR,
+	year={2017}
+}
+
+@inproceedings{pan2019video,
+	title={Video Generation from Single Semantic Label Map},
+	author={Pan, Junting and Wang, Chengyu and Jia, Xu and Shao, Jing and Sheng, Lu and Yan, Junjie and Wang, Xiaogang},
+	booktitle=CVPR,
+	year={2019}
+}
+
+@article{hu2018video,
+	title={Video Synthesis from a Single Image and Motion Stroke},
+	author={Hu, Qiyang and Waelchli, Adrian and Portenier, Tiziano and Zwicker, Matthias and Favaro, Paolo},
+	journal={arXiv preprint arXiv:1812.01874},
+	year={2018}
+}
+
+@inproceedings{li2018flow,
+	title={Flow-grounded spatial-temporal video prediction from still images},
+	author={Li, Yijun and Fang, Chen and Yang, Jimei and Wang, Zhaowen and Lu, Xin and Yang, Ming-Hsuan},
+	booktitle=ECCV,
+	year={2018}
+}
+
+
+@article{lim2017geometric,
+	title={Geometric {GAN}},
+	author={Lim, Jae Hyun and Ye, Jong Chul},
+	journal={arXiv preprint arXiv:1705.02894},
+	year={2017}
+}
+
+@article{zitnick2004high,
+	title={High-quality video view interpolation using a layered representation},
+	author={Zitnick, C Lawrence and Kang, Sing Bing and Uyttendaele, Matthew and Winder, Simon and Szeliski, Richard},
+	journal=TOG,
+	year={2004},
+}
+@inproceedings{flynn2016deepstereo,
+	title={Deepstereo: Learning to predict new views from the world's imagery},
+	author={Flynn, John and Neulander, Ivan and Philbin, James and Snavely, Noah},
+	booktitle=CVPR,
+	year={2016}
+}
+@article{kalantari2016learning,
+	title={Learning-based view synthesis for light field cameras},
+	author={Kalantari, Nima Khademi and Wang, Ting-Chun and Ramamoorthi, Ravi},
+	journal=TOG,
+	year={2016},
+}
+@inproceedings{xie2016deep3d,
+	title={{Deep3D}: Fully automatic {2D}-to-{3D} video conversion with deep convolutional neural networks},
+	author={Xie, Junyuan and Girshick, Ross and Farhadi, Ali},
+	booktitle=ECCV,
+	year={2016},
+}
+@inproceedings{srinivasan2017learning,
+	title={Learning to synthesize a {4D RGBD} light field from a single image},
+	author={Srinivasan, Pratul P and Wang, Tongzhou and Sreelal, Ashwin and Ramamoorthi, Ravi and Ng, Ren},
+	booktitle=ICCV,
+	year={2017}
+}
+@inproceedings{zhou2018stereo,
+	Author = {Zhou, Tinghui and Tucker, Richard and Flynn, John and Fyffe, Graham and Snavely, Noah},
+	Title = {Stereo Magnification: Learning View Synthesis using Multiplane Images},
+	Booktitle=SIG,
+	Year = {2018}
+}
+@article{hedman2018deep,
+	title={Deep blending for free-viewpoint image-based rendering},
+	author={Hedman, Peter and Philip, Julien and Price, True and Frahm, Jan-Michael and Drettakis, George and Brostow, Gabriel},
+	journal=TOG,
+	year={2018},
+}
+@inproceedings{flynn2019deepview,
+	title={DeepView: View synthesis with learned gradient descent},
+	author={Flynn, John and Broxton, Michael and Debevec, Paul and DuVall, Matthew and Fyffe, Graham and Overbeck, Ryan and Snavely, Noah and Tucker, Richard},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{meshry2019neural,
+	title={Neural rerendering in the wild},
+	author={Meshry, Moustafa and Goldman, Dan B and Khamis, Sameh and Hoppe, Hugues and Pandey, Rohit and Snavely, Noah and Martin-Brualla, Ricardo},
+	booktitle=CVPR,
+	year={2019}
+}
+@article{mildenhall2019local,
+	title={Local light field fusion: Practical view synthesis with prescriptive sampling guidelines},
+	author={Mildenhall, Ben and Srinivasan, Pratul P and Ortiz-Cayon, Rodrigo and Kalantari, Nima Khademi and Ramamoorthi, Ravi and Ng, Ren and Kar, Abhishek},
+	journal=TOG,
+	year={2019},
+}
+@inproceedings{srinivasan2019pushing,
+	title={Pushing the boundaries of view extrapolation with multiplane images},
+	author={Srinivasan, Pratul P and Tucker, Richard and Barron, Jonathan T and Ramamoorthi, Ravi and Ng, Ren and Snavely, Noah},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{sitzmann2019deepvoxels,
+	title={{DeepVoxels}: Learning persistent 3d feature embeddings},
+	author={Sitzmann, Vincent and Thies, Justus and Heide, Felix and Nie{\ss}ner, Matthias and Wetzstein, Gordon and Zollhofer, Michael},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{choi2019extreme,
+	title={Extreme view synthesis},
+	author={Choi, Inchang and Gallo, Orazio and Troccoli, Alejandro and Kim, Min H and Kautz, Jan},
+	booktitle=ICCV,
+	year={2019}
+}
+@article{aliev2019neural,
+	title={Neural point-based graphics},
+	author={Aliev, Kara-Ali and Ulyanov, Dmitry and Lempitsky, Victor},
+	journal={arXiv preprint arXiv:1906.08240},
+	year={2019}
+}
+@article{thies2019deferred,
+	title={Deferred neural rendering: Image synthesis using neural textures},
+	author={Thies, Justus and Zollh{\"o}fer, Michael and Nie{\ss}ner, Matthias},
+	journal=TOG,
+	year={2019},
+}
+
+@inproceedings{jolicoeur-martineau2018,
+title={The relativistic discriminator: a key element missing from standard {GAN}},
+author={Alexia Jolicoeur-Martineau},
+booktitle=ICLR,
+year={2019},
+url={https://openreview.net/forum?id=S1erHoR5t7},
+}
+
+
+@inproceedings{maeda2020unpaired,
+  title={Unpaired Image Super-Resolution using Pseudo-Supervision},
+  author={Maeda, Shunta},
+  booktitle=CVPR,
+  year={2020}
+}
+
+@inproceedings{ledig2017photo,
+  title={Photo-realistic single image super-resolution using a generative adversarial network},
+  author={Ledig, Christian and Theis, Lucas and Husz{\'a}r, Ferenc and Caballero, Jose and Cunningham, Andrew and Acosta, Alejandro and Aitken, Andrew and Tejani, Alykhan and Totz, Johannes and Wang, Zehan and others},
+  booktitle=CVPR,
+  year={2017}
+}
+
+@inproceedings{wang2018esrgan,
+  title={{ESRGAN}: Enhanced super-resolution generative adversarial networks},
+  author={Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Qiao, Yu and Change Loy, Chen},
+  booktitle=ECCV,
+  year={2018}
+}
+
+@inproceedings{blau20182018,
+  title={The 2018 {PIRM} challenge on perceptual image super-resolution},
+  author={Blau, Yochai and Mechrez, Roey and Timofte, Radu and Michaeli, Tomer and Zelnik-Manor, Lihi},
+  booktitle=ECCVW,
+  year={2018}
+}
+
+@inproceedings{kupyn2018deblurgan,
+  title={{DeblurGAN}: Blind motion deblurring using conditional adversarial networks},
+  author={Kupyn, Orest and Budzan, Volodymyr and Mykhailych, Mykola and Mishkin, Dmytro and Matas, Ji{\v{r}}{\'\i}},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{blau2018perception,
+  title={The perception-distortion tradeoff},
+  author={Blau, Yochai and Michaeli, Tomer},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@article{ma2017learning,
+  title={Learning a no-reference quality metric for single-image super-resolution},
+  author={Ma, Chao and Yang, Chih-Yuan and Yang, Xiaokang and Yang, Ming-Hsuan},
+  journal=CVIU,
+  year={2017},
+}
+
+@inproceedings{yu2019wide,
+  title={Wide activation for efficient and accurate image super-resolution},
+  author={Yu, Jiahui and Fan, Yuchen and Yang, Jianchao and Xu, Ning and Wang, Zhaowen and Wang, Xinchao and Huang, Thomas},
+  booktitle=BMVC,
+  year={2019}
+}
+
+@article{dong2015image,
+  title={Image super-resolution using deep convolutional networks},
+  author={Dong, Chao and Loy, Chen Change and He, Kaiming and Tang, Xiaoou},
+  journal=PAMI,
+  year={2015},
+}
+
+@inproceedings{dong2016accelerating,
+  title={Accelerating the super-resolution convolutional neural network},
+  author={Dong, Chao and Loy, Chen Change and Tang, Xiaoou},
+  booktitle=ECCV,
+  year={2016},
+}
+
+@inproceedings{kim2016accurate,
+  title={Accurate image super-resolution using very deep convolutional networks},
+  author={Kim, Jiwon and Kwon Lee, Jung and Mu Lee, Kyoung},
+  booktitle=CVPR,
+  year={2016}
+}
+
+@inproceedings{lim2017enhanced,
+  title={Enhanced deep residual networks for single image super-resolution},
+  author={Lim, Bee and Son, Sanghyun and Kim, Heewon and Nah, Seungjun and Mu Lee, Kyoung},
+  booktitle=CVPRW,
+  year={2017}
+}
+
+@inproceedings{tong2017image,
+  title={Image super-resolution using dense skip connections},
+  author={Tong, Tong and Li, Gen and Liu, Xiejie and Gao, Qinquan},
+  booktitle=ICCV,
+  year={2017}
+}
+
+@inproceedings{zhang2018residual,
+  title={Residual dense network for image super-resolution},
+  author={Zhang, Yulun and Tian, Yapeng and Kong, Yu and Zhong, Bineng and Fu, Yun},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{tai2017memnet,
+  title={{MemNet}: A persistent memory network for image restoration},
+  author={Tai, Ying and Yang, Jian and Liu, Xiaoming and Xu, Chunyan},
+  booktitle=ICCV,
+  year={2017}
+}
+
+@inproceedings{huang2017densely,
+  title={Densely connected convolutional networks},
+  author={Huang, Gao and Liu, Zhuang and Van Der Maaten, Laurens and Weinberger, Kilian Q},
+  booktitle=CVPR,
+  year={2017}
+}
+
+@article{zagoruyko2016wide,
+  title={Wide residual networks},
+  author={Zagoruyko, Sergey and Komodakis, Nikos},
+  journal={arXiv preprint arXiv:1605.07146},
+  year={2016}
+}
+
+@inproceedings{zhang2018image,
+  title={Image super-resolution using very deep residual channel attention networks},
+  author={Zhang, Yulun and Li, Kunpeng and Li, Kai and Wang, Lichen and Zhong, Bineng and Fu, Yun},
+  booktitle=ECCV,
+  year={2018}
+}
+
+@inproceedings{chen2018image,
+  title={Image blind denoising with generative adversarial network based noise modeling},
+  author={Chen, Jingwen and Chen, Jiawei and Chao, Hongyang and Yang, Ming},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{galteri2017deep,
+  title={Deep generative adversarial compression artifact removal},
+  author={Galteri, Leonardo and Seidenari, Lorenzo and Bertini, Marco and Del Bimbo, Alberto},
+  booktitle=ICCV,
+  year={2017}
+}
+
+@InProceedings{Agustsson_2019_ICCV,
+author = {Agustsson, Eirikur and Tschannen, Michael and Mentzer, Fabian and Timofte, Radu and Gool, Luc Van},
+title = {Generative Adversarial Networks for Extreme Learned Image Compression},
+booktitle = ICCV,
+year = {2019}
+}
+
+@inproceedings{tschannen2018deep,
+  title={Deep generative models for distribution-preserving lossy compression},
+  author={Tschannen, Michael and Agustsson, Eirikur and Lucic, Mario},
+  booktitle=NeurIPS,
+  year={2018}
+}
+
+@article{zhang2017beyond,
+  title={Beyond a gaussian denoiser: Residual learning of deep {CNN} for image denoising},
+  author={Zhang, Kai and Zuo, Wangmeng and Chen, Yunjin and Meng, Deyu and Zhang, Lei},
+  journal=TIP,
+  year={2017},
+}
+
+@inproceedings{redmon2016you,
+  title={You only look once: Unified, real-time object detection},
+  author={Redmon, Joseph and Divvala, Santosh and Girshick, Ross and Farhadi, Ali},
+  booktitle={CVPR},
+  year={2016}
+}
+
+@inproceedings{shen2018deep,
+  title={Deep semantic face deblurring},
+  author={Shen, Ziyi and Lai, Wei-Sheng and Xu, Tingfa and Kautz, Jan and Yang, Ming-Hsuan},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{yu2018generative,
+  title={Generative image inpainting with contextual attention},
+  author={Yu, Jiahui and Lin, Zhe and Yang, Jimei and Shen, Xiaohui and Lu, Xin and Huang, Thomas S},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{yu2019free,
+  title={Free-form image inpainting with gated convolution},
+  author={Yu, Jiahui and Lin, Zhe and Yang, Jimei and Shen, Xiaohui and Lu, Xin and Huang, Thomas S},
+  booktitle=ICCV,
+  year={2019}
+}
+
+@article{nazeri2019edgeconnect,
+  title={{EdgeConnect}: Generative image inpainting with adversarial edge learning},
+  author={Nazeri, Kamyar and Ng, Eric and Joseph, Tony and Qureshi, Faisal Z and Ebrahimi, Mehran},
+  journal={arXiv preprint arXiv:1901.00212},
+  year={2019}
+}
+
+@inproceedings{xiong2019foreground,
+  title={Foreground-aware image inpainting},
+  author={Xiong, Wei and Yu, Jiahui and Lin, Zhe and Yang, Jimei and Lu, Xin and Barnes, Connelly and Luo, Jiebo},
+  booktitle=CVPR,
+  year={2019}
+}
+
+@inproceedings{wang2018image,
+  title={Image inpainting via generative multi-column convolutional neural networks},
+  author={Wang, Yi and Tao, Xin and Qi, Xiaojuan and Shen, Xiaoyong and Jia, Jiaya},
+  booktitle=NeurIPS,
+  year={2018}
+}
+
+@inproceedings{zheng2019pluralistic,
+  title={Pluralistic image completion},
+  author={Zheng, Chuanxia and Cham, Tat-Jen and Cai, Jianfei},
+  booktitle=CVPR,
+  year={2019}
+}
+
+@inproceedings{jo2019sc,
+  title={{SC-FEGAN}: Face Editing Generative Adversarial Network with User's Sketch and Color},
+  author={Jo, Youngjoo and Park, Jongyoul},
+  booktitle=ICCV,
+  year={2019}
+}
+
+@inproceedings{zeng2019learning,
+  title={Learning pyramid-context encoder network for high-quality image inpainting},
+  author={Zeng, Yanhong and Fu, Jianlong and Chao, Hongyang and Guo, Baining},
+  booktitle=CVPR,
+  year={2019}
+}
+
+@inproceedings{lee2020maskgan,
+	title={{MaskGAN}: Towards diverse and interactive facial image manipulation},
+	author={Lee, Cheng-Han and Liu, Ziwei and Wu, Lingyun and Luo, Ping},
+	booktitle=CVPR,
+	year={2020}
+}
+@article{tang2020edge,
+	title={Edge Guided {GANs} with Semantic Preserving for Semantic Image Synthesis},
+	author={Tang, Hao and Qi, Xiaojuan and Xu, Dan and Torr, Philip HS and Sebe, Nicu},
+	journal={arXiv preprint arXiv:2003.13898},
+	year={2020}
+}
+@article{zheng2020example,
+	title={Example-Guided Image Synthesis across Arbitrary Scenes using Masked Spatial-Channel Attention and Self-Supervision},
+	author={Zheng, Haitian and Liao, Haofu and Chen, Lele and Xiong, Wei and Chen, Tianlang and Luo, Jiebo},
+	journal={arXiv preprint arXiv:2004.10024},
+	year={2020}
+}
+@inproceedings{yang2019diversity,
+	title={Diversity-sensitive conditional generative adversarial networks},
+	author={Yang, Dingdong and Hong, Seunghoon and Jang, Yunseok and Zhao, Tianchen and Lee, Honglak},
+	booktitle=ICLR,
+	year={2019}
+}
+@inproceedings{liu2019normalized,
+	title={Normalized diversification},
+	author={Liu, Shaohui and Zhang, Xiao and Wangni, Jianqiao and Shi, Jianbo},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{ghosh2018multi,
+	title={Multi-agent diverse generative adversarial networks},
+	author={Ghosh, Arnab and Kulharia, Viveka and Namboodiri, Vinay P and Torr, Philip HS and Dokania, Puneet K},
+	booktitle=CVPR,
+	year={2018}
+}
+@inproceedings{lee2019harmonizing,
+	title={Harmonizing maximum likelihood with {GANs} for multimodal conditional generation},
+	author={Lee, Soochan and Ha, Junsoo and Kim, Gunhee},
+	booktitle=ICLR,
+	year={2019}
+}
+@inproceedings{li2019diverse,
+	title={Diverse image synthesis from semantic layouts via conditional IMLE},
+	author={Li, Ke and Zhang, Tianhao and Malik, Jitendra},
+	booktitle=ICCV,
+	year={2019}
+}
+
+% Unsupervised
+@inproceedings{kim2017learning,
+	title={Learning to discover cross-domain relations with generative adversarial networks},
+	author={Kim, Taeksoo and Cha, Moonsu and Kim, Hyunsoo and Lee, Jung Kwon and Kim, Jiwon},
+	booktitle=ICML,
+	year={2017}
+}
+@inproceedings{cho2019image,
+	title={Image-to-image translation via group-wise deep whitening-and-coloring transformation},
+	author={Cho, Wonwoong and Choi, Sungha and Park, David Keetae and Shin, Inkyu and Choo, Jaegul},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{benaim2017one,
+	title={One-sided unsupervised domain mapping},
+	author={Benaim, Sagie and Wolf, Lior},
+	booktitle=NeurIPS,
+	year={2017}
+}
+@inproceedings{chen2018attention,
+	title={Attention-{GAN} for object transfiguration in wild images},
+	author={Chen, Xinyuan and Xu, Chang and Yang, Xiaokang and Tao, Dacheng},
+	booktitle=ECCV,
+	year={2018}
+}
+@inproceedings{mejjati2018unsupervised,
+	title={Unsupervised attention-guided image-to-image translation},
+	author={Mejjati, Youssef Alami and Richardt, Christian and Tompkin, James and Cosker, Darren and Kim, Kwang In},
+	booktitle=NeurIPS,
+	year={2018}
+}
+@article{yang2019show,
+	title={Show, Attend, and Translate: Unsupervised Image Translation With Self-Regularization and Attention},
+	author={Yang, Chao and Kim, Taehwan and Wang, Ruizhe and Peng, Hao and Kuo, C-C Jay},
+	journal=TIP,
+	year={2019},
+}
+@inproceedings{mo2019instagan,
+	title={{InstaGAN}: Instance-aware image-to-image translation},
+	author={Mo, Sangwoo and Cho, Minsu and Shin, Jinwoo},
+	booktitle=ICLR,
+	year={2019}
+}
+
+% Unsupervised Few-shot
+@inproceedings{wang2020semi,
+	title={Semi-supervised Learning for Few-shot Image-to-Image Translation},
+	author={Wang, Yaxing and Khan, Salman and Gonzalez-Garcia, Abel and Weijer, Joost van de and Khan, Fahad Shahbaz},
+	booktitle=CVPR,
+	year={2020}
+}
+@article{baek2020rethinking,
+	title={Rethinking the Truly Unsupervised Image-to-Image Translation},
+	author={Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},
+	journal={arXiv preprint arXiv:2006.06500},
+	year={2020}
+}
+@inproceedings{cohen2019bidirectional,
+	title={Bidirectional one-shot unsupervised domain mapping},
+	author={Cohen, Tomer and Wolf, Lior},
+	booktitle=ICCV,
+	year={2019}
+}
+@inproceedings{lin2020tuigan,
+	title={{TuiGAN}: Learning Versatile Image-to-Image Translation with Two Unpaired Images},
+	author={Lin, Jianxin and Pang, Yingxue and Xia, Yingce and Chen, Zhibo and Luo, Jiebo},
+	booktitle=ECCV,
+	year={2020}
+}
+@article{benaim2020structural,
+	title={Structural-analogy from a Single Image Pair},
+	author={Benaim, Sagie and Mokady, Ron and Bermano, Amit and Cohen-Or, Daniel and Wolf, Lior},
+	journal={arXiv preprint arXiv:2004.02222},
+	year={2020}
+}
+
+% Unsupervised Multimodal
+@inproceedings{mao2019mode,
+	title={Mode seeking generative adversarial networks for diverse image synthesis},
+	author={Mao, Qi and Lee, Hsin-Ying and Tseng, Hung-Yu and Ma, Siwei and Yang, Ming-Hsuan},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{almahairi2018augmented,
+	title={Augmented {CycleGAN}: Learning Many-to-Many Mappings from Unpaired Data},
+	author={Almahairi, Amjad and Rajeshwar, Sai and Sordoni, Alessandro and Bachman, Philip and Courville, Aaron},
+	booktitle=ICML,
+	year={2018}
+}
+@inproceedings{ma2019exemplar,
+	title={Exemplar guided unsupervised image-to-image translation with semantic consistency},
+	author={Ma, Liqian and Jia, Xu and Georgoulis, Stamatios and Tuytelaars, Tinne and Van Gool, Luc},
+	booktitle=ICLR,
+	year={2019}
+}
+@inproceedings{gonzalez2018image,
+	title={Image-to-image translation for cross-domain disentanglement},
+	author={Gonzalez-Garcia, Abel and Van De Weijer, Joost and Bengio, Yoshua},
+	booktitle=NeurIPS,
+	year={2018}
+}
+
+@inproceedings{tewari2020stylerig,
+    title = {StyleRig: Rigging StyleGAN for 3D Control over Portrait Images},
+    author={Tewari, Ayush and Elgharib, Mohamed and Bharaj, Gaurav and Bernard, Florian  and Seidel, Hans-Peter and P{\'e}rez, Patrick and Z{\"o}llhofer, Michael and Theobalt, Christian},   
+    booktitle = {CVPR},
+    year = {2020},
+}
+@inproceedings{van2019reversible,
+	title={Reversible {GANs} for memory-efficient image-to-image translation},
+	author={van der Ouderaa, Tycho FA and Worrall, Daniel E},
+	booktitle=CVPR,
+	year={2019}
+}
+@inproceedings{li2020gan,
+	title={{GAN} compression: Efficient architectures for interactive conditional {GANs}},
+	author={Li, Muyang and Lin, Ji and Ding, Yaoyao and Liu, Zhijian and Zhu, Jun-Yan and Han, Song},
+	booktitle=CVPR,
+	year={2020}
+}
+
+% Theory
+@inproceedings{galanti2018role,
+	title={The role of minimal complexity functions in unsupervised learning of semantic mappings},
+	author={Galanti, Tomer and Wolf, Lior and Benaim, Sagie},
+	booktitle=ICLR,
+	year={2018}
+}
+@inproceedings{yang2018esther,
+	title={{ESTHER}: Extremely Simple Image Translation Through Self-Regularization.},
+	author={Yang, Chao and Kim, Taehwan and Wang, Ruizhe and Peng, Hao and Kuo, C-C Jay},
+	booktitle={BMVC},
+	year={2018}
+}
+@article{de2019optimal,
+	title={Optimal unsupervised domain translation},
+	author={de B{\'e}zenac, Emmanuel and Ayed, Ibrahim and Gallinari, Patrick},
+	journal={arXiv preprint arXiv:1906.01292},
+	year={2019}
+}
+
+@article{russakovsky2015imagenet,
+Author = {Olga Russakovsky and Jia Deng and Hao Su and Jonathan Krause and Sanjeev Satheesh and Sean Ma and Zhiheng Huang and Andrej Karpathy and Aditya Khosla and Michael Bernstein and Alexander C. Berg and Li Fei-Fei},
+Title = {{ImageNet Large Scale Visual Recognition Challenge}},
+Year = {2015},
+journal = {IJCV},
+volume={115},
+number={3},
+pages={211-252}
+}
+
+@article{yu2015lsun,
+    Author = {Yu, Fisher and Zhang, Yinda and Song, Shuran and Seff, Ari and Xiao, Jianxiong},
+    Title = {LSUN: Construction of a Large-scale Image Dataset using Deep Learning with Humans in the Loop},
+    Journal = {arXiv preprint arXiv:1506.03365},
+    Year = {2015}
+}
+@inproceedings{jin2017towards,
+  title={Towards the high-quality anime characters generation with generative adversarial networks},
+  author={Jin, Y and Zhang, J and Li, M and Tian, Y and Zhu, H},
+  booktitle={Proceedings of the Machine Learning for Creativity and Design Workshop at NeurIPS},
+  year={2017}
+}
+@InProceedings{choi2018stargan,
+  author    = {Choi, Yunjey and Choi, Minje and Kim, Munyoung and Ha, Jung-Woo and Kim, Sunghun and Choo, Jaegul},
+  title     = {StarGAN: Unified generative adversarial networks for multi-domain image-to-image translation},
+  booktitle = {CVPR},
+  year      = {2018}
+}
+
+@inproceedings{xiangli2020real,
+title={Real or Not Real, that is the Question},
+author={Yuanbo Xiangli* and Yubin Deng* and Bo Dai* and Chen Change Loy and Dahua Lin},
+booktitle={ICLR},
+year={2020}
+}
+
+@inproceedings{dai2017towards,
+  title={Towards diverse and natural image descriptions via a conditional GAN},
+  author={Dai, Bo and Fidler, Sanja and Urtasun, Raquel and Lin, Dahua},
+  booktitle={ICCV},
+  pages={2970--2979},
+  year={2017}
+}
+
+@InProceedings{Albright2019CVPRWorkshops,
+  author    = {Albright, Michael and McCloskey, Scott},
+  title     = {Source Generator Attribution via Inversion},
+  booktitle = {CVPR Workshops},
+  year      = {2019}
+}
+
+@InProceedings{gulrajani2017improved,
+  author    = {Gulrajani, Ishaan and Ahmed, Faruk and Arjovsky, Martin and Dumoulin, Vincent and Courville, Aaron C},
+  title     = {Improved training of wasserstein GANs},
+  booktitle = {NeurIPS},
+  year      = {2017},
+  pages     = {5767--5777}
+}
+
+@InProceedings{miyato2018spectral,
+  author    = {Miyato, Takeru and Kataoka, Toshiki and Koyama, Masanori and Yoshida, Yuichi},
+  title     = {Spectral Normalization for Generative Adversarial Networks},
+  booktitle = {ICLR},
+  year      = {2018}
+}
+
+@InProceedings{zhang2019self,
+  author    = {Zhang, Han and Goodfellow, Ian and Metaxas, Dimitris and Odena, Augustus},
+  title     = {Self-Attention Generative Adversarial Networks},
+  booktitle = {ICML},
+  year      = {2019},
+  pages     = {7354--7363}
+}
+@article{zhu2019lia,
+  title   = {Disentangled Inference for GANs with Latently Invertible Autoencoder},
+  author  = {Zhu, Jiapeng and Zhao, Deli and Zhang, Bo and Zhou, Bolei},
+  journal = {arXiv preprint arXiv:1906.08090},
+  year    = {2019}
+}
+@article{hendrycks2016baseline,
+  title={A baseline for detecting misclassified and out-of-distribution examples in neural networks},
+  author={Hendrycks, Dan and Gimpel, Kevin},
+  journal={arXiv preprint arXiv:1610.02136},
+  year={2016}
+}
+@inproceedings{lee2018simple,
+  title={A simple unified framework for detecting out-of-distribution samples and adversarial attacks},
+  author={Lee, Kimin and Lee, Kibok and Lee, Honglak and Shin, Jinwoo},
+  booktitle={NeurIPS},
+  pages={7167--7177},
+  year={2018}
+}
+@inproceedings{ren2019likelihood,
+  title={Likelihood ratios for out-of-distribution detection},
+  author={Ren, Jie and Liu, Peter J and Fertig, Emily and Snoek, Jasper and Poplin, Ryan and Depristo, Mark and Dillon, Joshua and Lakshminarayanan, Balaji},
+  booktitle={NeurIPS},
+  pages={14707--14718},
+  year={2019}
+}
+
+@InProceedings{zhang2016colorful,
+  author       = {Zhang, Richard and Isola, Phillip and Efros, Alexei A},
+  title        = {Colorful image colorization},
+  booktitle    = {ECCV},
+  year         = {2016},
+  pages        = {649--666},
+  organization = {Springer}
+}
+
+@InProceedings{larsson2016learning,
+  author       = {Larsson, Gustav and Maire, Michael and Shakhnarovich, Gregory},
+  title        = {Learning representations for automatic colorization},
+  booktitle    = {ECCV},
+  year         = {2016},
+  pages        = {577--593},
+}
+
+@InProceedings{yeh2017semantic,
+  author    = {Yeh, Raymond A and Chen, Chen and Yian Lim, Teck and Schwing, Alexander G and Hasegawa-Johnson, Mark and Do, Minh N},
+  title     = {Semantic image inpainting with deep generative models},
+  booktitle = {CVPR},
+  year      = {2017},
+  pages     = {5485--5493}
+}
+
+@InProceedings{ledig2017photo,
+  author    = {Ledig, Christian and Theis, Lucas and Husz{\'a}r, Ferenc and Caballero, Jose and Cunningham, Andrew and Acosta, Alejandro and Aitken, Andrew and Tejani, Alykhan and Totz, Johannes and Wang, Zehan and others},
+  title     = {Photo-realistic single image super-resolution using a generative adversarial network},
+  booktitle = {CVPR},
+  year      = {2017},
+  pages     = {4681--4690}
+}
+
+@InProceedings{dong2015image,
+  author    = {Dong, Chao and Loy, Chen Change and He, Kaiming and Tang, Xiaoou},
+  title     = {Image super-resolution using deep convolutional networks},
+  booktitle = {TPAMI},
+  year      = {2015},
+  volume    = {38},
+  pages     = {295--307},
+  publisher = {IEEE}
+}
+
+@InProceedings{samangouei2018defense,
+  author    = {Samangouei, Pouya and Kabkab, Maya and Chellappa, Rama},
+  title     = {Defense-GAN: Protecting Classifiers Against Adversarial Attacks Using Generative Models},
+  booktitle = {ICLR},
+  year      = {2018}
+}
+
+@InProceedings{ulyanov2018deep,
+  author    = {Ulyanov, Dmitry and Vedaldi, Andrea and Lempitsky, Victor},
+  title     = {Deep image prior},
+  booktitle = {CVPR},
+  year      = {2018},
+  pages     = {9446--9454}
+}
+@inproceedings{naik2014streetscore,
+  title={Streetscore-predicting the perceived safety of one million streetscapes},
+  author={Naik, Nikhil and Philipoom, Jade and Raskar, Ramesh and Hidalgo, C{\'e}sar},
+  booktitle={CVPR Workshops},
+  pages={779--785},
+  year={2014}
+}
+@InProceedings{deng2009imagenet,
+  author       = {Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  title        = {Imagenet: A large-scale hierarchical image database},
+  booktitle    = {CVPR},
+  year         = {2009},
+  pages        = {248--255},
+}
+@inproceedings{chang2017one,
+  title={One Network to Solve Them All--Solving Linear Inverse Problems Using Deep Projection Models},
+  author={Rick Chang, JH and Li, Chun-Liang and Poczos, Barnabas and Vijaya Kumar, BVK and Sankaranarayanan, Aswin C},
+  booktitle={ICCV},
+  pages={5888--5897},
+  year={2017}
+}
+@inproceedings{raj2019gan,
+  title={Gan-based projector for faster recovery with convergence guarantees in linear inverse problems},
+  author={Raj, Ankit and Li, Yuqi and Bresler, Yoram},
+  booktitle={ICCV},
+  pages={5602--5611},
+  year={2019}
+}
+@inproceedings{daras2020your,
+  title={Your local GAN: Designing two dimensional local attention mechanisms for generative models},
+  author={Daras, Giannis and Odena, Augustus and Zhang, Han and Dimakis, Alexandros G},
+  booktitle={CVPR},
+  pages={14531--14539},
+  year={2020}
+}
+@inproceedings{gershman2014amortized,
+  title={Amortized inference in probabilistic reasoning},
+  author={Gershman, Samuel and Goodman, Noah},
+  booktitle={Proceedings of the annual meeting of the cognitive science society},
+  volume={36},
+  number={36},
+  year={2014}
+}
+@article{byrd1995limited,
+  title={A limited memory algorithm for bound constrained optimization},
+  author={Byrd, Richard H and Lu, Peihuang and Nocedal, Jorge and Zhu, Ciyou},
+  journal={SIAM Journal on scientific computing},
+  volume={16},
+  number={5},
+  pages={1190--1208},
+  year={1995},
+  publisher={SIAM}
+}
+
+@article{huang2018provably,
+  title={A provably convergent scheme for compressive sensing under random generative priors},
+  author={Huang, Wen and Hand, Paul and Heckel, Reinhard and Voroninski, Vladislav},
+  journal={arXiv preprint arXiv:1812.04176},
+  year={2018}
+}
+@inproceedings{lei2019inverting,
+  title={Inverting Deep Generative models, One layer at a time},
+  author={Lei, Qi and Jalal, Ajil and Dhillon, Inderjit S and Dimakis, Alexandros G},
+  booktitle={NeurIPS},
+  pages={13910--13919},
+  year={2019}
+}
+
+@article{xia2020tedigan,
+  author    = {Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao and Wu, Baoyuan},
+  title     = {TediGAN: Text-Guided Diverse Image Generation and Manipulation},
+  journal={arXiv preprint arXiv:2012.03308},
+  year={2020}
+}
+
+@article{xia2020domain,
+  title={Domain Fingerprints for No-reference Image Quality Assessment},
+  author={Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao and Xiao, Jing},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2020},
+}
+
+@article{xia2020unsupervised,
+  title={Unsupervised multi-domain multimodal image-to-image translation with explicit domain-constrained disentanglement},
+  author={Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao},
+  journal={Neural Networks},
+  year={2020},
+  publisher={Elsevier}
+}
+
+@article{xia2019sketch,
+  author    = {Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao},
+  title     = {Cali-Sketch: Stroke Calibration and Completion for High-Quality Face Image Generation from Poorly-Drawn Sketches},
+  journal={arXiv preprint arXiv:1911.00426},
+  year={2019}
+}
+
+@article{xia2019adverse,
+  author    = {Xia, Weihao and Cheng, Zhanglin and Yang, Yujiu and Xue, Jing-Hao},
+  title     = {Cooperative Semantic Segmentation and Image Restoration in Adverse Environmental Conditions},
+  journal={arXiv preprint arXiv:1911.00679},
+  year      = {2019}
+}
+@inproceedings{xia2020gaze,
+  title={Controllable Continuous Gaze Redirection},
+  author={Xia, Weihao and Cheng, Zhanglin and Yang, Yujiu and Xue, Jing-Hao and Feng, Wensen},
+  year={2020},
+  booktitle={ACM MM},
+}
+
+@inproceedings{ghosh2019isketchnfill,
+  title= {Interactive Sketch \& Fill: Multiclass Sketch-to-Image Translation},
+  author={Ghosh, Arnab and Zhang, Richard and Dokania, Puneet K. and Wang, Oliver and Efros, Alexei A. and Torr, Philip H. S. and Shechtman, Eli},
+  booktitle={ICCV},
+  year={2019}
+}
+
+@article {chenDeepFaceDrawing2020,
+    author = {Chen, Shu-Yu and Su, Wanchao and Gao, Lin and Xia, Shihong and Fu, Hongbo},
+    title = {{DeepFaceDrawing}: Deep Generation of Face Images from Sketches},
+    journal = {TOG},
+    year = {2020},
+    volume = 39,
+    pages = {72:1--72:16},
+    number = 4
+}
+
+@article{sun2019single,
+  title={Single image portrait relighting.},
+  author={Sun, Tiancheng and Barron, Jonathan T and Tsai, Yun-Ta and Xu, Zexiang and Yu, Xueming and Fyffe, Graham and Rhemann, Christoph and Busch, Jay and Debevec, Paul E and Ramamoorthi, Ravi},
+  journal={ACM Trans. Graph.},
+  volume={38},
+  number={4},
+  pages={79--1},
+  year={2019}
+}
+@inproceedings{zhou2019deep,
+  title={Deep single-image portrait relighting},
+  author={Zhou, Hao and Hadap, Sunil and Sunkavalli, Kalyan and Jacobs, David W},
+  booktitle={ICCV},
+  pages={7194--7202},
+  year={2019}
+}
+@article{bojanowski2017optimizing,
+  title={Optimizing the latent space of generative networks},
+  author={Bojanowski, Piotr and Joulin, Armand and Lopez-Paz, David and Szlam, Arthur},
+  journal={arXiv preprint arXiv:1707.05776},
+  year={2017}
+}
+@article{hussein2019image,
+  title={Image-adaptive GAN based reconstruction},
+  author={Hussein, Shady Abu and Tirer, Tom and Giryes, Raja},
+  journal={arXiv preprint arXiv:1906.05284},
+  year={2019}
+}
+@article{bora2017compressed,
+  title={Compressed sensing using generative models},
+  author={Bora, Ashish and Jalal, Ajil and Price, Eric and Dimakis, Alexandros G},
+  journal={arXiv preprint arXiv:1703.03208},
+  year={2017}
+}
+@inproceedings{shah2018solving,
+  title={Solving linear inverse problems using gan priors: An algorithm with provable guarantees},
+  author={Shah, Viraj and Hegde, Chinmay},
+  booktitle={ICASSP},
+  pages={4609--4613},
+  year={2018},
+}
+
+@article{zhang2004principal,
+  title={Principal manifolds and nonlinear dimensionality reduction via tangent space alignment},
+  author={Zhang, Zhenyue and Zha, Hongyuan},
+  journal={SIAM journal on scientific computing},
+  volume={26},
+  number={1},
+  pages={313--338},
+  year={2004},
+  publisher={SIAM}
+}
+@article{donoho2003hessian,
+  title={Hessian eigenmaps: Locally linear embedding techniques for high-dimensional data},
+  author={Donoho, David L and Grimes, Carrie},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={100},
+  number={10},
+  pages={5591--5596},
+  year={2003},
+  publisher={National Acad Sciences}
+}
+@article{belkin2003laplacian,
+  title={Laplacian eigenmaps for dimensionality reduction and data representation},
+  author={Belkin, Mikhail and Niyogi, Partha},
+  journal={Neural Computation},
+  volume={15},
+  number={6},
+  pages={1373--1396},
+  year={2003},
+  publisher={MIT Press}
+}
+
+@article{roweis2000nonlinear,
+  title={Nonlinear dimensionality reduction by locally linear embedding},
+  author={Roweis, Sam T and Saul, Lawrence K},
+  journal={science},
+  volume={290},
+  number={5500},
+  pages={2323--2326},
+  year={2000},
+  publisher={American Association for the Advancement of Science}
+}
+@article{balasubramanian2002isomap,
+  title={The isomap algorithm and topological stability},
+  author={Balasubramanian, Mukund and Schwartz, Eric L and Tenenbaum, Joshua B and de Silva, Vin and Langford, John C},
+  journal={Science},
+  volume={295},
+  number={5552},
+  pages={7--7},
+  year={2002},
+  publisher={Citeseer}
+}
+
+@article{kuhnel2018latent,
+  title={Latent space non-linear statistics},
+  author={Kuhnel, Line and Fletcher, Tom and Joshi, Sarang and Sommer, Stefan},
+  journal={arXiv preprint arXiv:1805.07632},
+  year={2018}
+}
+@article{davies2007source,
+  title={Source separation using single channel ICA},
+  author={Davies, Mike E and James, Christopher J},
+  journal={Signal Processing},
+  volume={87},
+  number={8},
+  pages={1819--1832},
+  year={2007},
+  publisher={Elsevier}
+}
+
+@article{oja2006fastica,
+  title={The FastICA algorithm revisited: Convergence analysis},
+  author={Oja, Erkki and Yuan, Zhijian},
+  journal={IEEE Transactions on Neural Networks},
+  volume={17},
+  number={6},
+  pages={1370--1381},
+  year={2006},
+}
+
+@book{child1990essentials,
+  title={The essentials of factor analysis},
+  author={Child, Dennis},
+  year={1990},
+  publisher={Cassell Educational}
+}
+
+@article{blei2003latent,
+  title={Latent dirichlet allocation},
+  author={Blei, David M and Ng, Andrew Y and Jordan, Michael I},
+  journal={JMLR},
+  volume={3},
+  number={Jan},
+  pages={993--1022},
+  year={2003}
+}
+@article{hoffman2013stochastic,
+  title={Stochastic variational inference},
+  author={Hoffman, Matthew D and Blei, David M and Wang, Chong and Paisley, John},
+  journal={JMLR},
+  volume={14},
+  number={1},
+  pages={1303--1347},
+  year={2013},
+}
+@inproceedings{hoffman2010online,
+  title={Online learning for latent dirichlet allocation},
+  author={Hoffman, Matthew and Bach, Francis R and Blei, David M},
+  booktitle={NeurIPS},
+  pages={856--864},
+  year={2010}
+}
+
+@inproceedings{rombach2020network,
+  title={Network-to-Network Translation with Conditional Invertible Neural Networks},
+  author={Rombach, Robin and Esser, Patrick and Ommer, Bjorn},
+  booktitle={NeurIPS},
+  volume={33},
+  year={2020}
+}
+
+@article{lin2007projected,
+  title={Projected gradient methods for nonnegative matrix factorization},
+  author={Lin, Chih-Jen},
+  journal={Neural Computation},
+  volume={19},
+  number={10},
+  pages={2756--2779},
+  year={2007},
+}
+
+@inproceedings{chen2019monocular,
+  title={Monocular neural image based rendering with continuous view control},
+  author={Chen, Xu and Song, Jie and Hilliges, Otmar},
+  booktitle={ICCV},
+  pages={4090--4100},
+  year={2019}
+}
+
+@article{he2019gaze,
+  author    = {Zhe He and
+               Adrian Spurr and
+               Xucong Zhang and
+               Otmar Hilliges},
+  title     = {Photo-realistic Monocular Gaze Redirection using Generative Adversarial Networks},
+  journal   = {ICCV},
+  year      = {2019},
+}
+
+@article{wood2018gaze,
+  author    = {Erroll Wood and
+               Tadas Baltrusaitis and
+               Louis{-}Philippe Morency and
+               Peter Robinson and
+               Andreas Bulling},
+  title     = {GazeDirector: Fully Articulated Eye Gaze Redirection in Video},
+  journal   = {Comput. Graph. Forum},
+  volume    = {37},
+  number    = {2},
+  pages     = {217--225},
+  year      = {2018}
+}
+@inproceedings{ganin2016deepwarp,
+  title={Deepwarp: Photorealistic image resynthesis for gaze manipulation},
+  author={Ganin, Yaroslav and Kononenko, Daniil and Sungatullina, Diana and Lempitsky, Victor},
+  booktitle={ECCV},
+  pages={311--326},
+  year={2016},
+}
+
+@InProceedings{karras2019style,
+  author    = {Karras, Tero and Laine, Samuli and Aila, Timo},
+  title     = {A style-based generator architecture for generative adversarial networks},
+  booktitle = {CVPR},
+  year      = {2019},
+  pages     = {4401--4410}
+}
+
+@Article{bau2019semantic,
+  author    = {Bau, David and Strobelt, Hendrik and Peebles, William and Wulff, Jonas and Zhou, Bolei and Zhu, Jun-Yan and Torralba, Antonio},
+  title     = {Semantic photo manipulation with a generative image prior},
+  journal   = {TOG},
+  year      = {2019},
+  volume    = {38},
+  number    = {4},
+  pages     = {59},
+}
+
+@InProceedings{donahue2017adversarial,
+  author    = {Donahue, Jeff and Kr{\"a}henb{\"u}hl, Philipp and Darrell, Trevor},
+  title     = {Adversarial feature learning},
+  booktitle = {ICLR},
+  year      = {2017},
+  journal   = {ICLR}
+}
+
+@InProceedings{dumoulin2017adversarially,
+  author    = {Dumoulin, Vincent and Belghazi, Ishmael and Poole, Ben and Mastropietro, Olivier and Lamb, Alex and Arjovsky, Martin and Courville, Aaron},
+  title     = {ADVERSARIALLY LEARNED INFERENCE},
+  booktitle = {ICLR},
+  year      = {2017},
+  volume    = {1050},
+  pages     = {21},
+  journal   = {ICLR}
+}
+
+@article{baluja2017adversarial,
+  title={Adversarial transformation networks: Learning to generate adversarial examples},
+  author={Baluja, Shumeet and Fischer, Ian},
+  journal={arXiv preprint arXiv:1703.09387},
+  year={2017}
+}
+
+@article{nurit2020steerability,
+  title={GAN Steerability without optimization},
+  author={Nurit, Spingarn-Eliezer and Ron, Banner and Tomer, Michaeli},
+  journal={arXiv preprint arXiv:2012.05328},
+  year={2020}
+}
+
+@inproceedings{johnson2016perceptual,
+	title={Perceptual losses for real-time style transfer and super-resolution},
+	author={Johnson, Justin and Alahi, Alexandre and Fei-Fei, Li},
+	booktitle={ECCV},
+	pages={694--711},
+	year={2016},
+}
+@inproceedings{chen2020boosting,
+  title={Boosting decision-based black-box adversarial attacks with random sign flip},
+  author={Chen, Weilun and Zhang, Zhaoxiang and Hu, Xiaolin and Wu, Baoyuan},
+  booktitle={ECCV},
+  year ={2020}
+}
+@article{lipton2017precise,
+  title={Precise recovery of latent vectors from generative adversarial networks},
+  author={Lipton, Zachary C and Tripathi, Subarna},
+  journal={arXiv preprint arXiv:1702.04782},
+  year={2017}
+}
+@inproceedings{bau2019inverting,
+  title={Inverting layers of a large generator},
+  author={Bau, David and Zhu, Jun-Yan and Wulff, Jonas and Peebles, William and Strobelt, Hendrik and Zhou, Bolei and Torralba, Antonio},
+  booktitle={ICLR Workshop},
+  volume={2},
+  number={3},
+  pages={4},
+  year={2019}
+}
+@inproceedings{luo2017learning,
+  title={Learning inverse mapping by autoencoder based generative adversarial nets},
+  author={Luo, Junyu and Xu, Yong and Tang, Chenwei and Lv, Jiancheng},
+  booktitle={International Conference on Neural Information Processing},
+  pages={207--216},
+  year={2017},
+
+}
+@article{perarnau2016invertible,
+  title={Invertible conditional gans for image editing},
+  author={Perarnau, Guim and Van De Weijer, Joost and Raducanu, Bogdan and {\'A}lvarez, Jose M},
+  journal={arXiv preprint arXiv:1611.06355},
+  year={2016}
+}
+
+@article{dhillon2018stochastic,
+  title={Stochastic activation pruning for robust adversarial defense},
+  author={Dhillon, Guneet S and Azizzadenesheli, Kamyar and Lipton, Zachary C and Bernstein, Jeremy and Kossaifi, Jean and Khanna, Aran and Anandkumar, Anima},
+  journal={arXiv preprint arXiv:1803.01442},
+  year={2018}
+}
+
+@inproceedings{kim2019pedestrain,
+  author    = {Minsu Kim and
+               Sunghun Joung and
+               Kihong Park and
+               Seungryong Kim and
+               Kwanghoon Sohn},
+  title     = {Unpaired Cross-Spectral Pedestrian Detection Via Adversarial Feature Learning},
+  booktitle = {ICIP},
+  pages     = {1650--1654},
+  publisher = {{IEEE}},
+  year      = {2019}
+}
+@article{turk1991eigenfaces,
+  title={Eigenfaces for recognition},
+  author={Turk, Matthew and Pentland, Alex},
+  journal={Journal of Cognitive Neuroscience},
+  volume={3},
+  number={1},
+  pages={71--86},
+  year={1991},
+  publisher={MIT Press}
+}
+@inproceedings{Jiang2019Disentangled,
+      title={Disentangled Representation Learning for 3D Face Shape},
+      author={Jiang, Zi-Hang and Wu, Qianyi and Chen, Keyu and Zhang, Juyong},
+      booktitle={CVPR},
+      year={2019}
+}
+
+@article{buchta2012spherical,
+  title={Spherical k-means clustering},
+  author={Buchta, Christian and Kober, Martin and Feinerer, Ingo and Hornik, Kurt},
+  journal={Journal of Statistical Software},
+  volume={50},
+  number={10},
+  pages={1--22},
+  year={2012},
+  publisher={American Statistical Association}
+}
+@book{gersho2012vector,
+  title={Vector quantization and signal compression},
+  author={Gersho, Allen and Gray, Robert M},
+  volume={159},
+  year={2012},
+  publisher={Springer Science \& Business Media}
+}
+
+@article{wold1987principal,
+  title={Principal component analysis},
+  author={Wold, Svante and Esbensen, Kim and Geladi, Paul},
+  journal={Chemometrics and Intelligent Laboratory Systems},
+  volume={2},
+  number={1-3},
+  pages={37--52},
+  year={1987},
+  publisher={Elsevier}
+}
+
+@article{lee1999nmf,
+  title={Learning the parts of objects by non-negative matrix factorization},
+  author={Lee, D.D. and Seung, H.S.},
+  journal={Nature},
+  year={2016}
+}
+
+@inproceedings{lee2001algorithms,
+  title={Algorithms for non-negative matrix factorization},
+  author={Lee, Daniel D and Seung, H Sebastian},
+  booktitle={NeurIPS},
+  pages={556--562},
+  year={2001}
+}
+
+@inproceedings{collins2019dff,
+      title = {Deep Feature Factorization For Content-Based Image Retrieval And Localization},
+      author = {Collins, Edo and Susstrunk, Sabine},
+      booktitle = {ICIP},
+      pages = {874-878},
+      year = {2019},
+}
+@article{langner2010presentation,
+  title={Presentation and validation of the Radboud Faces Database},
+  author={Langner, Oliver and Dotsch, Ron and Bijlstra, Gijsbert and Wigboldus, Daniel HJ and Hawk, Skyler T and Van Knippenberg, AD},
+  journal={Cognition and emotion},
+  volume={24},
+  number={8},
+  pages={1377--1388},
+  year={2010}
+}
+
+@inproceedings{pang2018reid,
+  author    = {Lu Pang and
+               Yaowei Wang and
+               Yi{-}Zhe Song and
+               Tiejun Huang and
+               Yonghong Tian},
+  title     = {Cross-Domain Adversarial Feature Learning for Sketch Re-identification},
+  booktitle = {ACM MM},
+  pages     = {609--617},
+  year      = {2018}
+}
+
+@article{donahue2016adversarial,
+  title={Adversarial feature learning},
+  author={Donahue, Jeff and Kr{\"a}henb{\"u}hl, Philipp and Darrell, Trevor},
+  journal={arXiv preprint arXiv:1605.09782},
+  year={2016}
+}
+@inproceedings{xie2017controllable,
+  title={Controllable invariance through adversarial feature learning},
+  author={Xie, Qizhe and Dai, Zihang and Du, Yulun and Hovy, Eduard and Neubig, Graham},
+  booktitle={NeurIPS},
+  pages={585--596},
+  year={2017}
+}
+@inproceedings{li2018domain,
+  title={Domain generalization with adversarial feature learning},
+  author={Li, Haoliang and Jialin Pan, Sinno and Wang, Shiqi and Kot, Alex C},
+  booktitle={CVPR},
+  pages={5400--5409},
+  year={2018}
+}
+@inproceedings{fan2020sparse,
+  title={Sparse adversarial attack via perturbation factorization},
+  author={Fan, Yanbo and Wu, Baoyuan and Li, Tuanhui and Zhang, Yong and Li, Mingyang and Li, Zhifeng and Yang, Yujiu},
+  booktitle={ECCV},
+  year ={2020}
+}
+@article{belghazi2018hierarchical,
+  title={Hierarchical adversarially learned inference},
+  author={Belghazi, Mohamed Ishmael and Rajeswar, Sai and Mastropietro, Olivier and Rostamzadeh, Negar and Mitrovic, Jovana and Courville, Aaron},
+  journal={arXiv preprint arXiv:1802.01071},
+  year={2018}
+}
+@inproceedings{du2018multi,
+  title={Multi-view adversarially learned inference for cross-domain joint distribution matching},
+  author={Du, Changying and Du, Changde and Xie, Xingyu and Zhang, Chen and Wang, Hao},
+  booktitle={ACM KDD},
+  pages={1348--1357},
+  year={2018}
+}
+
+@inproceedings{nguyen2015deep,
+	title={Deep neural networks are easily fooled: High confidence predictions for unrecognizable images},
+	author={Nguyen, Anh and Yosinski, Jason and Clune, Jeff},
+	booktitle={CVPR},
+	pages={427--436},
+	year={2015}
+}
+
+@article{ramesh2018spectral,
+  title={A Spectral Regularizer for Unsupervised Disentanglement},
+  author={Ramesh, Aditya and Choi, Youngduck and LeCun, Yann},
+  journal={arXiv preprint arXiv:1812.01161},
+  year={2018}
+}
+
+@inproceedings{li2017alice,
+  title={Alice: Towards understanding adversarial learning for joint distribution matching},
+  author={Li, Chunyuan and Liu, Hao and Chen, Changyou and Pu, Yuchen and Chen, Liqun and Henao, Ricardo and Carin, Lawrence},
+  booktitle={NeurIPS},
+  pages={5495--5503},
+  year={2017}
+}
+@article{dumoulin2016adversarially,
+  title={Adversarially learned inference},
+  author={Dumoulin, Vincent and Belghazi, Ishmael and Poole, Ben and Mastropietro, Olivier and Lamb, Alex and Arjovsky, Martin and Courville, Aaron},
+  journal={arXiv preprint arXiv:1606.00704},
+  year={2016}
+}
+@inproceedings{he2016deep,
+	title={Deep residual learning for image recognition},
+	author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	booktitle={CVPR},
+	pages={770--778},
+	year={2016}
+}
+
+@inproceedings{wang2019deep,
+	title={Deep network interpolation for continuous imagery effect transition},
+	author={Wang, Xintao and Yu, Ke and Dong, Chao and Tang, Xiaoou and Loy, Chen Change},
+	booktitle={CVPR},
+	pages={1692--1701},
+	year={2019}
+}
+
+@inproceedings{roth2005fields,
+	title={Fields of experts: A framework for learning image priors},
+	author={Roth, Stefan and Black, Michael J},
+	booktitle={CVPR},
+	pages={860--867},
+	year={2005},
+}
+
+@article{geman1984stochastic,
+	title={Stochastic relaxation, Gibbs distributions, and the Bayesian restoration of images},
+	author={Geman, Stuart and Geman, Donald},
+	journal={TPAMI},
+	number={6},
+	pages={721--741},
+	year={1984},
+	publisher={IEEE}
+}
+
+@article{zhu1997prior,
+	title={Prior learning and Gibbs reaction-diffusion},
+	author={Zhu, Song Chun and Mumford, David},
+	journal={TPAMI},
+	volume={19},
+	number={11},
+	pages={1236--1250},
+	year={1997},
+	publisher={IEEE}
+}
+
+@article{he2010single,
+	title={Single image haze removal using dark channel prior},
+	author={He, Kaiming and Sun, Jian and Tang, Xiaoou},
+	journal={TPAMI},
+	volume={33},
+	number={12},
+	pages={2341--2353},
+	year={2010},
+	publisher={IEEE}
+}
+@article{zhang2020portrait,
+  title={Portrait Shadow Manipulation},
+  author={Zhang, Xuaner Cecilia and Tsai, Yun-Ta and Pandey, Rohit and Zhang, Xiuming and Ng, Ren and Jacobs, David E and others},
+  journal={arXiv preprint arXiv:2005.08925},
+  year={2020}
+}
+@article{donoho2006compressed,
+  title={Compressed sensing},
+  author={Donoho, David L},
+  journal={IEEE Transactions on Information Theory},
+  volume={52},
+  number={4},
+  pages={1289--1306},
+  year={2006},
+}
+@article{candes2006robust,
+  title={Robust uncertainty principles: Exact signal reconstruction from highly incomplete frequency information},
+  author={Cand{\`e}s, Emmanuel J and Romberg, Justin and Tao, Terence},
+  journal={IEEE Transactions on information theory},
+  volume={52},
+  number={2},
+  pages={489--509},
+  year={2006},
+  publisher={IEEE}
+}
+
+@article{zhou2017places,
+	title={Places: A 10 million image database for scene recognition},
+	author={Zhou, Bolei and Lapedriza, Agata and Khosla, Aditya and Oliva, Aude and Torralba, Antonio},
+	journal={TPAMI},
+	volume={40},
+	pages={1452--1464},
+	year={2017},
+	publisher={IEEE}
+}
+
+@inproceedings{wu2020sapf,
+  title={Sparse Adversarial Attack via Perturbation Factorization},
+  author={Fan, Yanbo and Wu, Baoyuan and Li, Tuanhui and Zhang, Yong and Li, Mingyang and Li, Zhifeng and Yang, Yujiu},
+  booktitle={ECCV},
+  year={2020}
+}
+
+@inproceedings{zhang2017learning,
+	title={Learning deep CNN denoiser prior for image restoration},
+	author={Zhang, Kai and Zuo, Wangmeng and Gu, Shuhang and Zhang, Lei},
+	booktitle={CVPR},
+	pages={3929--3938},
+	year={2017}
+}
+
+@inproceedings{bigdeli2017deep,
+	title={Deep mean-shift priors for image restoration},
+	author={Bigdeli, Siavash Arjomand and Zwicker, Matthias and Favaro, Paolo and Jin, Meiguang},
+	booktitle={NeurIPS},
+	pages={763--772},
+	year={2017}
+}
+
+@article{chen2016trainable,
+	title={Trainable nonlinear reaction diffusion: A flexible framework for fast and effective image restoration},
+	author={Chen, Yunjin and Pock, Thomas},
+	journal={TPAMI},
+	volume={39},
+	number={6},
+	pages={1256--1272},
+	year={2016},
+	publisher={IEEE}
+}
+
+@article{paszke2017automatic,
+	title={Automatic differentiation in PyTorch},
+	author={Paszke, Adam and Gross, Sam and Chintala, Soumith and Chanan, Gregory and Yang, Edward and DeVito, Zachary and Lin, Zeming and Desmaison, Alban and Antiga, Luca and Lerer, Adam},
+	year={2017}
+}
+
+@inproceedings{ioffe2015batch,
+	title={Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift},
+	author={Ioffe, Sergey and Szegedy, Christian},
+	booktitle={ICML},
+	pages={448--456},
+	year={2015}
+}
+@inproceedings{ye2013real,
+  title={Real-time no-reference image quality assessment based on filter learning},
+  author={Ye, Peng and Kumar, Jayant and Kang, Le and Doermann, David},
+  booktitle={CVPR},
+  pages={987--994},
+  year={2013}
+}
+@inproceedings{ye2012unsupervised,
+  title={Unsupervised feature learning framework for no-reference image quality assessment},
+  author={Ye, Peng and Kumar, Jayant and Kang, Le and Doermann, David},
+  booktitle={CVPR},
+  pages={1098--1105},
+  year={2012},
+  organization={IEEE}
+}
+@article{saad2010dct,
+  title={A DCT statistics-based blind image quality index},
+  author={Saad, Michele A and Bovik, Alan C and Charrier, Christophe},
+  journal={IEEE Signal Processing Letters},
+  volume={17},
+  number={6},
+  pages={583--586},
+  year={2010},
+  publisher={IEEE}
+}
+@article{saad2012blind,
+  title={Blind image quality assessment: A natural scene statistics approach in the DCT domain},
+  author={Saad, Michele A and Bovik, Alan C and Charrier, Christophe},
+  journal={TIP},
+  volume={21},
+  number={8},
+  pages={3339--3352},
+  year={2012},
+  publisher={IEEE}
+}
+@article{moorthy2011blind,
+  title={Blind image quality assessment: From natural scene statistics to perceptual quality},
+  author={Moorthy, Anush Krishna and Bovik, Alan Conrad},
+  journal={TIP},
+  volume={20},
+  number={12},
+  pages={3350--3364},
+  year={2011},
+  publisher={IEEE}
+}
+@inproceedings{gu2020image,
+	title={Image Processing Using Multi-Code GAN Prior},
+	author={Gu, Jinjin and Shen, Yujun and Zhou, Bolei},
+	booktitle={CVPR},
+	year={2020}
+}
+@inproceedings{mittal2011blind,
+  title={Blind/referenceless image spatial quality evaluator},
+  author={Mittal, Anish and Moorthy, Anush K and Bovik, Alan C},
+  booktitle={Asilomar Conference on Signals, Systems and Computers},
+  pages={723--727},
+  year={2011},
+}
+@inproceedings{collins2020uncovering,
+	title={Editing in Style: Uncovering the Local Semantics of GANs},
+	author={Edo, Collins and Raja, Bala and Bob, Price and Sabine, Süsstrunk},
+	booktitle={CVPR},
+	year={2020}
+}
+
+@article{eric2020GANSpace,
+	title={GANSpace: Discovering Interpretable GAN Controls},
+	author={Erik, Härkönen and Aaron, Hertzmann and Jaakko, Lehtinen and Sylvain, Paris},
+	journal={arXiv preprint arXiv:2004.02546},
+	year={2020}
+}
+
+@article{nitzan2020harness,
+	title={Disentangling in Latent Space by Harnessing a Pretrained Generator},
+	author={Yotam, Nitzan and Amit, Bermano and Yangyan, Li and Daniel Cohen-Or},
+	journal={arXiv preprint arXiv:2005.07728},
+	year={2020}
+}
+
+
+
+@article{liu1989limited,
+  title={On the limited memory BFGS method for large scale optimization},
+  author={Liu, Dong C and Nocedal, Jorge},
+  journal={Mathematical programming},
+  volume={45},
+  number={1-3},
+  pages={503--528},
+  year={1989},
+}
+
+@article{duane1987hybrid,
+  title={Hybrid monte carlo},
+  author={Duane, Simon and Kennedy, Anthony D and Pendleton, Brian J and Roweth, Duncan},
+  journal={Physics letters B},
+  volume={195},
+  number={2},
+  pages={216--222},
+  year={1987},
+  publisher={Elsevier}
+}
+
+@inproceedings{fang2019hmc,
+author = {Fang, Tiantian and Alexander Schwing},
+title = {Co-Generation with GANs using AIS based HMC},
+booktitle = NeurIPS,
+year = {2019}
+}
+
+@inproceedings{viazovetskyi2020distillation,
+	title={StyleGAN2 Distillation for Feed-forward Image Manipulation},
+	author={Yuri, Viazovetskyi and Vladimir, Ivashkin ang Evgeny, Kashin},
+	booktitle={ECCV},
+	year={2020}
+}
+@misc{nevergrad,
+    author = {J. Rapin and O. Teytaud},
+    title = {{Nevergrad - A gradient-free optimization platform}},
+    year = {2018},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://GitHub.com/FacebookResearch/Nevergrad}},
+}
+
+@article{hansen2001cma,
+  title={Completely derandomized self-adaptation in evolution strategies. Evolutionary Computation},
+  author={Hansen, N. and Ostermeier, A.},
+  journal={Evoluaionary Computation},
+  year={2001}
+}
+
+@article{wampler2009basincma,
+    author  = {Kevin Wampler and Zoran Popovi\'c},
+    title   = {Optimal Gait and Form for Animal Locomotion},
+    journal = TOG,
+    year    = {2009} 
+}
+
+@article{yang2019semantic,
+	title={Semantic hierarchy emerges in deep generative representations for scene synthesis},
+	author={Yang, Ceyuan and Shen, Yujun and Zhou, Bolei},
+	journal={arXiv preprint arXiv:1911.09267},
+	year={2019}
+}
+@inproceedings{chen2014cross,
+  title={Cross-age reference coding for age-invariant face recognition and retrieval},
+  author={Chen, Bor-Chun and Chen, Chu-Song and Hsu, Winston H},
+  booktitle={ECCV},
+  pages={768--783},
+  year={2014},
+}
+@article{abdal2020styleflow,
+	title={StyleFlow: Attribute-conditioned Exploration of StyleGAN-Generated Images using Conditional Continuous Normalizing Flows},
+	author={Rameen, Abdal and Peihao, Zhu and Niloy, Mitra and Peter, Wonka},
+	journal={arXiv preprint arXiv:2008.02401},
+	year={2020}
+}
+
+@inproceedings{blanz1999morphable,
+  title={A morphable model for the synthesis of {3D} faces},
+  author={Blanz, Volker and Vetter, Thomas},
+  booktitle={Proceedings of the 26th annual conference on Computer graphics and interactive techniques},
+  year={1999}
+}
+@article{vlasic2005face,
+  title={Face transfer with multilinear models},
+  author={Vlasic, Daniel and Brand, Matthew and Pfister, Hanspeter and Popovic, Jovan},
+  journal=TOG,
+  year={2005}
+}
+@article{thies2015real,
+  title={Real-time expression transfer for facial reenactment.},
+  author={Thies, Justus and Zollh{\"o}fer, Michael and Nie{\ss}ner, Matthias and Valgaerts, Levi and Stamminger, Marc and Theobalt, Christian},
+  journal=TOG,
+  year={2015}
+}
+@inproceedings{thies2016face2face,
+  title={{Face2Face}: Real-time face capture and reenactment of rgb videos},
+  author={Thies, Justus and Zollhofer, Michael and Stamminger, Marc and Theobalt, Christian and Nie{\ss}ner, Matthias},
+  booktitle=CVPR,
+  year={2016}
+}
+@article{suwajanakorn2017synthesizing,
+  title={Synthesizing {Obama}: learning lip sync from audio},
+  author={Suwajanakorn, Supasorn and Seitz, Steven M and Kemelmacher-Shlizerman, Ira},
+  journal=TOG,
+  year={2017},
+}
+
+@article{kim2018deep,
+  title={Deep video portraits},
+  author={Kim, Hyeongwoo and Garrido, Pablo and Tewari, Ayush and Xu, Weipeng and Thies, Justus and Niessner, Matthias and P{\'e}rez, Patrick and Richardt, Christian and Zollh{\"o}fer, Michael and Theobalt, Christian},
+  journal=TOG,
+  year={2018},
+}
+@inproceedings{wu2018reenactgan,
+  title={{ReenactGAN}: Learning to reenact faces via boundary transfer},
+  author={Wu, Wayne and Zhang, Yunxuan and Li, Cheng and Qian, Chen and Change Loy, Chen},
+  booktitle=ECCV,
+  year={2018}
+}
+@inproceedings{bansal2018recycle,
+  title={Recycle-{GAN}: Unsupervised video retargeting},
+  author={Bansal, Aayush and Ma, Shugao and Ramanan, Deva and Sheikh, Yaser},
+  booktitle=ECCV,
+  year={2018}
+}
+
+
+@inproceedings{olszewski2017realistic,
+  title={Realistic dynamic facial textures from a single image using {GANs}},
+  author={Olszewski, Kyle and Li, Zimo and Yang, Chao and Zhou, Yi and Yu, Ronald and Huang, Zeng and Xiang, Sitao and Saito, Shunsuke and Kohli, Pushmeet and Li, Hao},
+  booktitle=ICCV,
+  year={2017}
+}
+@inproceedings{chen2018lip,
+  title={Lip movements generation at a glance},
+  author={Chen, Lele and Li, Zhiheng and K Maddox, Ross and Duan, Zhiyao and Xu, Chenliang},
+  booktitle=ECCV,
+  year={2018}
+}
+@inproceedings{pumarola2018ganimation,
+  title={{GANimation}: Anatomically-aware facial animation from a single image},
+  author={Pumarola, Albert and Agudo, Antonio and Martinez, Aleix M and Sanfeliu, Alberto and Moreno-Noguer, Francesc},
+  booktitle=ECCV,
+  year={2018}
+}
+@article{nagano2018pagan,
+  title={{paGAN}: real-time avatars using dynamic textures},
+  author={Nagano, Koki and Seo, Jaewoo and Xing, Jun and Wei, Lingyu and Li, Zimo and Saito, Shunsuke and Agarwal, Aviral and Fursund, Jens and Li, Hao},
+  journal=TOG,
+  year={2018},
+}
+@article{geng2018warp,
+  title={Warp-guided {GANs} for single-photo facial animation},
+  author={Geng, Jiahao and Shao, Tianjia and Zheng, Youyi and Weng, Yanlin and Zhou, Kun},
+  journal=TOG,
+  year={2018},
+}
+@inproceedings{zhou2019talking,
+  title={Talking face generation by adversarially disentangled audio-visual representation},
+  author={Zhou, Hang and Liu, Yu and Liu, Ziwei and Luo, Ping and Wang, Xiaogang},
+  booktitle=AAAI,
+  year={2019}
+}
+@inproceedings{chen2019hierarchical,
+  title={Hierarchical cross-modal talking face generation with dynamic pixel-wise loss},
+  author={Chen, Lele and Maddox, Ross K and Duan, Zhiyao and Xu, Chenliang},
+  booktitle=CVPR,
+  year={2019}
+}
+@inproceedings{song2019talking,
+  title     = {Talking Face Generation by Conditional Recurrent Adversarial Network},
+  author    = {Song, Yang and Zhu, Jingwen and Li, Dawei and Wang, Andy and Qi, Hairong},
+  booktitle = IJCAI,
+  year      = {2019},
+}
+@article{jamaludin2019you,
+  title={You said that?: Synthesising talking faces from audio},
+  author={Jamaludin, Amir and Chung, Joon Son and Zisserman, Andrew},
+  journal=IJCV,
+  year={2019},
+}
+@article{creswell2018inverting,
+  author    = {Creswell, Antonia and Bharath, Anil Anthony},
+  title     = {Inverting the generator of a generative adversarial network},
+  journal = {TNNLS},
+  year      = {2018}
+}
+@article{vougioukas2019realistic,
+  title={Realistic speech-driven facial animation with {GANs}},
+  author={Vougioukas, Konstantinos and Petridis, Stavros and Pantic, Maja},
+  journal=IJCV,
+  year={2019},
+}
+@article{pumarola2020ganimation,
+  title={{GANimation}: One-shot anatomically consistent facial animation},
+  author={Pumarola, Albert and Agudo, Antonio and Martinez, Aleix M and Sanfeliu, Alberto and Moreno-Noguer, Francesc},
+  journal=IJCV,
+  year={2020},
+}
+@article{fried2019text,
+  title={Text-based editing of talking-head video},
+  author={Fried, Ohad and Tewari, Ayush and Zollh{\"o}fer, Michael and Finkelstein, Adam and Shechtman, Eli and Goldman, Dan B and Genova, Kyle and Jin, Zeyu and Theobalt, Christian and Agrawala, Maneesh},
+  journal=TOG,
+  year={2019},
+}
+
+
+@inproceedings{garrido2014automatic,
+  title={Automatic face reenactment},
+  author={Garrido, Pablo and Valgaerts, Levi and Rehmsen, Ole and Thormahlen, Thorsten and Perez, Patrick and Theobalt, Christian},
+  booktitle=CVPR,
+  year={2014}
+}
+
+@inproceedings{wiles2018x2face,
+  title={{X2Face}: A network for controlling face generation using images, audio, and pose codes},
+  author={Wiles, Olivia and Sophia Koepke, A and Zisserman, Andrew},
+  booktitle=ECCV,
+  year={2018}
+}
+
+@article{averbuch2017bringing,
+  title={Bringing portraits to life},
+  author={Averbuch-Elor, Hadar and Cohen-Or, Daniel and Kopf, Johannes and Cohen, Michael F},
+  journal=TOG,
+  year={2017},
+}
+@inproceedings{nirkin2019fsgan,
+  title={{FSGAN}: Subject agnostic face swapping and reenactment},
+  author={Nirkin, Yuval and Keller, Yosi and Hassner, Tal},
+  booktitle=ICCV,
+  year={2019}
+}
+@inproceedings{zakharov2019few,
+  title={Few-shot adversarial learning of realistic neural talking head models},
+  author={Zakharov, Egor and Shysheya, Aliaksandra and Burkov, Egor and Lempitsky, Victor},
+  booktitle=ICCV,
+  year={2019}
+}
+@inproceedings{siarohin2019first,
+  title={First order motion model for image animation},
+  author={Siarohin, Aliaksandr and Lathuili{\`e}re, St{\'e}phane and Tulyakov, Sergey and Ricci, Elisa and Sebe, Nicu},
+  booktitle=NeurIPS,
+  year={2019}
+}
+@inproceedings{gu2020flnet,
+  title={{FLNet}: Landmark Driven Fetching and Learning Network for Faithful Talking Facial Animation Synthesis.},
+  author={Gu, Kuangxiao and Zhou, Yuqian and Huang, Thomas S},
+  booktitle=AAAI,
+  year={2020}
+}
+
+@inproceedings{siarohin2018deformable,
+  title={Deformable {GANs} for pose-based human image generation},
+  author={Siarohin, Aliaksandr and Sangineto, Enver and Lathuiliere, St{\'e}phane and Sebe, Nicu},
+  booktitle=CVPR,
+  year={2018}
+}
+
+@inproceedings{pumarola2018unsupervised,
+  title={Unsupervised person image synthesis in arbitrary poses},
+  author={Pumarola, Albert and Agudo, Antonio and Sanfeliu, Alberto and Moreno-Noguer, Francesc},
+  booktitle={CVPR},
+  year={2018}
+}
+@inproceedings{zanfir2018human,
+  title={Human appearance transfer},
+  author={Zanfir, Mihai and Popa, Alin-Ionut and Zanfir, Andrei and Sminchisescu, Cristian},
+  booktitle=CVPR,
+  year={2018}
+}
+@inproceedings{joo2018generating,
+  title={Generating a fusion image: One's identity and another's shape},
+  author={Joo, Donggyu and Kim, Doyeon and Kim, Junmo},
+  booktitle=CVPR,
+  year={2018}
+}
+@inproceedings{zhao2018multi,
+  title={Multi-view image generation from a single-view},
+  author={Zhao, Bo and Wu, Xiao and Cheng, Zhi-Qi and Liu, Hao and Jie, Zequn and Feng, Jiashi},
+  booktitle=MM,
+  year={2018}
+}
+@inproceedings{raj2018swapnet,
+  title={{SwapNet}: Image based garment transfer},
+  author={Raj, Amit and Sangkloy, Patsorn and Chang, Huiwen and Hays, James and Ceylan, Duygu and Lu, Jingwan},
+  booktitle=ECCV,
+  year={2018}
+}
+@inproceedings{dong2018soft,
+  title={Soft-gated warping-{GAN} for pose-guided person image synthesis},
+  author={Dong, Haoye and Liang, Xiaodan and Gong, Ke and Lai, Hanjiang and Zhu, Jia and Yin, Jian},
+  booktitle=NeurIPS,
+  year={2018}
+}
+@inproceedings{song2019unsupervised,
+  title={Unsupervised person image generation with semantic parsing transformation},
+  author={Song, Sijie and Zhang, Wei and Liu, Jiaying and Mei, Tao},
+  booktitle=CVPR,
+  year={2019}
+}
+@inproceedings{grigorev2019coordinate,
+  title={Coordinate-based texture inpainting for pose-guided human image generation},
+  author={Grigorev, Artur and Sevastopolsky, Artem and Vakhitov, Alexander and Lempitsky, Victor},
+  booktitle=CVPR,
+  year={2019}
+}
+@inproceedings{lorenz2019unsupervised,
+  title={Unsupervised part-based disentangling of object shape and appearance},
+  author={Lorenz, Dominik and Bereska, Leonard and Milbich, Timo and Ommer, Bjorn},
+  booktitle=CVPR,
+  year={2019}
+}
+@inproceedings{zhu2019progressive,
+  title={Progressive pose attention transfer for person image generation},
+  author={Zhu, Zhen and Huang, Tengteng and Shi, Baoguang and Yu, Miao and Wang, Bofei and Bai, Xiang},
+  booktitle=CVPR,
+  year={2019}
+}
+@inproceedings{li2019dense,
+  title={Dense intrinsic appearance flow for human pose transfer},
+  author={Li, Yining and Huang, Chen and Loy, Chen Change},
+  booktitle=CVPR,
+  year={2019}
+}
+
+
+@article{thies2018headon,
+  title={{HeadOn}: Real-time reenactment of human portrait videos},
+  author={Thies, Justus and Zollh{\"o}fer, Michael and Theobalt, Christian and Stamminger, Marc and Niessner, Matthias},
+  journal=TOG,
+  year={2018},
+}
+@article{aberman2019deep,
+  title={Deep Video-Based Performance Cloning},
+  author={Aberman, Kfir and Shi, Mingyi and Liao, Jing and Lischinski, Dani and Chen, Baoquan and Cohen-Or, Daniel},
+  journal={Computer Graphics Forum},
+  year={2019},
+}
+@inproceedings{shysheya2019textured,
+  title={Textured neural avatars},
+  author={Shysheya, Aliaksandra and Zakharov, Egor and Aliev, Kara-Ali and Bashirov, Renat and Burkov, Egor and Iskakov, Karim and Ivakhnenko, Aleksei and Malkov, Yury and Pasechnik, Igor and Ulyanov, Dmitry and others},
+  booktitle=CVPR,
+  year={2019}
+}
+@article{liu2019neural,
+  title={Neural rendering and reenactment of human actor videos},
+  author={Liu, Lingjie and Xu, Weipeng and Zollhoefer, Michael and Kim, Hyeongwoo and Bernard, Florian and Habermann, Marc and Wang, Wenping and Theobalt, Christian},
+  journal=TOG,
+  year={2019},
+}
+@article{liu2020neural,
+  title={Neural Human Video Rendering by Learning Dynamic Textures and Rendering-to-Video Translation},
+  author={Liu, Lingjie and Xu, Weipeng and Habermann, Marc and Zollhoefer, Michael and Bernard, Florian and Kim, Hyeongwoo and Wang, Wenping and Theobalt, Christian},
+  journal=TVCG,
+  year={2020},
+}
+
+
+@inproceedings{weng2019photo,
+  title={Photo wake-up: 3d character animation from a single photo},
+  author={Weng, Chung-Yi and Curless, Brian and Kemelmacher-Shlizerman, Ira},
+  booktitle=CVPR,
+  year={2019}
+}
+@inproceedings{liu2019liquid,
+  title={{Liquid Warping GAN}: A unified framework for human motion imitation, appearance transfer and novel view synthesis},
+  author={Liu, Wen and Piao, Zhixin and Min, Jie and Luo, Wenhan and Ma, Lin and Gao, Shenghua},
+  booktitle=ICCV,
+  year={2019}
+}
+@inproceedings{ren2020deep,
+  title={Deep image spatial transformation for person image generation},
+  author={Ren, Yurui and Yu, Xiaoming and Chen, Junming and Li, Thomas H and Li, Ge},
+  booktitle=CVPR,
+  year={2020}
+}
+
+@article{loper2015smpl,
+  title={{SMPL}: A skinned multi-person linear model},
+  author={Loper, Matthew and Mahmood, Naureen and Romero, Javier and Pons-Moll, Gerard and Black, Michael J},
+  journal=TOG,
+  year={2015},
+}
+@inproceedings{saito2019pifu,
+  title={{PIFu}: Pixel-aligned implicit function for high-resolution clothed human digitization},
+  author={Saito, Shunsuke and Huang, Zeng and Natsume, Ryota and Morishima, Shigeo and Kanazawa, Angjoo and Li, Hao},
+  booktitle=ICCV,
+  year={2019}
+}
+@inproceedings{wang2020neural,
+  title={Neural Pose Transfer by Spatially Adaptive Instance Normalization},
+  author={Wang, Jiashun and Wen, Chao and Fu, Yanwei and Lin, Haitao and Zou, Tianyun and Xue, Xiangyang and Zhang, Yinda},
+  booktitle=CVPR,
+  year={2020}
+}
+@inproceedings{huang2020arch,
+  title={{ARCH}: Animatable Reconstruction of Clothed Humans},
+  author={Huang, Zeng and Xu, Yuanlu and Lassner, Christoph and Li, Hao and Tung, Tony},
+  booktitle=CVPR,
+  year={2020}
+}
+
+@inproceedings{garrido2014automatic,
+  title={Automatic face reenactment},
+  author={Garrido, Pablo and Valgaerts, Levi and Rehmsen, Ole and Thormahlen, Thorsten and Perez, Patrick and Theobalt, Christian},
+  booktitle=CVPR,
+  year={2014}
+}
+
+@inproceedings{qian2019make,
+  title={Make a face: Towards arbitrary high fidelity face manipulation},
+  author={Qian, Shengju and Lin, Kwan-Yee and Wu, Wayne and Liu, Yangxiaokang and Wang, Quan and Shen, Fumin and Qian, Chen and He, Ran},
+  booktitle=ICCV,
+  year={2019}
+}
+
+@inproceedings{ha2020marionette,
+  author = {Sungjoo Ha and Martin Kersner and Beomsu Kim and Seokjun Seo and Dongyoung Kim},
+  title = {{MarioNETte}: Few-shot Face Reenactment Preserving Identity of Unseen Targets},
+  booktitle = AAAI,
+  year = {2020}
+}
+
+@inproceedings{jahanian2020steerability,
+	title={On the ''steerability" of generative adversarial networks},
+	author={Jahanian, Ali and Chai, Lucy and Isola, Phillip},
+	booktitle=ICLR,
+	year={2020}
+}
+@inproceedings{goetschalckx2019ganalyze,
+	title={Ganalyze: Toward visual definitions of cognitive image properties},
+	author={Goetschalckx, Lore and Andonian, Alex and Oliva, Aude and Isola, Phillip},
+	booktitle=ICCV,
+	year={2019}
+}
+@inproceedings{shen2020interpreting,
+	title={Interpreting the latent space of {GANs} for semantic face editing},
+	author={Shen, Yujun and Gu, Jinjin and Tang, Xiaoou and Zhou, Bolei},
+	booktitle=CVPR,
+	year={2020}
+}
+@inproceedings{liu2015faceattributes,
+ title = {Deep Learning Face Attributes in the Wild},
+ author = {Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},
+ booktitle = {ICCV},
+ year = {2015} 
+}
+
+@inproceedings{abdal2019image2stylegan,
+	title={{Image2StyleGAN}: How to embed images into the {StyleGAN} latent space?},
+	author={Abdal, Rameen and Qin, Yipeng and Wonka, Peter},
+	booktitle=ICCV,
+	year={2019}
+}
+@inproceedings{abdal2020image2stylegan2,
+	title={{Image2StyleGAN++}: How to Edit the Embedded Images?},
+	author={Abdal, Rameen and Qin, Yipeng and Wonka, Peter},
+	booktitle=CVPR,
+	year={2020}
+}
+@inproceedings{huh2020transforming,
+	title={Transforming and Projecting Images into Class-conditional Generative Networks},
+	author={Huh, Minyoung and Zhang, Richard and Zhu, Jun-Yan and Paris, Sylvain and Hertzmann, Aaron},
+	booktitle=ECCV,
+	year={2020}
+}
+@inproceedings{pan2020exploiting,
+	title={Exploiting Deep Generative Prior for Versatile Image Restoration and Manipulation},
+	author={Pan, Xingang and Zhan, Xiaohang and Dai, Bo and Lin, Dahua and Loy, Chen Change and Luo, Ping},
+	booktitle=ECCV,
+	year={2020}
+}
+@inproceedings{wang2020cnn,
+	title={{CNN}-generated images are surprisingly easy to spot... for now},
+	author={Wang, Sheng-Yu and Wang, Oliver and Zhang, Richard and Owens, Andrew and Efros, Alexei A},
+	booktitle=CVPR,
+	year={2020}
+}
+
+@inproceedings{zhang2019detecting,
+	title={Detecting and simulating artifacts in {GAN} fake images},
+	author={Zhang, Xu and Karaman, Svebor and Chang, Shih-Fu},
+	booktitle={WIFD},
+	year={2019}
+}
