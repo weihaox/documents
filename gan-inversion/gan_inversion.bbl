@@ -232,10 +232,6 @@ B.-C. Chen, C.-S. Chen, and W.~H. Hsu, ``Cross-age reference coding for
 A.~Yu and K.~Grauman, ``Semantic jitter: Dense supervision for visual
   comparisons via synthetic images,'' in \emph{ICCV}, 2017, pp. 5571--5580.
 
-\bibitem{xia2020tedigan}
-W.~Xia, Y.~Yang, J.-H. Xue, and B.~Wu, ``Tedigan: Text-guided diverse image
-  generation and manipulation,'' \emph{arXiv preprint arXiv:2012.03308}, 2020.
-
 \bibitem{liu2016fashion}
 Z.~Liu, S.~Yan, P.~Luo, X.~Wang, and X.~Tang, ``Fashion landmark detection in
   the wild,'' in \emph{ECCV}, 2016, pp. 229--245.
@@ -256,13 +252,12 @@ N.~Naik, J.~Philipoom, R.~Raskar, and C.~Hidalgo, ``Streetscore-predicting the
   2014, pp. 779--785.
 
 \bibitem{nitzan2020harness}
-N.~Yotam, B.~Amit, L.~Yangyan, and D.~Cohen-Or, ``Disentangling in latent space
-  by harnessing a pretrained generator,'' \emph{arXiv preprint
-  arXiv:2005.07728}, 2020.
+Y.~Nitzan, A.~Bermano, Y.~Li, and D.~Cohen-Or, ``Face identity disentanglement
+  via latent space mapping,'' \emph{TOG}, 2020.
 
 \bibitem{voynov2020latent}
-V.~Andrey and B.~Artem, ``Unsupervised discovery of interpretable directions in
-  the gan latent space,'' \emph{ICML}, 2020.
+A.~Voynov and A.~Babenko, ``Unsupervised discovery of interpretable directions
+  in the gan latent space,'' \emph{ICML}, 2020.
 
 \bibitem{TIP2004ImageWang}
 Z.~Wang, A.~C. Bovik, H.~R. Sheikh, and E.~P. Simoncelli, ``Image quality
@@ -308,8 +303,7 @@ T.~White, ``Sampling generative networks: Notes on a few effective
 \bibitem{abdal2020styleflow}
 A.~Rameen, Z.~Peihao, M.~Niloy, and W.~Peter, ``Styleflow:
   Attribute-conditioned exploration of stylegan-generated images using
-  conditional continuous normalizing flows,'' \emph{arXiv preprint
-  arXiv:2008.02401}, 2020.
+  conditional continuous normalizing flows,'' \emph{TOG}, 2021.
 
 \bibitem{Geitgey2020Fr}
 \BIBentryALTinterwordspacing
@@ -459,12 +453,17 @@ A.~Tewari, M.~Elgharib, G.~Bharaj, F.~Bernard, H.-P. Seidel, P.~P{\'e}rez,
   control over portrait images,'' in \emph{CVPR}, 2020.
 
 \bibitem{bau2020rewriting}
-B.~David, L.~Steven, W.~Tongzhou, Z.~Jun-Yan, and T.~Antonio, ``Rewriting a
-  deep generative model,'' in \emph{ECCV}, 2020.
+D.~Bau, S.~Liu, T.~Wang, J.-Y. Zhu, and A.~Torralba, ``Rewriting a deep
+  generative model,'' in \emph{ECCV}, 2020.
 
 \bibitem{viazovetskyi2020distillation}
 V.~Yuri and K.~Vladimir, Ivashkin ang~Evgeny, ``Stylegan2 distillation for
   feed-forward image manipulation,'' in \emph{ECCV}, 2020.
+
+\bibitem{anirudh2020mimicgan}
+R.~Anirudh, J.~J. Thiagarajan, B.~Kailkhura, and P.~Bremer, ``Mimicgan: Robust
+  projection onto image manifolds with corruption mimicking,'' \emph{IJCV},
+  vol. 128, no.~10, pp. 2459--2477, 2020.
 
 \bibitem{tewari2020pie}
 A.~Tewari, M.~Elgharib, M.~BR, F.~Bernard, H.-P. Seidel, P.~P{\'e}rez,
@@ -473,20 +472,11 @@ A.~Tewari, M.~Elgharib, M.~BR, F.~Bernard, H.-P. Seidel, P.~P{\'e}rez,
 
 \bibitem{eric2020GANSpace}
 H.~Erik, H.~Aaron, L.~Jaakko, and P.~Sylvain, ``Ganspace: Discovering
-  interpretable gan controls,'' \emph{arXiv preprint arXiv:2004.02546}, 2020.
-
-\bibitem{shen2020closedform}
-Y.~Shen and B.~Zhou, ``Closed-form factorization of latent semantics in gans,''
-  \emph{arXiv preprint arXiv:2007.06600}, 2020.
+  interpretable gan controls,'' in \emph{NeurIPS}, 2020.
 
 \bibitem{guan2020faster}
 S.~Guan, Y.~Tai, B.~Ni, F.~Zhu, F.~Huang, and X.~Yang, ``Collaborative learning
   for faster stylegan embedding,'' \emph{arXiv preprint arXiv:2007.01758},
-  2020.
-
-\bibitem{xu2020ghfeat}
-Y.~Xu, Y.~Shen, J.~Zhu, C.~Yang, and B.~Zhou, ``Generative hierarchical
-  features from synthesizing images,'' \emph{arXiv preprint arXiv:2007.10379},
   2020.
 
 \bibitem{richardson2020encoding}
@@ -507,9 +497,39 @@ T.~Miyato, T.~Kataoka, M.~Koyama, and Y.~Yoshida, ``Spectral normalization for
 A.~Cherepkov, A.~Voynov, and A.~Babenko, ``Navigating the gan parameter space
   for semantic image editing,'' \emph{arXiv preprint arXiv:2011.13786}, 2020.
 
-\bibitem{nurit2020steerability}
-S.-E. Nurit, B.~Ron, and M.~Tomer, ``Gan steerability without optimization,''
-  \emph{arXiv preprint arXiv:2012.05328}, 2020.
+\bibitem{spingarn2021steerability}
+S.~Nurit, B.~Ron, and M.~Tomer, ``Gan steerability without optimization,'' in
+  \emph{ICLR}, 2021.
+
+\bibitem{zhuang2021enjoy}
+P.~Zhuang, O.~Koyejo, and A.~G. Schwing, ``Enjoy your editing: Controllable
+  gans for image editing via latent space navigation,'' in \emph{ICLR}, 2021.
+
+\bibitem{chai2021using}
+L.~Chai, J.~Wulff, and P.~Isola, ``Using latent space regression to analyze and
+  leverage compositionality in gans.'' in \emph{ICLR}, 2021.
+
+\bibitem{shen2021closedform}
+Y.~Shen and B.~Zhou, ``Closed-form factorization of latent semantics in gans,''
+  in \emph{CVPR}, 2021.
+
+\bibitem{xu2021ghfeat}
+Y.~Xu, Y.~Shen, J.~Zhu, C.~Yang, and B.~Zhou, ``Generative hierarchical
+  features from synthesizing images,'' in \emph{CVPR}, 2021.
+
+\bibitem{wang2021hijack}
+H.-P. Wang, N.~Yu, and M.~Fritz, ``Hijack-gan: Unintended-use of pretrained,
+  black-box gans,'' in \emph{CVPR}, 2021.
+
+\bibitem{tov2021designing}
+O.~Tov, Y.~Alaluf, Y.~Nitzan, O.~Patashnik, and D.~Cohen-Or, ``Designing an
+  encoder for stylegan image manipulation,'' \emph{arXiv preprint
+  arXiv:2102.02766}, 2021.
+
+\bibitem{alaluf2021only}
+Y.~Alaluf, O.~Patashnik, and D.~Cohen-Or, ``Only a matter of style: Age
+  transformation using a style-based regression model,'' \emph{arXiv preprint
+  arXiv:2102.02754}, 2021.
 
 \bibitem{perarnau2016invertible}
 G.~Perarnau, J.~Van De~Weijer, B.~Raducanu, and J.~M. {\'A}lvarez, ``Invertible
@@ -572,6 +592,10 @@ W.~Huang, P.~Hand, R.~Heckel, and V.~Voroninski, ``A provably convergent scheme
 \bibitem{maas2013rectifier}
 A.~L. Maas, A.~Y. Hannun, and A.~Y. Ng, ``Rectifier nonlinearities improve
   neural network acoustic models,'' in \emph{ICML}, 2013.
+
+\bibitem{xia2021tedigan}
+W.~Xia, Y.~Yang, J.-H. Xue, and B.~Wu, ``Tedigan: Text-guided diverse image
+  generation and manipulation,'' in \emph{CVPR}, 2021.
 
 \bibitem{kohonen1973matrix}
 T.~Kohonen and M.~Ruohonen, ``Representation of associated data by matrix

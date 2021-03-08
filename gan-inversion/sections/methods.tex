@@ -38,7 +38,7 @@ Given a latent code $\w \in \R^{l}$ that corresponds to an image $I$, and a vect
 The modified latent code $\w^{\prime}$ is designed to map to a face image $I^{\prime} = \mathcal{S}({\w}^{\prime})$ that obeys the control parameters $\p$.
 The encoder $\mathcal{R}$ is trained separately for the different modes of control, \ie, pose, expression and illumination, which is implemented based on a linear two-layer MLP and is trained in a self-supervised manner based on two-way cycle consistency losses and a differentiable face reconstruction network.
 
-To better reuse the layer-wise representations learned by the StyleGAN model, Xu~\etal~\cite{xu2020ghfeat} propose to train a hierarchical encoder by treating the pretrained StyleGAN generator as a learned loss (similar to perceptual loss~\cite{johnson2016perceptual} using learned VGG~\cite{simonyan2014very}). 
+To better reuse the layer-wise representations learned by the StyleGAN model, Xu~\etal~\cite{xu2021ghfeat} propose to train a hierarchical encoder by treating the pretrained StyleGAN generator as a learned loss (similar to perceptual loss~\cite{johnson2016perceptual} using learned VGG~\cite{simonyan2014very}). 
 The learned disentangled multi-level visual features $\{\y^{(\ell)}\}^L_{\ell=1}$  are then fed into per-layer adaptive instance normalization (AdaIN)~\cite{huang2017adain} of the fixed StyleGAN generator to obtain the desired images by replacing the original style code:
 \begin{equation}
 \mathtt{AdaIN}({x}_i^{(\ell)}, \y^{(\ell)}) = \y_{s,i}^{(\ell)}\ \frac{{x}_i^{(\ell)} - \mu({x}_i^{(\ell)})}{\sigma({x}_i^{(\ell)})} + \y_{b,i}^{(\ell)},
@@ -106,12 +106,10 @@ Without using the above framework, Guan~\etal~\cite{guan2020faster} propose a co
 where $\w \in \mathcal{W^+}$ is the latent code to be optimized, $G$ is a frozen generator of StyleGAN pretrained on the FFHQ dataset~\cite{karras2019style}, ${x_e} = G(\mathbf{w_e})$ and ${x_o} = G(\mathbf{w_o})$ are generated from $\mathbf{w_e}$ and $\mathbf{w_o}$ by the StyleGAN generator $G$, $\Phi(\cdot)$ is the LPIPS loss~\cite{zhang2018unreasonable}, and $\lambda_1$, $\lambda_2$, $\lambda_3$, $\alpha$ are the loss weights.
 
 
-
-
 \subsubsection{Closed-Form Solution}
 \label{sec:closed}
-Very recently, two methods~\cite{nurit2020steerability,shen2020closedform} found that the interpretable directions can be directly computed in \textit{closed-form}, without any kinds of training or optimization. 
-To be specific, Nurit~\etal~\cite{nurit2020steerability} observe that the output of the first layer in BigGAN~\cite{brock2018large} (the first layer maps $\z$ into a tensor with low spatial resolution) already has spatial coordinates and determines the coarse structure of the generated image, which suggests that applying the geometric transformation to the output of the first layer is similar to applying it directly to the generated image, \ie, $G(\z+\q)\approx \mathcal{T}\{G(\z)\}$ for every $\z$. 
+Very recently, two methods~\cite{spingarn2021steerability,shen2021closedform} found that the interpretable directions can be directly computed in \textit{closed-form}, without any kinds of training or optimization. 
+To be specific, Spingarn~\etal~\cite{spingarn2021steerability} observe that the output of the first layer in BigGAN~\cite{brock2018large} (the first layer maps $\z$ into a tensor with low spatial resolution) already has spatial coordinates and determines the coarse structure of the generated image, which suggests that applying the geometric transformation to the output of the first layer is similar to applying it directly to the generated image, \ie, $G(\z+\q)\approx \mathcal{T}\{G(\z)\}$ for every $\z$. 
 $G$ is a pretrained generator, $\mathcal{T}$ is the desired transformation in the image, and $\q$ is the target direction in the latent space.
 The goal is to bring $\W(\z+\q)+\bb$ as close as possible to $\PP(\W\z+\bb)$.
 $\PP$ denotes the matrix corresponding to $\mathcal{T}$ in the resolution of the first layer's output. 
@@ -144,7 +142,7 @@ Assuming again that $\E[\z]=0$ and making an additional assumption that $\E[\z\z
 \end{equation}
 where $\w_i$ is the $i$-th column of $\W$.
 
-Shen~\etal~\cite{shen2020closedform} observe that the semantic transformation of an image, usually denoted by moving the latent code towards a certain direction $\n^{\prime} = \z + \alpha \n$, is actually determined by the latent direction $\n$ and is independent of the sampled code $\z$.
+Shen~\etal~\cite{shen2021closedform} observe that the semantic transformation of an image, usually denoted by moving the latent code towards a certain direction $\n^{\prime} = \z + \alpha \n$, is actually determined by the latent direction $\n$ and is independent of the sampled code $\z$.
 Based on that, they turn into finding the directions $\n$ that can cause a significant change in the output image $\Delta\y$, \ie, $\Delta\y =\y^{\prime}-\y= (\A(\z + \alpha\n) + \bb) - (\A\z + \bb) = \alpha\A\n$, where $\A$ and $\bb$ are the weight and bias of certain layers in $G$, respectively. 
 The obtained formula, $\Delta\y = \alpha\A\n$, suggests that the desired editing with direction $\n$ can be achieved by adding the term $\alpha\A\n$ onto the projected code and indicates that the weight parameter $\A$ should contain the essential knowledge of image variations.
 The problem of exploring the latent semantics can thus be factorized by solving the following optimization problem:
@@ -182,12 +180,12 @@ Here, $\mathcal{L}$ measures the distance between the generated image $G(\z+\alp
 \figwalk
 
 \noindent\textbf{Unsupervised-Setting.} 
-The supervised setting would introduce bias into the experiment since the sampled codes and synthesized images used as supervision are different in each sampling and may lead to different discoveries of interpretable directions~\cite{shen2020closedform}. 
+The supervised setting would introduce bias into the experiment since the sampled codes and synthesized images used as supervision are different in each sampling and may lead to different discoveries of interpretable directions~\cite{shen2021closedform}. 
 It also severely restricts a range of directions that existing approaches can discover, especially when the labels are missing. 
 Furthermore, the individual controls discovered by these methods are typically entangled, affecting multiple attributes, and are often non-local.
 Thus, some~\cite{voynov2020latent,lu2020discovery,eric2020GANSpace,cherepkov2020navigating} aim to discover interpretable directions in the latent space in an unsupervised manner, \ie, without the requirement of paired data.
 For example, Härkönen~\etal~\cite{eric2020GANSpace} create interpretable controls for image synthesis by identifying important latent directions based on PCA applied in the latent or feature space. The obtained principal components correspond to certain attributes and selective application of the principal components allows control of features.
-Shen~\etal~\cite{shen2020closedform} and Nurit~\etal~\cite{nurit2020steerability} propose to directly compute the interpretable directions in closed form from the pretrained models, without any kinds of training or optimization (see Section~\ref{sec:closed} for more details).
+Shen~\etal~\cite{shen2021closedform} and Spingarn~\etal~\cite{spingarn2021steerability} propose to directly compute the interpretable directions in closed form from the pretrained models, without any kinds of training or optimization (see Section~\ref{sec:closed} for more details).
 
 \subsubsection{Semantic-Aware}
 \label{sec:semantic-aware}
@@ -306,7 +304,7 @@ In particular, this method uses projection to orthogonalize different vectors.
 As shown in Figure~\ref{fig:projection}, given two hyperplanes with normal vectors $\n_{1}$ and $\n_{2}$, the goal is to find a projected direction $\n_{1}-(\n_{1}^{\top} \n_{2}) \n_{2}$, such that moving samples along this new direction can change ``attribute one'' without affecting ``attribute two''. 
 For the case where multiple attributes are involved, they subtract the projection from the primal direction onto the plane that is constructed by all conditioned directions.
 Other GAN inversion methods~\cite{guan2020faster,viazovetskyi2020distillation} based on the pretrained StyleGAN~\cite{karras2019style} or StyleGAN2~\cite{karras2020analyzing} models can also manipulate multiple attributes due to the stronger separability of $\mathcal{W}$ space than $\mathcal{Z}$ space.
-However, as observed by recent methods~\cite{xia2020tedigan,liu2020style,wu2020stylespace}, some attributes remain entangled in the $\mathcal{W}$ space, leading to some unwanted changes when we manipulate a given image.
+However, as observed by recent methods~\cite{xia2021tedigan,liu2020style,wu2020stylespace}, some attributes remain entangled in the $\mathcal{W}$ space, leading to some unwanted changes when we manipulate a given image.
 Instead of manipulating in the semantic $\mathcal{W}$ space, Liu~\etal~\cite{liu2020style} propose the $\mathcal{S}$ space (style space), where all facial attributes are almost linearly separable.  
 The style code is formed by concatenating the output of all affine layers of StyleGAN2~\cite{karras2020analyzing} generator.
 Experiments show that the $\mathcal{S}$ space can alleviate \textit{spatially entangled changes} and exert precise local modifications.
@@ -353,6 +351,6 @@ The attribute-conditioned sampling and attribute-controlled editing of the Style
 As demonstrated in Figure~\ref{fig:ood}, this method is able to handle extreme pose, asymmetrical expressions, and age diversity well compared to the concurrent techniques.
 Zhu~\etal~\cite{zhu2020indomain} propose a domain-specific GAN inversion approach to recover the input image at both the pixel and semantic levels.
 Although trained only with the FFHQ dataset, their model can generalize to not only real face images from multiple face datasets~\cite{chelnokova2014rewards, courset2018caucasian, yi2019apdrawinggan} but also paintings, caricatures, and black and white photos collected from the Internet.
-Besides the image, recent methods also show out-of-distribution generalization ability for other modalities, \ie, sketch~\cite{richardson2020encoding} and text~\cite{xia2020tedigan}.
+Besides the image, recent methods also show out-of-distribution generalization ability for other modalities, \ie, sketch~\cite{richardson2020encoding} and text~\cite{xia2021tedigan}.
 
 \figood

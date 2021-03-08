@@ -6,7 +6,7 @@ This repo stores some latex source templates.
 - `poster`
 -- `interpGaze`: includes the poster of our MM'20 paper.
 - `research statement`: contains the research statement.
--`bibliography`: houses the master bibliography file that I use for my academic research without the frustration of having to repeatedly search and download bib entries (and subsequently correct) or copy-paste from prior projects in every research project I work on.
+- `bibliography`: houses the master bibliography file that I use for my academic research without the frustration of having to repeatedly search and download bib entries (and subsequently correct) or copy-paste from prior projects in every research project I work on.
 
 ## Citation
 

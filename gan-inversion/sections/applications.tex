@@ -14,7 +14,7 @@ x^{\prime}=G(\z^{*}+\alpha \n),
 \end{equation}
 where $\n$ is the normal direction corresponding to a particular semantic in the latent space and $\alpha$ is the step for manipulation. 
 In other words, if a latent code is moved towards a certain direction, the semantics contained in the output image should vary accordingly. 
-For example, Xu~\etal~\cite{xu2020ghfeat} use a hierarchical encoder to obtain the sampled features, matching between the learned GH-Feat with the internal representation of the StyleGAN generator and leading to high-fidelity global and local editing results from multiple levels.
+For example, Xu~\etal~\cite{xu2021ghfeat} use a hierarchical encoder to obtain the sampled features, matching between the learned GH-Feat with the internal representation of the StyleGAN generator and leading to high-fidelity global and local editing results from multiple levels.
 Voynov~\etal~\cite{voynov2020latent} determine the direction corresponding to the background removal or background blur gradually without changing the foreground.
 In~\cite{shen2020interpreting} Shen~\etal~achieve single and multiple facial attribute manipulation by projecting and orthogonalizing different vectors.
 Recently, Zhu~\etal~\cite{zhu2020indomain} perform semantic manipulation by either decreasing or increasing the semantic degree. 
@@ -162,7 +162,7 @@ This application is helpful to existing interactive image processing tasks such 
 Semantic image diffusion is an image editing task, which inserts the target face to the context and makes them compatible, as illustrated in Figure~\ref{fig:diffusion}. 
 It can be seen as a variant of image harmonization~\cite{cohen2006color,huang2018multimodal,tsai2017deep}.
 Zhu~\etal~\cite{zhu2020indomain} use their in-domain inversion method for semantic diffusion, which keeps the characteristics of the target image (\eg, face identity) and adapts to the context information at the same time.
-On the other hand, Xu~\etal~\cite{xu2020ghfeat} copy some patches (\eg, bed and window) onto a bedroom image and feed the stitched image into the proposed encoder for feature extraction. 
+On the other hand, Xu~\etal~\cite{xu2021ghfeat} copy some patches (\eg, bed and window) onto a bedroom image and feed the stitched image into the proposed encoder for feature extraction. 
 The extracted features are then visualized via the generator for image harmonization.
 
 \subsubsection{Category Transfer}
